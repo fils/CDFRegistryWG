@@ -1,0 +1,28 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Open Core Data",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Douglas Fils",
+        "email": "nemo@nobody.com",
+        "url": "http://foo.com"
+    },
+    "url": "http://www.rvdata.us",
+    "potentialAction": [{
+            "@type": "SearchAction",
+            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
+            "query-input": "required maxlength=500 name=gsc.q"
+        },
+        {
+            "@type": "SearchAction",
+            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
+            "query-input": "required maxlength=500 name=gsc.q"
+        },
+        {
+            "@type": "SearchAction",
+            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
+            "query-input": "required   name=gsc.q"
+        }
+    ]
+}
