@@ -24,4 +24,13 @@ by a line like
 or other store approaches.
 
 
+## Tests
+The following links show results of tests on the opencore.json file.  Note that the 
+URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
+
+#### Results from Google Structure Data Testing Tool
+[View results](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
+
+#### Structured Data Linter
+[View results](http://linter.structured-data.org/?url=https:%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
 
