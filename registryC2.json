@@ -12,18 +12,20 @@
     "url": "http://www.rvdata.us",
     "potentialAction": [{
             "@type": "SearchAction",
-            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
-            "query-input": "required  name=gsc.q"
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://paleo-search.appspot.com/#gsc.q={q}",
+                "description": "Swagger endpoint",
+                "httpMethod": "GET"
+            }
         },
         {
             "@type": "SearchAction",
-            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
-            "query-input": "required  name=gsc.q"
+            "target": "http://paleo-search.appspot.com/#gsc.q={q}"
         },
         {
             "@type": "SearchAction",
-            "target": "http://paleo-search.appspot.com/#gsc.q={q}",
-            "query-input": "required   name=gsc.q"
+            "target": "http://paleo-search.appspot.com/#gsc.q={q}"
         }
     ]
 }
