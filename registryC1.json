@@ -6,7 +6,8 @@
         "@type": "ContactPoint",
         "name": "Bob Arko",
         "email": "nemo@nobody.com",
-        "url": "http://foo.com"
+        "url": "http://foo.com",
+        "contactType": "technical support"
     },
     "url": "http://www.rvdata.us",
     "mainEntityOfPage": [{

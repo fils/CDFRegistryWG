@@ -6,18 +6,19 @@
         "@type": "ContactPoint",
         "name": "Douglas Fils",
         "email": "nemo@nobody.com",
-        "url": "http://foo.com"
+        "url": "http://foo.com",
+        "contactType": "technical support"
     },
     "url": "http://www.rvdata.us",
     "potentialAction": [{
             "@type": "SearchAction",
             "target": "http://paleo-search.appspot.com/#gsc.q={q}",
-            "query-input": "required maxlength=500 name=gsc.q"
+            "query-input": "required  name=gsc.q"
         },
         {
             "@type": "SearchAction",
             "target": "http://paleo-search.appspot.com/#gsc.q={q}",
-            "query-input": "required maxlength=500 name=gsc.q"
+            "query-input": "required  name=gsc.q"
         },
         {
             "@type": "SearchAction",
