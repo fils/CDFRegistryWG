@@ -5,6 +5,8 @@
 Some test files to explore the use of schema.org objects and properties to 
 describe data repositories with.
 
+* registryC5.json : A test of multiple context entries..  to allow us to use
+other context for things like controlled voc. 
 * registryC3.json : A test to see how use of subOrganization would work for 
 groups that scope several projects 
 * registryC2.json : Uses the SearchAction object.  Best candidate so far.

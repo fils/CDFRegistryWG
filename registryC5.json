@@ -1,0 +1,13 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "dc": "http://purl.org/dc/elements/1.1/"
+    },
+    "@type": "Person",
+
+    "name": "Jane Doe",
+    "jobTitle": "Professor",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com",
+    "dc:description": "One should not use DC terms for a person"
+}
