@@ -54,7 +54,7 @@
         },
         {
             "@type": "Organization",
-            "name": "GDC Archive",
+            "name": "GDC Archives",
             "url": "http://foo.org/sioexp",
             "contactPoint": {
                 "@type": "ContactPoint",
