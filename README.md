@@ -27,6 +27,14 @@ by a line like
 * After reading in the JSON-LD it could be converted to RDF for a triple store 
 or other store approaches.
 
+## On external vocabularies
+registryC5 is testing some external vocabulary uses.  It is valid JSON-LD but 
+Google will always through an error since it doesn't see this as a property of some
+known schema.org class.  This should be fine and I have tested this, but it is always
+a worry with Google that you will not know when how they deal with this case
+will be changed.   Their typical response has been, "try and get things you need 
+in core schema.org".  
+
 
 ## Tests
 The following links show results of tests on the opencore.json file.  Note that the 
