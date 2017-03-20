@@ -1,0 +1,41 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "BCO-DMO",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Adam Shepherd",
+        "email": "ashepherd@whoi.edu",
+        "url": "http://orcid.org/0000-0003-4486-9448",
+        "contactType": "technical support"
+    },
+    "url": "http://www.bco-dmo.org",
+    "potentialAction": [{
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://lod.bco-dmo.org/sparql",
+                "description": "SPARQL Endpoint",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://www.bco-dmo.org/.well-known/void",
+                "description": "VoID Description",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://www.bco-dmo.org/services/oai",
+                "description": "OAI-PMH Endpoint",
+                "httpMethod": "GET"
+            }
+        }
+    ]
+}
