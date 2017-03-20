@@ -2,6 +2,7 @@
     "@context": "http://schema.org/",
     "@type": "Organization",
     "name": "Open Core Data",
+    "url": "http://www.opencoredata.org",
     "contactPoint": {
         "@type": "ContactPoint",
         "name": "Douglas Fils",
@@ -9,7 +10,19 @@
         "url": "http://orcid.org/0000-0002-2257-9127",
         "contactType": "technical support"
     },
-    "url": "http://www.opencoredata.org",
+    "funder": {
+        "@type": "Organization",
+        "name": "NSF",
+        "url": "http://www.nsf.gov"
+    },
+    "memberOf": {
+        "@type": "ProgramMembership",
+        "hostingOrganization": {
+            "@type": "Organization",
+            "name": "RE3Data",
+            "url": "http://www.re3data.org"
+        }
+    },
     "potentialAction": [{
             "@type": "SearchAction",
             "target": {
