@@ -1,10 +1,17 @@
 # CDFRegistryWG
 
 
-## registryC*.json
+## About
 Some test files to explore the use of schema.org objects and properties to 
 describe data repositories with.
 
+#### Facility examples
+* opencore.json : Example of encoding Open Core services into this schema.org
+* bcodmo.json : Example for BCO-DMO
+* iris.json : Example for IRIS with a mix of machine and human focused resources
+
+
+#### Candidate encodings :  Some test of various encoding ideas
 * registryC5.json : A test of multiple context entries..  to allow us to use
 other context for things like controlled voc. 
 * registryC3.json : A test to see how use of subOrganization would work for 
@@ -12,7 +19,6 @@ groups that scope several projects
 * registryC2.json : Uses the SearchAction object.  Best candidate so far.
 * registryC1.json : Early test... used DigitalDocument which is likely not a proper 
 use of this type.  However, it might apply to the VoID document in some ways.   
-* opencore.json : Example of encoding Open Core services into this schema.org
  
 ## Notes
 The registryC2.json is the best candidate so far.  It is encoding the Open Core Data
