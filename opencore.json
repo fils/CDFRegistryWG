@@ -14,8 +14,8 @@
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "http://opencoredata.org/common/swagger-ui/",
-                "description": "Swagger description document",
+                "urlTemplate": "http://opencoredata.org/apidocs.json",
+                "description": "Swagger 1.2 description document",
                 "httpMethod": "GET"
             }
         },
@@ -37,5 +37,12 @@
                 "httpMethod": "GET"
             }
         }
-    ]
+    ],
+    "mainEntityOfPage": [{
+        "@type": "DigitalDocument",
+        "fileformat": "HTML",
+        "keywords": "Swagger",
+        "description": "User interface for the swagger document",
+        "url": "http://opencoredata.org/common/swagger-ui/"
+    }]
 }
