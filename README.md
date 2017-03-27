@@ -21,9 +21,11 @@ groups that scope several projects
 use of this type.  However, it might apply to the VoID document in some ways.   
  
 ## Notes
-The registryC2.json is the best candidate so far.  It is encoding the Open Core Data
-information right now.  A copy of this is in opencore.json as well.  A reference work flow would go something like this.
+A reference work flow would go something like this.
 
+
+* Make a simple SKOS or OWL out of RE3 XML schema terms
+* Use schema.org/Organization plus external voc from above (valid JOSN-LD)
 * Sites place this JSON-LD into their index page or some other page they designate.
 * The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined 
 by a line like

@@ -1,0 +1,1583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+        xmlns="http://re3data.org/glossary/terms"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dct="http://purl.org/dc/terms/"
+        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+        xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+        xmlns:ann="http://art.uniroma2.it/ontologies/annotation#">
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl-d85b3d07-1d0c-c027-6cc0-726eede0444b" />
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl-d85b3d07-1d0c-c027-6cc0-726eede0444b">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">Your beloved thesaurus</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/identifiers">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>identifiers-1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_identifiers" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_identifiers" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_identifiers">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">identifiers</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_identifiers">
+        <rdf:value xml:lang="en">The identifiers provided by re3data.org (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/re3data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Auto-Value Example: r3d100010134</skos:note>
+        <skos:notation>re3data-1.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_re3data" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_re3data" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_re3data">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">re3data</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_re3data">
+        <rdf:value xml:lang="en">A unique string to identify the RDR metadata entry. The internal identifier is assigned by re3data.org.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/doi">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Auto-Value Example: http://doi.org/10.17616/R3X S37</skos:note>
+        <skos:notation>doi-1.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_doi" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_doi" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_doi">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">doi</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_doi">
+        <rdf:value xml:lang="en">The DOI assigned to the re3data.org metadata entry of the RDR to make the metadata entries citable.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositoryname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: Access to Archival Databases</skos:note>
+        <skos:notation>repositoryName-2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositoryname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositoryname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositoryname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositoryname">
+        <rdf:value xml:lang="en">The full name of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/additionalname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: AAD</skos:note>
+        <skos:notation>additionalName-3</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_additionalname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_additionalname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_additionalname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">additionalName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_additionalname">
+        <rdf:value xml:lang="en">The alternative name or acronym for the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositoryurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>URL Example: http://cdiac.esd.ornl.gov/ho me.html</skos:note>
+        <skos:notation>repositoryUrl-4</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositoryurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositoryurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositoryurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositoryurl">
+        <rdf:value xml:lang="en">The URL of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositoryidentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>repositoryIdentifier-5</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositoryidentifier" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositoryidentifier" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositoryidentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryIdentifier</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositoryidentifier">
+        <rdf:value xml:lang="en">An identifier provisioned for the website of the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositoryidentifiertype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: DOI</skos:note>
+        <skos:notation>repositoryIdentifierType-5.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositoryidentifiertype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositoryidentifiertype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositoryidentifiertype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryIdentifierType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositoryidentifiertype">
+        <rdf:value xml:lang="en">The type of the provider of the identifier for the RDR (e.g. DOI, URN, VIAF, DataCite).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositoryidentifiervalue">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://doi.org/10.1234/foo</skos:note>
+        <skos:notation>repositoryIdentifierValue-5.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositoryidentifiervalue" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositoryidentifiervalue" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositoryidentifiervalue">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryIdentifierValue</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositoryidentifiervalue">
+        <rdf:value xml:lang="en">A globally unique identifier that refers to the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/description">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open (max. 2.000 characters).</skos:note>
+        <skos:notation>description-6</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_description" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_description" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_description">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">description</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_description">
+        <rdf:value xml:lang="en">A textual description providing additional information about the RDR (primary language is English).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositorycontact">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: info@researchdata.com</skos:note>
+        <skos:notation>repositoryContact-7</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositorycontact" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositorycontact" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositorycontact">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryContact</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositorycontact">
+        <rdf:value xml:lang="en">The email address of the contact or an URL of an online contact form of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: disciplinary governmental institutional multidisciplinary project-related
+ other</skos:note>
+        <skos:notation>type-8</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_type" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_type" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_type">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">type</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_type">
+        <rdf:value xml:lang="en">The type of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/size">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: 5.000 datasets; 30 studies</skos:note>
+        <skos:notation>size-9</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_size" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_size" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_size">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">size</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_size">
+        <rdf:value xml:lang="en">The number of items contained in the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/updated">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)</skos:note>
+        <skos:notation>updated-9.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_updated" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_updated" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_updated">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">updated</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_updated">
+        <rdf:value xml:lang="en">The date of the last update of the RDR size.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/startdate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)</skos:note>
+        <skos:notation>startDate-10</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_startdate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_startdate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_startdate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">startDate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_startdate">
+        <rdf:value xml:lang="en">Releasing date of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/enddate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>endDate-11</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_enddate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_enddate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_enddate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">endDate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_enddate">
+        <rdf:value xml:lang="en">The RDR ended its service of ingesting new research data and/or providing it (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/closed">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601) or empty value with attribute xsi:nil set to "true"</skos:note>
+        <skos:notation>closed-11.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_closed" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_closed" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_closed">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">closed</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_closed">
+        <rdf:value xml:lang="en">The date when the RDR stopped ingesting new research data to its database. The database and its research data are still available.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/offline">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601) or empty value with attribute xsi:nil set to "true"</skos:note>
+        <skos:notation>offline-11.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_offline" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_offline" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_offline">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">offline</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_offline">
+        <rdf:value xml:lang="en">The date when the RDR went offline. The database and/or the website are no longer available.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/repositorylanguage">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values from: ISO-639-3. Examples:
+ eng, deu, fra</skos:note>
+        <skos:notation>repositoryLanguage-12</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_repositorylanguage" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_repositorylanguage" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_repositorylanguage">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">repositoryLanguage</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_repositorylanguage">
+        <rdf:value xml:lang="en">The user interface language of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/subject">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:notation>subject-13</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_subject" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_subject" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_subject">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">subject</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_subject">
+        <rdf:value xml:lang="en">The disciplinary focus of the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/subjectscheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values from: DFG Classification of Subject Area</skos:note>
+        <skos:notation>subjectScheme-13.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_subjectscheme" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_subjectscheme" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_subjectscheme">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">subjectScheme</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_subjectscheme">
+        <rdf:value xml:lang="en">The subject scheme according to which the subject of the RDR is described.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/subjectid">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is dependent on scheme. Examples: 11
+ 10101</skos:note>
+        <skos:notation>subjectId-13.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_subjectid" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_subjectid" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_subjectid">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">subjectId</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_subjectid">
+        <rdf:value xml:lang="en">The ID/notation of the subject classification.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/subjectname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is dependent on scheme. Examples: Humanities
+ Prehistory</skos:note>
+        <skos:notation>subjectName-13.3</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_subjectname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_subjectname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_subjectname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">subjectName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_subjectname">
+        <rdf:value xml:lang="en">The subject(s) of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/missionstatementurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>URL Example: http://cdiac.ornl.gov/aboutc diac.html</skos:note>
+        <skos:notation>missionStatementUrl-14</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_missionstatementurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_missionstatementurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_missionstatementurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">missionStatementUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_missionstatementurl">
+        <rdf:value xml:lang="en">The URL of a mission statement describing the designated community of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/contenttype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is dependent on scheme. Examples: Raw data, Images</skos:note>
+        <skos:notation>contentType-15</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_contenttype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_contenttype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_contenttype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">contentType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_contenttype">
+        <rdf:value xml:lang="en">All types of resources available in the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/contenttypescheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values from: PARSE.Insight survey</skos:note>
+        <skos:notation>contentTypeScheme-15.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_contenttypescheme" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_contenttypescheme" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_contenttypescheme">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">contentTypeScheme</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_contenttypescheme">
+        <rdf:value xml:lang="en">The name and/or URL of the subject scheme or classification code.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/providertype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: dataProvider serviceProvider</skos:note>
+        <skos:notation>providerType-16</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_providertype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_providertype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_providertype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">providerType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_providertype">
+        <rdf:value xml:lang="en">The type of provider.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/keyword">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Examples: computer science</skos:note>
+        <skos:notation>keyword-17</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_keyword" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_keyword" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_keyword">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">keyword</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_keyword">
+        <rdf:value xml:lang="en">English keyword(s) describing the subject focus of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institution">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>institution-18</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institution" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institution" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institution">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institution</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institution">
+        <rdf:value xml:lang="en">All institutions being responsible for funding, creating and/or running the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: National Institute of General Medical Sciences, U.S. National Institutes of Health</skos:note>
+        <skos:notation>institutionName-18.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionname">
+        <rdf:value xml:lang="en">The name of the responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionadditionalname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: NIGMS</skos:note>
+        <skos:notation>institutionAdditionalName-18.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionadditionalname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionadditionalname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionadditionalname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionAdditionalName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionadditionalname">
+        <rdf:value xml:lang="en">The alternative name or acronym for the responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutioncountry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed Values from: ISO-3166-1 alpha-3. Examples:
+ DEU, GBR, USA</skos:note>
+        <skos:notation>institutionCountry-18.3</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutioncountry" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutioncountry" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutioncountry">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionCountry</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutioncountry">
+        <rdf:value xml:lang="en">The location of the responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/responsibilitytype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: funding general
+ main sponsoring technical</skos:note>
+        <skos:notation>responsibilityType-18.4</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_responsibilitytype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_responsibilitytype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_responsibilitytype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">responsibilityType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_responsibilitytype">
+        <rdf:value xml:lang="en">The type of responsibility for each responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutiontype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: commercial non-profit</skos:note>
+        <skos:notation>institutionType-18.5</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutiontype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutiontype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutiontype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutiontype">
+        <rdf:value xml:lang="en">The type of responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://www.nigms.nih.gov/</skos:note>
+        <skos:notation>institutionUrl-18.6</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionurl">
+        <rdf:value xml:lang="en">The URL of the responsible institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionidentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>institutionIdentifier-18.7</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionidentifier" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionidentifier" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionidentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionIdentifier</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionidentifier">
+        <rdf:value xml:lang="en">The identifier for the responsible institution (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionidentifiertype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: ISNI</skos:note>
+        <skos:notation>institutionIdentifierType-18.7.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionidentifiertype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionidentifiertype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionidentifiertype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionIdentifierType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionidentifiertype">
+        <rdf:value xml:lang="en">The provider name of the identifier for the responsible institution (e.g. ISNI, VIAF, FundRef, DataCite).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutionidentifiervalue">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://isni.org/isni/00000001 00755874</skos:note>
+        <skos:notation>institutionIdentifierValue-18.7.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutionidentifiervalue" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutionidentifiervalue" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutionidentifiervalue">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionIdentifierValue</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutionidentifiervalue">
+        <rdf:value xml:lang="en">A globally unique identifier that refers to the institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/responsibilitystartdate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)</skos:note>
+        <skos:notation>responsibilityStartDate-18.8</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_responsibilitystartdate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_responsibilitystartdate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_responsibilitystartdate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">responsibilityStartDate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_responsibilitystartdate">
+        <rdf:value xml:lang="en">The start date of the period of responsibility.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/responsibilityenddate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)</skos:note>
+        <skos:notation>responsibilityEndDate-18.9</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_responsibilityenddate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_responsibilityenddate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_responsibilityenddate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">responsibilityEndDate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_responsibilityenddate">
+        <rdf:value xml:lang="en">The end date of the period of responsibility.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/institutioncontact">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: john.doe@researchdata.com</skos:note>
+        <skos:notation>institutionContact-18.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_institutioncontact" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_institutioncontact" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_institutioncontact">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">institutionContact</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_institutioncontact">
+        <rdf:value xml:lang="en">The email address of the contact or an URL of an online contact form of the institution.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/policy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>policy-19</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_policy" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_policy" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_policy">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">policy</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_policy">
+        <rdf:value xml:lang="en">Policies providing information concerning the usage of the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/policytype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values from: Access policy Collection policy
+ Data policy Metadata policy Preservation policy Submission policy Terms of use Usage policy Quality policy</skos:note>
+        <skos:notation>policyType-19.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_policytype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_policytype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_policytype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">policyType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_policytype">
+        <rdf:value xml:lang="en">The type of the policy.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/policyname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open. Example: Data policy of the information system PANGAEA</skos:note>
+        <skos:notation>policyName-19.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_policyname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_policyname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_policyname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">policyName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_policyname">
+        <rdf:value xml:lang="en">The name of the policy.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/policyurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://www.pangaea.de/cura tor/files/pangaea-data- policy.pdf</skos:note>
+        <skos:notation>policyUrl-19.3</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_policyurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_policyurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_policyurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">policyUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_policyurl">
+        <rdf:value xml:lang="en">The URL of the policy.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaseaccess">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>databaseAccess-20</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaseaccess" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaseaccess" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaseaccess">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseAccess</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaseaccess">
+        <rdf:value xml:lang="en">The access regulation to the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaseaccesstype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: open embargoed
+ restricted closed</skos:note>
+        <skos:notation>databaseAccessType-20.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaseaccesstype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaseaccesstype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaseaccesstype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseAccessType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaseaccesstype">
+        <rdf:value xml:lang="en">The type of access to the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaseaccessrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: feeRequired registration
+ other</skos:note>
+        <skos:notation>databaseAccessRestriction-20.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaseaccessrestriction" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaseaccessrestriction" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaseaccessrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseAccessRestriction</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaseaccessrestriction">
+        <rdf:value xml:lang="en">All existing access restrictions to the RDR (required if restricted is chosen).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaselicense">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>databaseLicense-21</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaselicense" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaselicense" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaselicense">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseLicense</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaselicense">
+        <rdf:value xml:lang="en">The database license of the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaselicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: Creative Commons Attribution 4.0 International</skos:note>
+        <skos:notation>databaseLicenseName-21.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaselicensename" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaselicensename" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaselicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseLicenseName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaselicensename">
+        <rdf:value xml:lang="en">The name of the database license.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/databaselicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://creativecommons.org/ licenses/by/4.0/</skos:note>
+        <skos:notation>databaseLicenseUrl-21.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_databaselicenseurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_databaselicenseurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_databaselicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">databaseLicenseUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_databaselicenseurl">
+        <rdf:value xml:lang="en">The database license URL.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/dataaccess">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>dataAccess-22</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_dataaccess" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_dataaccess" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_dataaccess">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataAccess</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_dataaccess">
+        <rdf:value xml:lang="en">The access regulation to the research data provided by the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/dataaccesstype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: open restricted
+ closed</skos:note>
+        <skos:notation>dataAccessType-22.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_dataaccesstype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_dataaccesstype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_dataaccesstype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataAccessType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_dataaccesstype">
+        <rdf:value xml:lang="en">The type of access to research data.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/dataaccessrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: feeRequired institutional membership registration
+ other</skos:note>
+        <skos:notation>dataAccessRestriction-22.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_dataaccessrestriction" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_dataaccessrestriction" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_dataaccessrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataAccessRestriction</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_dataaccessrestriction">
+        <rdf:value xml:lang="en">All existing access restrictions to the research data (required if restricted is chosen).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datalicense">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>dataLicense-23</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datalicense" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datalicense" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datalicense">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataLicense</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datalicense">
+        <rdf:value xml:lang="en">The license of the research data, existing in the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datalicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: Creative Commons Attribution 4.0 International</skos:note>
+        <skos:notation>dataLicenseName-23.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datalicensename" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datalicensename" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datalicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataLicenseName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datalicensename">
+        <rdf:value xml:lang="en">The name of the data license.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datalicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://creativecommons.org/ licenses/by/4.0/</skos:note>
+        <skos:notation>dataLicenseUrl-23.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datalicenseurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datalicenseurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datalicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataLicenseUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datalicenseurl">
+        <rdf:value xml:lang="en">The data license URL.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/dataupload">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>dataUpload-24</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_dataupload" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_dataupload" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_dataupload">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUpload</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_dataupload">
+        <rdf:value xml:lang="en">The regulation for submitting research data to the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datauploadtype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: open restricted
+ closed</skos:note>
+        <skos:notation>dataUploadType-24.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datauploadtype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datauploadtype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datauploadtype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUploadType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datauploadtype">
+        <rdf:value xml:lang="en">The type of the data upload.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datauploadrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: feeRequired institutional membership registration
+ other</skos:note>
+        <skos:notation>dataUploadRestriction-24.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datauploadrestriction" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datauploadrestriction" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datauploadrestriction">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUploadRestriction</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datauploadrestriction">
+        <rdf:value xml:lang="en">All existing restrictions to the data upload (required if restricted is chosen).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datauploadlicense">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>dataUploadLicense-25</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datauploadlicense" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datauploadlicense" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datauploadlicense">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUploadLicense</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datauploadlicense">
+        <rdf:value xml:lang="en">The license for data upload (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datauploadlicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example:</skos:note>
+        <skos:notation>dataUploadLicenseName-25.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datauploadlicensename" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datauploadlicensename" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datauploadlicensename">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUploadLicenseName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datauploadlicensename">
+        <rdf:value xml:lang="en">The name of the data</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/datauploadlicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>URL Example: http://cbil.upenn.edu/RAD/p hp/RAD-data_sub.php</skos:note>
+        <skos:notation>dataUploadLicenseUrl-25.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_datauploadlicenseurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_datauploadlicenseurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_datauploadlicenseurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">dataUploadLicenseUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_datauploadlicenseurl">
+        <rdf:value xml:lang="en">The data upload license URL.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/software">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: DSpace</skos:note>
+        <skos:notation>software-26</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_software" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_software" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_software">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">software</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_software">
+        <rdf:value xml:lang="en">The name of the software that is used to run the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/versioning">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: yes no
+ unknown</skos:note>
+        <skos:notation>versioning-27</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_versioning" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_versioning" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_versioning">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">versioning</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_versioning">
+        <rdf:value xml:lang="en">The RDR supports versioning of research data.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/api">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>api-28</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_api" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_api" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_api">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">api</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_api">
+        <rdf:value xml:lang="en">The API supported by the RDR (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/apitype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: OAI-PMH</skos:note>
+        <skos:notation>apiType-28.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_apitype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_apitype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_apitype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">apiType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_apitype">
+        <rdf:value xml:lang="en">The type of the API.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/apiurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://www.datadryad.org/o ai/</skos:note>
+        <skos:notation>apiUrl-28.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_apiurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_apiurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_apiurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">apiUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_apiurl">
+        <rdf:value xml:lang="en">The URL of the API.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/apidocumentation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://wiki.datadryad.org/Da ta_Access#OAI-PMH</skos:note>
+        <skos:notation>apiDocumentation-28.3</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_apidocumentation" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_apidocumentation" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_apidocumentation">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">apiDocumentation</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_apidocumentation">
+        <rdf:value xml:lang="en">A link referring to the API documentation, a website that states its availability and other information for using the API.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/pidsystem">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: DOI</skos:note>
+        <skos:notation>pidSystem-29</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_pidsystem" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_pidsystem" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_pidsystem">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">pidSystem</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_pidsystem">
+        <rdf:value xml:lang="en">The persistent identifier system that is used by the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/citationreference">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: Data Citation Index SCOPUS</skos:note>
+        <skos:notation>citationReference-30</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_citationreference" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_citationreference" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_citationreference">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">citationReference</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_citationreference">
+        <rdf:value xml:lang="en">The RDR is covered by SCOPUS or the Data Citation Index.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/metrics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: Altmetric; usage statistics</skos:note>
+        <skos:notation>metrics-31</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_metrics" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_metrics" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_metrics">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">metrics</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_metrics">
+        <rdf:value xml:lang="en">Any service, tool, etc. that is used by the RDR to track, measure and visualize the usage of provided research data.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/citationguidelineurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://wiki.pangaea.de/wiki/ Citation</skos:note>
+        <skos:notation>citationGuidelineUrl-32</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_citationguidelineurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_citationguidelineurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_citationguidelineurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">citationGuidelineUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_citationguidelineurl">
+        <rdf:value xml:lang="en">The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.or g/whycitedata).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/aidsystem">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: ORCID</skos:note>
+        <skos:notation>aidSystem-33</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_aidsystem" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_aidsystem" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_aidsystem">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">aidSystem</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_aidsystem">
+        <rdf:value xml:lang="en">The author identifier system that is used by the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/enhancedpublication">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: yes no
+ unknown</skos:note>
+        <skos:notation>enhancedPublication-34</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_enhancedpublication" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_enhancedpublication" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_enhancedpublication">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">enhancedPublication</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_enhancedpublication">
+        <rdf:value xml:lang="en">The RDR offers the interlinking between publications and data.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/qualitymanagement">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Controlled vocabulary Allowed values: yes no
+ unknown</skos:note>
+        <skos:notation>qualityManagement-35</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_qualitymanagement" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_qualitymanagement" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_qualitymanagement">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">qualityManagement</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_qualitymanagement">
+        <rdf:value xml:lang="en">Any form of quality management concerning the research data or metadata of the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/certificate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: Data Seal of Approval (DSA), ISO 16919</skos:note>
+        <skos:notation>certificate-36</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_certificate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_certificate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_certificate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">certificate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_certificate">
+        <rdf:value xml:lang="en">The certificate, seal or standard the RDR complies with.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/metadatastandard">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>metadataStandard-37</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_metadatastandard" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_metadatastandard" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_metadatastandard">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">metadataStandard</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_metadatastandard">
+        <rdf:value xml:lang="en">The metadata standard the RDR complies with (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/metadatastandardname">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: Data Documentation Initiative (DDI )</skos:note>
+        <skos:notation>metadataStandardName-37.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_metadatastandardname" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_metadatastandardname" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_metadatastandardname">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">metadataStandardName</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_metadatastandardname">
+        <rdf:value xml:lang="en">The name of the metadata standard.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/metadatastandardurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>URL Example: http://www.ddialliance.org/S pecification/</skos:note>
+        <skos:notation>metadataStandardUrl-37.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_metadatastandardurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_metadatastandardurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_metadatastandardurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">metadataStandardUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_metadatastandardurl">
+        <rdf:value xml:lang="en">The URL of the metadata standard.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/syndication">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>-</skos:note>
+        <skos:notation>syndication-38</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_syndication" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_syndication" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_syndication">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">syndication</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_syndication">
+        <rdf:value xml:lang="en">The alerting service the RDR offers (wrapper element).</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/syndicationtype">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: RSS</skos:note>
+        <skos:notation>syndicationType-38.1</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_syndicationtype" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_syndicationtype" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_syndicationtype">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">syndicationType</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_syndicationtype">
+        <rdf:value xml:lang="en">The type of the alerting service.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/syndicationurl">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>Example: http://datacentrum.3tu.nl/e n/information/rss/</skos:note>
+        <skos:notation>syndicationUrl-38.2</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_syndicationurl" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_syndicationurl" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_syndicationurl">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">syndicationUrl</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_syndicationurl">
+        <rdf:value xml:lang="en">URL of the alerting service(s) provided by the RDR.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/remarks">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>The format is open.</skos:note>
+        <skos:notation>remarks-39</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_remarks" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_remarks" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_remarks">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">remarks</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_remarks">
+        <rdf:value xml:lang="en">Additional remarks</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/entrydate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY-MM-DD (ISO-8601)</skos:note>
+        <skos:notation>entryDate-40</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_entrydate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_entrydate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_entrydate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">entryDate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_entrydate">
+        <rdf:value xml:lang="en">The date the RDR was indexed in re3data.org.</rdf:value>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/lastupdate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+        <skos:inScheme rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:topConceptOf rdf:resource="http://re3data.org/glossary/terms" />
+        <skos:note>YYYY-MM-DD (ISO-8601)</skos:note>
+        <skos:notation>lastUpdate-41</skos:notation>
+        <skos:definition rdf:resource="http://re3data.org/glossary/terms/def_lastupdate" />
+        <skosxl:prefLabel rdf:resource="http://re3data.org/glossary/terms/xl_en_lastupdate" />
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/xl_en_lastupdate">
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label" />
+        <skosxl:literalForm xml:lang="en">lastUpdate</skosxl:literalForm>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://re3data.org/glossary/terms/def_lastupdate">
+        <rdf:value xml:lang="en">The date the metadata of the RDR was updated.</rdf:value>
+    </rdf:Description>
+
+</rdf:RDF>

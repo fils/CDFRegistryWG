@@ -1,0 +1,1408 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://re3data.org/glossary/terms> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix ann: <http://art.uniroma2.it/ontologies/annotation#> .
+
+<http://re3data.org/glossary/terms>
+    a skos:ConceptScheme ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl-d85b3d07-1d0c-c027-6cc0-726eede0444b> .
+
+<http://re3data.org/glossary/terms/additionalname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_additionalname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "additionalName-3" ;
+    skos:note "The format is open. Example: AAD" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_additionalname> .
+
+<http://re3data.org/glossary/terms/aidsystem>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_aidsystem> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "aidSystem-33" ;
+    skos:note "Example: ORCID" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_aidsystem> .
+
+<http://re3data.org/glossary/terms/api>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_api> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "api-28" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_api> .
+
+<http://re3data.org/glossary/terms/apidocumentation>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_apidocumentation> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "apiDocumentation-28.3" ;
+    skos:note "Example: http://wiki.datadryad.org/Da ta_Access#OAI-PMH" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_apidocumentation> .
+
+<http://re3data.org/glossary/terms/apitype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_apitype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "apiType-28.1" ;
+    skos:note "Example: OAI-PMH" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_apitype> .
+
+<http://re3data.org/glossary/terms/apiurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_apiurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "apiUrl-28.2" ;
+    skos:note "Example: http://www.datadryad.org/o ai/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_apiurl> .
+
+<http://re3data.org/glossary/terms/certificate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_certificate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "certificate-36" ;
+    skos:note "Example: Data Seal of Approval (DSA), ISO 16919" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_certificate> .
+
+<http://re3data.org/glossary/terms/citationguidelineurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_citationguidelineurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "citationGuidelineUrl-32" ;
+    skos:note "Example: http://wiki.pangaea.de/wiki/ Citation" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_citationguidelineurl> .
+
+<http://re3data.org/glossary/terms/citationreference>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_citationreference> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "citationReference-30" ;
+    skos:note "Controlled vocabulary Allowed values: Data Citation Index SCOPUS" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_citationreference> .
+
+<http://re3data.org/glossary/terms/closed>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_closed> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "closed-11.1" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601) or empty value with attribute xsi:nil set to \"true\"" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_closed> .
+
+<http://re3data.org/glossary/terms/contenttype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_contenttype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "contentType-15" ;
+    skos:note "The format is dependent on scheme. Examples: Raw data, Images" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_contenttype> .
+
+<http://re3data.org/glossary/terms/contenttypescheme>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_contenttypescheme> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "contentTypeScheme-15.1" ;
+    skos:note "Controlled vocabulary Allowed values from: PARSE.Insight survey" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_contenttypescheme> .
+
+<http://re3data.org/glossary/terms/dataaccess>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_dataaccess> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataAccess-22" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_dataaccess> .
+
+<http://re3data.org/glossary/terms/dataaccessrestriction>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_dataaccessrestriction> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataAccessRestriction-22.2" ;
+    skos:note """Controlled vocabulary Allowed values: feeRequired institutional membership registration
+ other""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_dataaccessrestriction> .
+
+<http://re3data.org/glossary/terms/dataaccesstype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_dataaccesstype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataAccessType-22.1" ;
+    skos:note """Controlled vocabulary Allowed values: open restricted
+ closed""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_dataaccesstype> .
+
+<http://re3data.org/glossary/terms/databaseaccess>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaseaccess> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseAccess-20" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaseaccess> .
+
+<http://re3data.org/glossary/terms/databaseaccessrestriction>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaseaccessrestriction> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseAccessRestriction-20.2" ;
+    skos:note """Controlled vocabulary Allowed values: feeRequired registration
+ other""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaseaccessrestriction> .
+
+<http://re3data.org/glossary/terms/databaseaccesstype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaseaccesstype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseAccessType-20.1" ;
+    skos:note """Controlled vocabulary Allowed values: open embargoed
+ restricted closed""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaseaccesstype> .
+
+<http://re3data.org/glossary/terms/databaselicense>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaselicense> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseLicense-21" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaselicense> .
+
+<http://re3data.org/glossary/terms/databaselicensename>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaselicensename> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseLicenseName-21.1" ;
+    skos:note "Example: Creative Commons Attribution 4.0 International" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaselicensename> .
+
+<http://re3data.org/glossary/terms/databaselicenseurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_databaselicenseurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "databaseLicenseUrl-21.2" ;
+    skos:note "Example: http://creativecommons.org/ licenses/by/4.0/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_databaselicenseurl> .
+
+<http://re3data.org/glossary/terms/datalicense>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datalicense> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataLicense-23" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datalicense> .
+
+<http://re3data.org/glossary/terms/datalicensename>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datalicensename> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataLicenseName-23.1" ;
+    skos:note "Example: Creative Commons Attribution 4.0 International" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datalicensename> .
+
+<http://re3data.org/glossary/terms/datalicenseurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datalicenseurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataLicenseUrl-23.2" ;
+    skos:note "Example: http://creativecommons.org/ licenses/by/4.0/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datalicenseurl> .
+
+<http://re3data.org/glossary/terms/dataupload>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_dataupload> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUpload-24" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_dataupload> .
+
+<http://re3data.org/glossary/terms/datauploadlicense>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datauploadlicense> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUploadLicense-25" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datauploadlicense> .
+
+<http://re3data.org/glossary/terms/datauploadlicensename>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datauploadlicensename> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUploadLicenseName-25.1" ;
+    skos:note "Example:" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datauploadlicensename> .
+
+<http://re3data.org/glossary/terms/datauploadlicenseurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datauploadlicenseurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUploadLicenseUrl-25.2" ;
+    skos:note "URL Example: http://cbil.upenn.edu/RAD/p hp/RAD-data_sub.php" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datauploadlicenseurl> .
+
+<http://re3data.org/glossary/terms/datauploadrestriction>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datauploadrestriction> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUploadRestriction-24.2" ;
+    skos:note """Controlled vocabulary Allowed values: feeRequired institutional membership registration
+ other""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datauploadrestriction> .
+
+<http://re3data.org/glossary/terms/datauploadtype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_datauploadtype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "dataUploadType-24.1" ;
+    skos:note """Controlled vocabulary Allowed values: open restricted
+ closed""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_datauploadtype> .
+
+<http://re3data.org/glossary/terms/def_additionalname>
+    rdf:value "The alternative name or acronym for the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_aidsystem>
+    rdf:value "The author identifier system that is used by the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_api>
+    rdf:value "The API supported by the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_apidocumentation>
+    rdf:value "A link referring to the API documentation, a website that states its availability and other information for using the API."@en .
+
+<http://re3data.org/glossary/terms/def_apitype>
+    rdf:value "The type of the API."@en .
+
+<http://re3data.org/glossary/terms/def_apiurl>
+    rdf:value "The URL of the API."@en .
+
+<http://re3data.org/glossary/terms/def_certificate>
+    rdf:value "The certificate, seal or standard the RDR complies with."@en .
+
+<http://re3data.org/glossary/terms/def_citationguidelineurl>
+    rdf:value "The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.or g/whycitedata)."@en .
+
+<http://re3data.org/glossary/terms/def_citationreference>
+    rdf:value "The RDR is covered by SCOPUS or the Data Citation Index."@en .
+
+<http://re3data.org/glossary/terms/def_closed>
+    rdf:value "The date when the RDR stopped ingesting new research data to its database. The database and its research data are still available."@en .
+
+<http://re3data.org/glossary/terms/def_contenttype>
+    rdf:value "All types of resources available in the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_contenttypescheme>
+    rdf:value "The name and/or URL of the subject scheme or classification code."@en .
+
+<http://re3data.org/glossary/terms/def_dataaccess>
+    rdf:value "The access regulation to the research data provided by the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_dataaccessrestriction>
+    rdf:value "All existing access restrictions to the research data (required if restricted is chosen)."@en .
+
+<http://re3data.org/glossary/terms/def_dataaccesstype>
+    rdf:value "The type of access to research data."@en .
+
+<http://re3data.org/glossary/terms/def_databaseaccess>
+    rdf:value "The access regulation to the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_databaseaccessrestriction>
+    rdf:value "All existing access restrictions to the RDR (required if restricted is chosen)."@en .
+
+<http://re3data.org/glossary/terms/def_databaseaccesstype>
+    rdf:value "The type of access to the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_databaselicense>
+    rdf:value "The database license of the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_databaselicensename>
+    rdf:value "The name of the database license."@en .
+
+<http://re3data.org/glossary/terms/def_databaselicenseurl>
+    rdf:value "The database license URL."@en .
+
+<http://re3data.org/glossary/terms/def_datalicense>
+    rdf:value "The license of the research data, existing in the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_datalicensename>
+    rdf:value "The name of the data license."@en .
+
+<http://re3data.org/glossary/terms/def_datalicenseurl>
+    rdf:value "The data license URL."@en .
+
+<http://re3data.org/glossary/terms/def_dataupload>
+    rdf:value "The regulation for submitting research data to the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_datauploadlicense>
+    rdf:value "The license for data upload (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_datauploadlicensename>
+    rdf:value "The name of the data"@en .
+
+<http://re3data.org/glossary/terms/def_datauploadlicenseurl>
+    rdf:value "The data upload license URL."@en .
+
+<http://re3data.org/glossary/terms/def_datauploadrestriction>
+    rdf:value "All existing restrictions to the data upload (required if restricted is chosen)."@en .
+
+<http://re3data.org/glossary/terms/def_datauploadtype>
+    rdf:value "The type of the data upload."@en .
+
+<http://re3data.org/glossary/terms/def_description>
+    rdf:value "A textual description providing additional information about the RDR (primary language is English)."@en .
+
+<http://re3data.org/glossary/terms/def_doi>
+    rdf:value "The DOI assigned to the re3data.org metadata entry of the RDR to make the metadata entries citable."@en .
+
+<http://re3data.org/glossary/terms/def_enddate>
+    rdf:value "The RDR ended its service of ingesting new research data and/or providing it (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_enhancedpublication>
+    rdf:value "The RDR offers the interlinking between publications and data."@en .
+
+<http://re3data.org/glossary/terms/def_entrydate>
+    rdf:value "The date the RDR was indexed in re3data.org."@en .
+
+<http://re3data.org/glossary/terms/def_identifiers>
+    rdf:value "The identifiers provided by re3data.org (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_institution>
+    rdf:value "All institutions being responsible for funding, creating and/or running the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_institutionadditionalname>
+    rdf:value "The alternative name or acronym for the responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutioncontact>
+    rdf:value "The email address of the contact or an URL of an online contact form of the institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutioncountry>
+    rdf:value "The location of the responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutionidentifier>
+    rdf:value "The identifier for the responsible institution (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_institutionidentifiertype>
+    rdf:value "The provider name of the identifier for the responsible institution (e.g. ISNI, VIAF, FundRef, DataCite)."@en .
+
+<http://re3data.org/glossary/terms/def_institutionidentifiervalue>
+    rdf:value "A globally unique identifier that refers to the institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutionname>
+    rdf:value "The name of the responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutiontype>
+    rdf:value "The type of responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_institutionurl>
+    rdf:value "The URL of the responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_keyword>
+    rdf:value "English keyword(s) describing the subject focus of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_lastupdate>
+    rdf:value "The date the metadata of the RDR was updated."@en .
+
+<http://re3data.org/glossary/terms/def_metadatastandard>
+    rdf:value "The metadata standard the RDR complies with (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_metadatastandardname>
+    rdf:value "The name of the metadata standard."@en .
+
+<http://re3data.org/glossary/terms/def_metadatastandardurl>
+    rdf:value "The URL of the metadata standard."@en .
+
+<http://re3data.org/glossary/terms/def_metrics>
+    rdf:value "Any service, tool, etc. that is used by the RDR to track, measure and visualize the usage of provided research data."@en .
+
+<http://re3data.org/glossary/terms/def_missionstatementurl>
+    rdf:value "The URL of a mission statement describing the designated community of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_offline>
+    rdf:value "The date when the RDR went offline. The database and/or the website are no longer available."@en .
+
+<http://re3data.org/glossary/terms/def_pidsystem>
+    rdf:value "The persistent identifier system that is used by the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_policy>
+    rdf:value "Policies providing information concerning the usage of the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_policyname>
+    rdf:value "The name of the policy."@en .
+
+<http://re3data.org/glossary/terms/def_policytype>
+    rdf:value "The type of the policy."@en .
+
+<http://re3data.org/glossary/terms/def_policyurl>
+    rdf:value "The URL of the policy."@en .
+
+<http://re3data.org/glossary/terms/def_providertype>
+    rdf:value "The type of provider."@en .
+
+<http://re3data.org/glossary/terms/def_qualitymanagement>
+    rdf:value "Any form of quality management concerning the research data or metadata of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_re3data>
+    rdf:value "A unique string to identify the RDR metadata entry. The internal identifier is assigned by re3data.org."@en .
+
+<http://re3data.org/glossary/terms/def_remarks>
+    rdf:value "Additional remarks"@en .
+
+<http://re3data.org/glossary/terms/def_repositorycontact>
+    rdf:value "The email address of the contact or an URL of an online contact form of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_repositoryidentifier>
+    rdf:value "An identifier provisioned for the website of the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_repositoryidentifiertype>
+    rdf:value "The type of the provider of the identifier for the RDR (e.g. DOI, URN, VIAF, DataCite)."@en .
+
+<http://re3data.org/glossary/terms/def_repositoryidentifiervalue>
+    rdf:value "A globally unique identifier that refers to the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_repositorylanguage>
+    rdf:value "The user interface language of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_repositoryname>
+    rdf:value "The full name of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_repositoryurl>
+    rdf:value "The URL of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_responsibilityenddate>
+    rdf:value "The end date of the period of responsibility."@en .
+
+<http://re3data.org/glossary/terms/def_responsibilitystartdate>
+    rdf:value "The start date of the period of responsibility."@en .
+
+<http://re3data.org/glossary/terms/def_responsibilitytype>
+    rdf:value "The type of responsibility for each responsible institution."@en .
+
+<http://re3data.org/glossary/terms/def_size>
+    rdf:value "The number of items contained in the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_software>
+    rdf:value "The name of the software that is used to run the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_startdate>
+    rdf:value "Releasing date of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_subject>
+    rdf:value "The disciplinary focus of the RDR (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_subjectid>
+    rdf:value "The ID/notation of the subject classification."@en .
+
+<http://re3data.org/glossary/terms/def_subjectname>
+    rdf:value "The subject(s) of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_subjectscheme>
+    rdf:value "The subject scheme according to which the subject of the RDR is described."@en .
+
+<http://re3data.org/glossary/terms/def_syndication>
+    rdf:value "The alerting service the RDR offers (wrapper element)."@en .
+
+<http://re3data.org/glossary/terms/def_syndicationtype>
+    rdf:value "The type of the alerting service."@en .
+
+<http://re3data.org/glossary/terms/def_syndicationurl>
+    rdf:value "URL of the alerting service(s) provided by the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_type>
+    rdf:value "The type of the RDR."@en .
+
+<http://re3data.org/glossary/terms/def_updated>
+    rdf:value "The date of the last update of the RDR size."@en .
+
+<http://re3data.org/glossary/terms/def_versioning>
+    rdf:value "The RDR supports versioning of research data."@en .
+
+<http://re3data.org/glossary/terms/description>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_description> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "description-6" ;
+    skos:note "The format is open (max. 2.000 characters)." ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_description> .
+
+<http://re3data.org/glossary/terms/doi>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_doi> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "doi-1.2" ;
+    skos:note "Auto-Value Example: http://doi.org/10.17616/R3X S37" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_doi> .
+
+<http://re3data.org/glossary/terms/enddate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_enddate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "endDate-11" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_enddate> .
+
+<http://re3data.org/glossary/terms/enhancedpublication>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_enhancedpublication> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "enhancedPublication-34" ;
+    skos:note """Controlled vocabulary Allowed values: yes no
+ unknown""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_enhancedpublication> .
+
+<http://re3data.org/glossary/terms/entrydate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_entrydate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "entryDate-40" ;
+    skos:note "YYYY-MM-DD (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_entrydate> .
+
+<http://re3data.org/glossary/terms/identifiers>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_identifiers> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "identifiers-1" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_identifiers> .
+
+<http://re3data.org/glossary/terms/institution>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institution> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institution-18" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institution> .
+
+<http://re3data.org/glossary/terms/institutionadditionalname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionadditionalname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionAdditionalName-18.2" ;
+    skos:note "Example: NIGMS" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionadditionalname> .
+
+<http://re3data.org/glossary/terms/institutioncontact>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutioncontact> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionContact-18.1" ;
+    skos:note "The format is open. Example: john.doe@researchdata.com" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutioncontact> .
+
+<http://re3data.org/glossary/terms/institutioncountry>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutioncountry> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionCountry-18.3" ;
+    skos:note """Controlled vocabulary Allowed Values from: ISO-3166-1 alpha-3. Examples:
+ DEU, GBR, USA""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutioncountry> .
+
+<http://re3data.org/glossary/terms/institutionidentifier>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionidentifier> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionIdentifier-18.7" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionidentifier> .
+
+<http://re3data.org/glossary/terms/institutionidentifiertype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionidentifiertype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionIdentifierType-18.7.1" ;
+    skos:note "Example: ISNI" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionidentifiertype> .
+
+<http://re3data.org/glossary/terms/institutionidentifiervalue>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionidentifiervalue> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionIdentifierValue-18.7.2" ;
+    skos:note "Example: http://isni.org/isni/00000001 00755874" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionidentifiervalue> .
+
+<http://re3data.org/glossary/terms/institutionname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionName-18.1" ;
+    skos:note "Example: National Institute of General Medical Sciences, U.S. National Institutes of Health" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionname> .
+
+<http://re3data.org/glossary/terms/institutiontype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutiontype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionType-18.5" ;
+    skos:note "Controlled vocabulary Allowed values: commercial non-profit" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutiontype> .
+
+<http://re3data.org/glossary/terms/institutionurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_institutionurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "institutionUrl-18.6" ;
+    skos:note "Example: http://www.nigms.nih.gov/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_institutionurl> .
+
+<http://re3data.org/glossary/terms/keyword>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_keyword> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "keyword-17" ;
+    skos:note "Examples: computer science" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_keyword> .
+
+<http://re3data.org/glossary/terms/lastupdate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_lastupdate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "lastUpdate-41" ;
+    skos:note "YYYY-MM-DD (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_lastupdate> .
+
+<http://re3data.org/glossary/terms/metadatastandard>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_metadatastandard> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "metadataStandard-37" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_metadatastandard> .
+
+<http://re3data.org/glossary/terms/metadatastandardname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_metadatastandardname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "metadataStandardName-37.1" ;
+    skos:note "Example: Data Documentation Initiative (DDI )" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_metadatastandardname> .
+
+<http://re3data.org/glossary/terms/metadatastandardurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_metadatastandardurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "metadataStandardUrl-37.2" ;
+    skos:note "URL Example: http://www.ddialliance.org/S pecification/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_metadatastandardurl> .
+
+<http://re3data.org/glossary/terms/metrics>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_metrics> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "metrics-31" ;
+    skos:note "Example: Altmetric; usage statistics" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_metrics> .
+
+<http://re3data.org/glossary/terms/missionstatementurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_missionstatementurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "missionStatementUrl-14" ;
+    skos:note "URL Example: http://cdiac.ornl.gov/aboutc diac.html" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_missionstatementurl> .
+
+<http://re3data.org/glossary/terms/offline>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_offline> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "offline-11.2" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601) or empty value with attribute xsi:nil set to \"true\"" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_offline> .
+
+<http://re3data.org/glossary/terms/pidsystem>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_pidsystem> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "pidSystem-29" ;
+    skos:note "Example: DOI" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_pidsystem> .
+
+<http://re3data.org/glossary/terms/policy>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_policy> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "policy-19" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_policy> .
+
+<http://re3data.org/glossary/terms/policyname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_policyname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "policyName-19.2" ;
+    skos:note "The format is open. Example: Data policy of the information system PANGAEA" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_policyname> .
+
+<http://re3data.org/glossary/terms/policytype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_policytype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "policyType-19.1" ;
+    skos:note """Controlled vocabulary Allowed values from: Access policy Collection policy
+ Data policy Metadata policy Preservation policy Submission policy Terms of use Usage policy Quality policy""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_policytype> .
+
+<http://re3data.org/glossary/terms/policyurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_policyurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "policyUrl-19.3" ;
+    skos:note "Example: http://www.pangaea.de/cura tor/files/pangaea-data- policy.pdf" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_policyurl> .
+
+<http://re3data.org/glossary/terms/providertype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_providertype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "providerType-16" ;
+    skos:note "Controlled vocabulary Allowed values: dataProvider serviceProvider" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_providertype> .
+
+<http://re3data.org/glossary/terms/qualitymanagement>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_qualitymanagement> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "qualityManagement-35" ;
+    skos:note """Controlled vocabulary Allowed values: yes no
+ unknown""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_qualitymanagement> .
+
+<http://re3data.org/glossary/terms/re3data>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_re3data> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "re3data-1.1" ;
+    skos:note "Auto-Value Example: r3d100010134" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_re3data> .
+
+<http://re3data.org/glossary/terms/remarks>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_remarks> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "remarks-39" ;
+    skos:note "The format is open." ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_remarks> .
+
+<http://re3data.org/glossary/terms/repositorycontact>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositorycontact> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryContact-7" ;
+    skos:note "The format is open. Example: info@researchdata.com" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositorycontact> .
+
+<http://re3data.org/glossary/terms/repositoryidentifier>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositoryidentifier> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryIdentifier-5" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositoryidentifier> .
+
+<http://re3data.org/glossary/terms/repositoryidentifiertype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositoryidentifiertype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryIdentifierType-5.1" ;
+    skos:note "Example: DOI" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositoryidentifiertype> .
+
+<http://re3data.org/glossary/terms/repositoryidentifiervalue>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositoryidentifiervalue> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryIdentifierValue-5.2" ;
+    skos:note "Example: http://doi.org/10.1234/foo" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositoryidentifiervalue> .
+
+<http://re3data.org/glossary/terms/repositorylanguage>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositorylanguage> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryLanguage-12" ;
+    skos:note """Controlled vocabulary Allowed values from: ISO-639-3. Examples:
+ eng, deu, fra""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositorylanguage> .
+
+<http://re3data.org/glossary/terms/repositoryname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositoryname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryName-2" ;
+    skos:note "The format is open. Example: Access to Archival Databases" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositoryname> .
+
+<http://re3data.org/glossary/terms/repositoryurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_repositoryurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "repositoryUrl-4" ;
+    skos:note "URL Example: http://cdiac.esd.ornl.gov/ho me.html" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_repositoryurl> .
+
+<http://re3data.org/glossary/terms/responsibilityenddate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_responsibilityenddate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "responsibilityEndDate-18.9" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_responsibilityenddate> .
+
+<http://re3data.org/glossary/terms/responsibilitystartdate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_responsibilitystartdate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "responsibilityStartDate-18.8" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_responsibilitystartdate> .
+
+<http://re3data.org/glossary/terms/responsibilitytype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_responsibilitytype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "responsibilityType-18.4" ;
+    skos:note """Controlled vocabulary Allowed values: funding general
+ main sponsoring technical""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_responsibilitytype> .
+
+<http://re3data.org/glossary/terms/size>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_size> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "size-9" ;
+    skos:note "The format is open. Example: 5.000 datasets; 30 studies" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_size> .
+
+<http://re3data.org/glossary/terms/software>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_software> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "software-26" ;
+    skos:note "Example: DSpace" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_software> .
+
+<http://re3data.org/glossary/terms/startdate>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_startdate> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "startDate-10" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_startdate> .
+
+<http://re3data.org/glossary/terms/subject>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_subject> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "subject-13" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_subject> .
+
+<http://re3data.org/glossary/terms/subjectid>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_subjectid> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "subjectId-13.2" ;
+    skos:note """The format is dependent on scheme. Examples: 11
+ 10101""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_subjectid> .
+
+<http://re3data.org/glossary/terms/subjectname>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_subjectname> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "subjectName-13.3" ;
+    skos:note """The format is dependent on scheme. Examples: Humanities
+ Prehistory""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_subjectname> .
+
+<http://re3data.org/glossary/terms/subjectscheme>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_subjectscheme> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "subjectScheme-13.1" ;
+    skos:note "Controlled vocabulary Allowed values from: DFG Classification of Subject Area" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_subjectscheme> .
+
+<http://re3data.org/glossary/terms/syndication>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_syndication> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "syndication-38" ;
+    skos:note "-" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_syndication> .
+
+<http://re3data.org/glossary/terms/syndicationtype>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_syndicationtype> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "syndicationType-38.1" ;
+    skos:note "Example: RSS" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_syndicationtype> .
+
+<http://re3data.org/glossary/terms/syndicationurl>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_syndicationurl> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "syndicationUrl-38.2" ;
+    skos:note "Example: http://datacentrum.3tu.nl/e n/information/rss/" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_syndicationurl> .
+
+<http://re3data.org/glossary/terms/type>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_type> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "type-8" ;
+    skos:note """Controlled vocabulary Allowed values: disciplinary governmental institutional multidisciplinary project-related
+ other""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_type> .
+
+<http://re3data.org/glossary/terms/updated>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_updated> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "updated-9.1" ;
+    skos:note "YYYY or YYYY-MM-DD or any other format described in W3C-DTF (ISO-8601)" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_updated> .
+
+<http://re3data.org/glossary/terms/versioning>
+    a skos:Concept ;
+    skos:definition <http://re3data.org/glossary/terms/def_versioning> ;
+    skos:inScheme <http://re3data.org/glossary/terms> ;
+    skos:notation "versioning-27" ;
+    skos:note """Controlled vocabulary Allowed values: yes no
+ unknown""" ;
+    skos:topConceptOf <http://re3data.org/glossary/terms> ;
+    skosxl:prefLabel <http://re3data.org/glossary/terms/xl_en_versioning> .
+
+<http://re3data.org/glossary/terms/xl-d85b3d07-1d0c-c027-6cc0-726eede0444b>
+    a skosxl:Label ;
+    skosxl:literalForm "Your beloved thesaurus"@en .
+
+<http://re3data.org/glossary/terms/xl_en_additionalname>
+    a skosxl:Label ;
+    skosxl:literalForm "additionalName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_aidsystem>
+    a skosxl:Label ;
+    skosxl:literalForm "aidSystem"@en .
+
+<http://re3data.org/glossary/terms/xl_en_api>
+    a skosxl:Label ;
+    skosxl:literalForm "api"@en .
+
+<http://re3data.org/glossary/terms/xl_en_apidocumentation>
+    a skosxl:Label ;
+    skosxl:literalForm "apiDocumentation"@en .
+
+<http://re3data.org/glossary/terms/xl_en_apitype>
+    a skosxl:Label ;
+    skosxl:literalForm "apiType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_apiurl>
+    a skosxl:Label ;
+    skosxl:literalForm "apiUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_certificate>
+    a skosxl:Label ;
+    skosxl:literalForm "certificate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_citationguidelineurl>
+    a skosxl:Label ;
+    skosxl:literalForm "citationGuidelineUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_citationreference>
+    a skosxl:Label ;
+    skosxl:literalForm "citationReference"@en .
+
+<http://re3data.org/glossary/terms/xl_en_closed>
+    a skosxl:Label ;
+    skosxl:literalForm "closed"@en .
+
+<http://re3data.org/glossary/terms/xl_en_contenttype>
+    a skosxl:Label ;
+    skosxl:literalForm "contentType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_contenttypescheme>
+    a skosxl:Label ;
+    skosxl:literalForm "contentTypeScheme"@en .
+
+<http://re3data.org/glossary/terms/xl_en_dataaccess>
+    a skosxl:Label ;
+    skosxl:literalForm "dataAccess"@en .
+
+<http://re3data.org/glossary/terms/xl_en_dataaccessrestriction>
+    a skosxl:Label ;
+    skosxl:literalForm "dataAccessRestriction"@en .
+
+<http://re3data.org/glossary/terms/xl_en_dataaccesstype>
+    a skosxl:Label ;
+    skosxl:literalForm "dataAccessType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaseaccess>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseAccess"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaseaccessrestriction>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseAccessRestriction"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaseaccesstype>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseAccessType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaselicense>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseLicense"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaselicensename>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseLicenseName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_databaselicenseurl>
+    a skosxl:Label ;
+    skosxl:literalForm "databaseLicenseUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datalicense>
+    a skosxl:Label ;
+    skosxl:literalForm "dataLicense"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datalicensename>
+    a skosxl:Label ;
+    skosxl:literalForm "dataLicenseName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datalicenseurl>
+    a skosxl:Label ;
+    skosxl:literalForm "dataLicenseUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_dataupload>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUpload"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datauploadlicense>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUploadLicense"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datauploadlicensename>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUploadLicenseName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datauploadlicenseurl>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUploadLicenseUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datauploadrestriction>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUploadRestriction"@en .
+
+<http://re3data.org/glossary/terms/xl_en_datauploadtype>
+    a skosxl:Label ;
+    skosxl:literalForm "dataUploadType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_description>
+    a skosxl:Label ;
+    skosxl:literalForm "description"@en .
+
+<http://re3data.org/glossary/terms/xl_en_doi>
+    a skosxl:Label ;
+    skosxl:literalForm "doi"@en .
+
+<http://re3data.org/glossary/terms/xl_en_enddate>
+    a skosxl:Label ;
+    skosxl:literalForm "endDate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_enhancedpublication>
+    a skosxl:Label ;
+    skosxl:literalForm "enhancedPublication"@en .
+
+<http://re3data.org/glossary/terms/xl_en_entrydate>
+    a skosxl:Label ;
+    skosxl:literalForm "entryDate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_identifiers>
+    a skosxl:Label ;
+    skosxl:literalForm "identifiers"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institution>
+    a skosxl:Label ;
+    skosxl:literalForm "institution"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionadditionalname>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionAdditionalName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutioncontact>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionContact"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutioncountry>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionCountry"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionidentifier>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionIdentifier"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionidentifiertype>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionIdentifierType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionidentifiervalue>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionIdentifierValue"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionname>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutiontype>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_institutionurl>
+    a skosxl:Label ;
+    skosxl:literalForm "institutionUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_keyword>
+    a skosxl:Label ;
+    skosxl:literalForm "keyword"@en .
+
+<http://re3data.org/glossary/terms/xl_en_lastupdate>
+    a skosxl:Label ;
+    skosxl:literalForm "lastUpdate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_metadatastandard>
+    a skosxl:Label ;
+    skosxl:literalForm "metadataStandard"@en .
+
+<http://re3data.org/glossary/terms/xl_en_metadatastandardname>
+    a skosxl:Label ;
+    skosxl:literalForm "metadataStandardName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_metadatastandardurl>
+    a skosxl:Label ;
+    skosxl:literalForm "metadataStandardUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_metrics>
+    a skosxl:Label ;
+    skosxl:literalForm "metrics"@en .
+
+<http://re3data.org/glossary/terms/xl_en_missionstatementurl>
+    a skosxl:Label ;
+    skosxl:literalForm "missionStatementUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_offline>
+    a skosxl:Label ;
+    skosxl:literalForm "offline"@en .
+
+<http://re3data.org/glossary/terms/xl_en_pidsystem>
+    a skosxl:Label ;
+    skosxl:literalForm "pidSystem"@en .
+
+<http://re3data.org/glossary/terms/xl_en_policy>
+    a skosxl:Label ;
+    skosxl:literalForm "policy"@en .
+
+<http://re3data.org/glossary/terms/xl_en_policyname>
+    a skosxl:Label ;
+    skosxl:literalForm "policyName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_policytype>
+    a skosxl:Label ;
+    skosxl:literalForm "policyType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_policyurl>
+    a skosxl:Label ;
+    skosxl:literalForm "policyUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_providertype>
+    a skosxl:Label ;
+    skosxl:literalForm "providerType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_qualitymanagement>
+    a skosxl:Label ;
+    skosxl:literalForm "qualityManagement"@en .
+
+<http://re3data.org/glossary/terms/xl_en_re3data>
+    a skosxl:Label ;
+    skosxl:literalForm "re3data"@en .
+
+<http://re3data.org/glossary/terms/xl_en_remarks>
+    a skosxl:Label ;
+    skosxl:literalForm "remarks"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositorycontact>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryContact"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositoryidentifier>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryIdentifier"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositoryidentifiertype>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryIdentifierType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositoryidentifiervalue>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryIdentifierValue"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositorylanguage>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryLanguage"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositoryname>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_repositoryurl>
+    a skosxl:Label ;
+    skosxl:literalForm "repositoryUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_responsibilityenddate>
+    a skosxl:Label ;
+    skosxl:literalForm "responsibilityEndDate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_responsibilitystartdate>
+    a skosxl:Label ;
+    skosxl:literalForm "responsibilityStartDate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_responsibilitytype>
+    a skosxl:Label ;
+    skosxl:literalForm "responsibilityType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_size>
+    a skosxl:Label ;
+    skosxl:literalForm "size"@en .
+
+<http://re3data.org/glossary/terms/xl_en_software>
+    a skosxl:Label ;
+    skosxl:literalForm "software"@en .
+
+<http://re3data.org/glossary/terms/xl_en_startdate>
+    a skosxl:Label ;
+    skosxl:literalForm "startDate"@en .
+
+<http://re3data.org/glossary/terms/xl_en_subject>
+    a skosxl:Label ;
+    skosxl:literalForm "subject"@en .
+
+<http://re3data.org/glossary/terms/xl_en_subjectid>
+    a skosxl:Label ;
+    skosxl:literalForm "subjectId"@en .
+
+<http://re3data.org/glossary/terms/xl_en_subjectname>
+    a skosxl:Label ;
+    skosxl:literalForm "subjectName"@en .
+
+<http://re3data.org/glossary/terms/xl_en_subjectscheme>
+    a skosxl:Label ;
+    skosxl:literalForm "subjectScheme"@en .
+
+<http://re3data.org/glossary/terms/xl_en_syndication>
+    a skosxl:Label ;
+    skosxl:literalForm "syndication"@en .
+
+<http://re3data.org/glossary/terms/xl_en_syndicationtype>
+    a skosxl:Label ;
+    skosxl:literalForm "syndicationType"@en .
+
+<http://re3data.org/glossary/terms/xl_en_syndicationurl>
+    a skosxl:Label ;
+    skosxl:literalForm "syndicationUrl"@en .
+
+<http://re3data.org/glossary/terms/xl_en_type>
+    a skosxl:Label ;
+    skosxl:literalForm "type"@en .
+
+<http://re3data.org/glossary/terms/xl_en_updated>
+    a skosxl:Label ;
+    skosxl:literalForm "updated"@en .
+
+<http://re3data.org/glossary/terms/xl_en_versioning>
+    a skosxl:Label ;
+    skosxl:literalForm "versioning"@en .
+
