@@ -1,4 +1,4 @@
-# CDFRegistryWG
+# EarthCube CDF Registry Working Group
 
 
 ## About
@@ -23,7 +23,6 @@ groups that scope several projects
 * registryC1.json : Early test... used DigitalDocument which is likely not a proper 
 use of this type.  However, it might apply to the VoID document in some ways.   
  
-
 
 ## Notes on approaches
 The following are a few brief note on how this might all fit together into an example 
@@ -52,6 +51,14 @@ and expose this material up through a workflow to aggregation and interface clie
 
 
 ## Errata 
+### On ad hoc implementation 
+As noted in item 4 a test crawler, harvester and indexer is being developed at 
+[contextBuilder](https://github.com/fils/contextBuilder).  This is a simple (and not 
+production ready) application for harvesting from a whitelist and extracting the JSON-LD
+package.  The next step will be to convert this JSON-LD to triples and moved into a standard 
+triple store.  
+
+
 ### On external vocabularies
 registryC5 is testing some external vocabulary uses.  It is valid JSON-LD but 
 Google will always through an error since it doesn't see this as a property of some
@@ -60,7 +67,7 @@ a worry with Google that you will not know when how they deal with this case
 will be changed.   Their typical response has been, "try and get things you need 
 in core schema.org".  
 
-### Tests
+### Some early tests / linting
 The following links show results of tests on the opencore.json file.  Note that the 
 URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
 
