@@ -2,8 +2,10 @@
 
 
 ## About
-Some test files to explore the use of schema.org objects and properties to 
-describe data repositories with.
+The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group to review alignment of existing approaches to research facility description and discovery.  The involved parties include the EarthCube CDF, Coalition for Publishing Data in the Earth and Space Sciences (COPDESS) and the Registry of Research Data Repositories (re3data). 
+
+## Files
+The following files are being generated to test out various approaches to encoding the facility metadata.  The "C" files are "candidate" or "test" files.  The files with facility names represent examples of using these tests to do an example encoding of a particular facility's data.  
 
 #### Facility examples
 * opencore.json : Example of encoding Open Core services into this schema.org
@@ -14,28 +16,43 @@ describe data repositories with.
 #### Candidate encodings :  Some test of various encoding ideas
 * registryC5.json : A test of multiple context entries..  to allow us to use
 other context for things like controlled voc. 
+* registryC4.json : Simple example with some ContactPoint
 * registryC3.json : A test to see how use of subOrganization would work for 
 groups that scope several projects 
 * registryC2.json : Uses the SearchAction object.  Best candidate so far.
 * registryC1.json : Early test... used DigitalDocument which is likely not a proper 
 use of this type.  However, it might apply to the VoID document in some ways.   
  
-## Notes
-A reference work flow would go something like this.
 
 
-* Make a simple SKOS or OWL out of RE3 XML schema terms
-* Use schema.org/Organization plus external voc from above (valid JOSN-LD)
-* Sites place this JSON-LD into their index page or some other page they designate.
-* The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined 
-by a line like
+## Notes on approaches
+The following are a few brief note on how this might all fit together into an example 
+implementation.  
+
+#### Simple Scenario 
+
+1. A facility has both metadata about the facility as well as links to service description 
+documents like Swagger, OGC or Threads.  
+2. These are assembled together into a JSON-LD document following schema.org patterns with possible
+use of external vocabularies.  This is then placed into the facility landing page (or other designated page) via 
 ```
-    <script type="application/ld+json" class="cdfregistry">
+    <script type="application/ld+json">
 ```
-* After reading in the JSON-LD it could be converted to RDF for a triple store 
-or other store approaches.
+3. Items that can not be defined by schema.org can be then be defined via an external vocabulary
+4. The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined in item 2
 
-## On external vocabularies
+After reading in the JSON-LD it could be converted to RDF for a triple store 
+or other data store approaches used by a harvesting group.   There is no blessed harvesting or presentation 
+site.  Any number of groups or organizations could harvest and provide access to this material. 
+
+The following image gives a brief overview of how facilities might take their descriptor documents and metadata
+and expose this material up through a workflow to aggregation and interface clients.  
+
+![Image of Flow](./Images/bubbles.png)
+
+
+## Errata 
+### On external vocabularies
 registryC5 is testing some external vocabulary uses.  It is valid JSON-LD but 
 Google will always through an error since it doesn't see this as a property of some
 known schema.org class.  This should be fine and I have tested this, but it is always
@@ -43,8 +60,7 @@ a worry with Google that you will not know when how they deal with this case
 will be changed.   Their typical response has been, "try and get things you need 
 in core schema.org".  
 
-
-## Tests
+### Tests
 The following links show results of tests on the opencore.json file.  Note that the 
 URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
 
