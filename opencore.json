@@ -1,6 +1,7 @@
 {
     "@context": "http://schema.org/",
     "@type": "Organization",
+    "@id": "http://opencoredata.org/id/facilityinfo",
     "name": "Open Core Data",
     "contactPoint": {
         "@type": "ContactPoint",
