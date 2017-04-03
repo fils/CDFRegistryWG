@@ -2,7 +2,13 @@
 
 
 ## About
-The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group to review alignment of existing approaches to research facility description and discovery.  The involved parties include the EarthCube CDF, Coalition for Publishing Data in the Earth and Space Sciences (COPDESS) and the Registry of Research Data Repositories (re3data). 
+The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group to review alignment of existing approaches to research facility description and discovery.  The involved parties include the EarthCube CDF, Coalition for Publishing Data in the Earth and Space Sciences (COPDESS) and the Registry of Research Data Repositories (re3data).   
+
+* [EarthCube CDF](https://www.earthcube.org/group/council-data-facilities)
+* [Re3data](http://www.re3data.org/) and  [RE3 schema](http://www.re3data.org/schema) 
+* [COPDESS](http://www.copdess.org/)
+
+
 
 ## Files
 The following files are being generated to test out various approaches to encoding the facility metadata.  The "C" files are "candidate" or "test" files.  The files with facility names represent examples of using these tests to do an example encoding of a particular facility's data.  
