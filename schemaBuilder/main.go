@@ -9,11 +9,24 @@ import (
 )
 
 type SchemaOrgMetadata struct {
-	Context      Context      `json:"@context"` // was []interface{}  should be Context struct (which has 3 items in it for each voc)
-	Type         string       `json:"@type"`
-	ID           string       `json:"@id"` // need an ID for each of these subsections
-	URL          string       `json:"url"`
-	ContactPoint ContactPoint `json:"contactPoint"`
+	Context         Context      `json:"@context"` // was []interface{}  should be Context struct (which has 3 items in it for each voc)
+	Type            string       `json:"@type"`
+	ID              string       `json:"@id"` // need an ID for each of these subsections
+	URL             string       `json:"url"`
+	ContactPoint    ContactPoint `json:"contactPoint"`
+	PotentialAction SearchAction `json:"potentialAction"`
+}
+
+type SearchAction struct {
+	Type   string `json:"@type"`
+	Target Target `json:"target"`
+}
+
+type Target struct {
+	Type        string `json:"@type"`
+	URLTemplate string `json:"urlTemplate"`
+	Description string `json:"description"`
+	HTTPMethod  string `json:"httpMethod"`
 }
 
 type Context struct {
@@ -29,7 +42,7 @@ type ContactPoint struct {
 	Name        string `json:"name"`
 	URL         string `json:"url"`
 	Email       string `json:"email"`
-	ContactType string `json:"contactType`
+	ContactType string `json:"contactType"`
 }
 
 func main() {
@@ -52,6 +65,13 @@ func main() {
 	result.ContactPoint.URL = "http://url.to/person"
 	result.ContactPoint.Email = "joe@example.org"
 	result.ContactPoint.ContactType = "technical support"
+
+	// potentialAction
+	result.PotentialAction.Type = "SearchAction"
+	result.PotentialAction.Target.Description = "Swagger 1.2 description document"
+	result.PotentialAction.Target.HTTPMethod = "GET"
+	result.PotentialAction.Target.Type = "EntryPoint"
+	result.PotentialAction.Target.URLTemplate = "http://opencoredata.org/apidocs.json"
 
 	jsonldtext, _ := json.MarshalIndent(result, "", " ") // results as embeddale JSON-LD
 
