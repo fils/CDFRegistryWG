@@ -9,11 +9,13 @@ document.
 
 For a live example you can visit the [Open Core Data](http://opencoredata.org) page and 
 do a "view source" on the page.  The contents of the ``` <script type="application/ld+json"> ```
-is of type JSON-LD.  Examples of JSON-LD can also be seen in this repository in the form of
+is JSON-LD.  Examples of JSON-LD can be seen in this repository in the form of
 the files:
 
 * [BCO-DMO](https://github.com/fils/CDFRegistryWG/blob/master/bcodmo.json)  
 * [OpenCore](https://github.com/fils/CDFRegistryWG/blob/master/opencore.json)  
+
+and others.
 
 These are JSON-LD files that would be scoped by the script tag.  Feel free to raise any questions
 about these in the issues section of this repository.  
@@ -64,4 +66,6 @@ directly from that domain.   For more detailed examples of JSON-LD look at the e
 
 ```
 
+For more information on JSON-LD as well as tools and examples 
+visit the [JSON-LD Playground](http://json-ld.org/playground/).
 
