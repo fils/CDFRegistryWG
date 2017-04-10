@@ -44,7 +44,7 @@ use of external vocabularies.  This is then placed into the facility landing pag
     <script type="application/ld+json">
 ```
 3. Items that can not be defined by schema.org can be then be defined via an external vocabulary
-4. The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined in item 2
+4. The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined in item 2.  More advanced crawling solutions might use tools like: https://github.com/anaskhan96/soup or https://github.com/PuerkitoBio/fetchbot 
 
 After reading in the JSON-LD it could be converted to RDF for a triple store 
 or other data store approaches used by a harvesting group.   There is no blessed harvesting or presentation 
