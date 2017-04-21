@@ -9,6 +9,7 @@
     "re3data:datalicense": "http://opencoredata.org/datapolicy.html",
     "contactPoint": {
         "@type": "ContactPoint",
+        "@id": "http://opencoredata.org/id/facilityinfo#contactPoint",
         "name": "Douglas Fils",
         "email": "dfilsAToceanleadershipDOTorg",
         "url": "http://orcid.org/0000-0002-2257-9127",
@@ -18,22 +19,27 @@
     "sameAs": "http://www.re3data.org/repository/r3d100012071",
     "funder": {
         "@type": "Organization",
+        "@id": "http://opencoredata.org/id/facilityinfo#funder",
         "name": "NSF",
         "url": "http://www.nsf.gov"
     },
     "memberOf": {
         "@type": "ProgramMembership",
+        "@id": "http://opencoredata.org/id/facilityinfo#programMembership",
         "programName": "EarthCube CDF Registry",
         "hostingOrganization": {
             "@type": "Organization",
+            "@id": "http://opencoredata.org/id/facilityinfo#programMembershipHost",
             "name": "RE3Data",
             "url": "http://www.re3data.org"
         }
     },
     "potentialAction": [{
             "@type": "SearchAction",
+            "@id": "http://opencoredata.org/id/facilityinfo#potentialActionSwagger",
             "target": {
                 "@type": "EntryPoint",
+                "@id": "http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint",
                 "urlTemplate": "http://opencoredata.org/apidocs.json",
                 "description": "Swagger 1.2 description document",
                 "httpMethod": "GET"
@@ -41,8 +47,10 @@
         },
         {
             "@type": "SearchAction",
+            "@id": "http://opencoredata.org/id/facilityinfo#potentialActionSPARQL",
             "target": {
                 "@type": "EntryPoint",
+                "@id": "http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint",
                 "urlTemplate": "http://opencoredata.org/sparql",
                 "description": "SPARQL endpoint",
                 "httpMethod": "GET"
@@ -50,8 +58,10 @@
         },
         {
             "@type": "SearchAction",
+            "@id": "http://opencoredata.org/id/facilityinfo#potentialActionVOID",
             "target": {
                 "@type": "EntryPoint",
+                "@id": "http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint",
                 "urlTemplate": "http://opencoredata.org/rdf/void.ttl",
                 "description": "VoID document",
                 "httpMethod": "GET"
@@ -60,6 +70,7 @@
     ],
     "mainEntityOfPage": [{
         "@type": "DigitalDocument",
+        "@id": "http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI",
         "fileformat": "HTML",
         "keywords": "Swagger",
         "description": "User interface for the swagger document",
