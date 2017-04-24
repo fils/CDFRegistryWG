@@ -32,10 +32,10 @@ where {
  }
  ```
 
- and results in:
+ and results in
 
- 
-| name  | pred  | obj |
+```
+| Name  | Pred  | Obj |
 | --- | --- | --- | --- |
 | BCO-DMO  | schema:contactType | technical support |
 | BCO-DMO  | schema:name  | Adam Shepherd |
@@ -52,5 +52,5 @@ where {
 | UNAVCO  | schema:name  | Jim Riley |
 | UNAVCO  | schema:url  | <http://orcid.org/0000-0001-8163-5662> |
 | UNAVCO  | rdf:type  | schema:ContactPoint |
-
+```
 
