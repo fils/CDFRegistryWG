@@ -37,20 +37,20 @@ where {
  
 | name	 | pred	 | obj |
 | ------- | ------ | ------- | ------ |
-BCO-DMO	 | schema:contactType	 | technical support
-BCO-DMO	 | schema:name	 | Adam Shepherd
-BCO-DMO	 | schema:email	 | ashepherd@whoi.edu
-BCO-DMO	 | schema:url	 | <http://orcid.org/0000-0003-4486-9448>
-BCO-DMO	 | rdf:type	 | schema:ContactPoint
-Open Core Data	 | schema:contactType	 | technical support
-Open Core Data	 | schema:email	 | dfilsAToceanleadershipDOTorg
-Open Core Data	 | schema:name	 | Douglas Fils
-Open Core Data	 | schema:url	 | <http://orcid.org/0000-0002-2257-9127>
-Open Core Data	 | rdf:type	 | schema:ContactPoint
-UNAVCO	 | schema:contactType	 | technical support
-UNAVCO	 | schema:email	 | jrileyATunavcoDOTorg
-UNAVCO	 | schema:name	 | Jim Riley
-UNAVCO	 | schema:url	 | <http://orcid.org/0000-0001-8163-5662>
-UNAVCO	 | rdf:type	 | schema:ContactPoint
+| BCO-DMO	 | schema:contactType	 | technical support |
+| BCO-DMO	 | schema:name	 | Adam Shepherd |
+| BCO-DMO	 | schema:email	 | ashepherd@whoi.edu |
+| BCO-DMO	 | schema:url	 | <http://orcid.org/0000-0003-4486-9448> |
+| BCO-DMO	 | rdf:type	 | schema:ContactPoint |
+| Open Core Data	 | schema:contactType	 | technical support |
+| Open Core Data	 | schema:email	 | dfilsAToceanleadershipDOTorg |
+| Open Core Data	 | schema:name	 | Douglas Fils |
+| Open Core Data	 | schema:url	 | <http://orcid.org/0000-0002-2257-9127> |
+| Open Core Data	 | rdf:type	 | schema:ContactPoint |
+| UNAVCO	 | schema:contactType	 | technical support |
+| UNAVCO	 | schema:email	 | jrileyATunavcoDOTorg |
+| UNAVCO	 | schema:name	 | Jim Riley |
+| UNAVCO	 | schema:url	 | <http://orcid.org/0000-0001-8163-5662> |
+| UNAVCO	 | rdf:type	 | schema:ContactPoint |
 
 
