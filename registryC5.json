@@ -3,6 +3,8 @@
         "@type": "WebSite",
         "@id": "http://opencoredata.org",
         "url": "https://www.opencoredata.org/",
+        "keywords": "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism",
+        "description": "opencoredata is a data infrastructure focused on making data from JRSO and CSDCO scientific drilling data facilities available in a semantic and Linked Open Data manner.",
         "potentialAction": {
             "@type": "SearchAction",
             "@id": "http://opencoredata.org#searchAction",
@@ -19,6 +21,7 @@
         "@id": "http://opencoredata.org/id/facilityinfo",
         "name": "Open Core Data",
         "re3data:datalicense": "http://opencoredata.org/datapolicy.html",
+        "re3data:keyword": "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism",
         "contactPoint": {
             "@type": "ContactPoint",
             "@id": "http://opencoredata.org/id/facilityinfo#contactPoint",
