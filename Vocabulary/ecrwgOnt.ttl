@@ -35,13 +35,24 @@
     dc:issued "2011-05-11"^^xsd:date ;
     a owl:Ontology .
 
+# thinking about if we should be more specific in calling it http://example.org/voc/DataRepository
 <http://example.org/voc/Repository>
     a rdfs:Class ;
-    rdfs:comment "An Data Repository."@en ;
+    rdfs:comment "A Data Repository."@en ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
-    rdfs:label "Organization"@en ;
+    rdfs:label "Repository"@en ;
     rdfs:subClassOf <http://schema.org/Organization> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
+
+<http://example.org/voc/repositoryName>
+    a rdf:Property ;
+    rdfs:comment "The name of the data repository expressed in text."@en ;
+    rdfs:domain  <http://example.org/voc/Repository> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Repository Name"@en ;
+    rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+    rdfs:subPropertyOf <http://schema.org/name> ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
 
 <http://example.org/voc/contactPoint>
     a rdf:Property, owl:ObjectProperty ;
@@ -49,20 +60,8 @@
     rdfs:domain <http://example.org/voc/Organization> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:label "Has Business Contact"@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact"
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" ;
     rdfs:range <http://example.org/voc/ContactPoint> ;
     rdfs:subPropertyOf <http://schema.org/contactPoint> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 
-<http://example.org/voc/repositoryName>
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The name of the organization expressed in text."@en ;
-    rdfs:domain  <http://example.org/voc/Repository> ;
-    rdfs:isDefinedBy <http://example.org/voc/> ;
-    rdfs:label "Repository Name"@en ; 
-    rdfs:range rdf:langString ;
-    rdfs:range <xsd:anyURI>	;
-    rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
-    rdfs:subPropertyOf <http://schema.org/name> ;
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-   
