@@ -1,0 +1,68 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cert: <http://www.w3.org/ns/auth/cert#> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix exif: <http://www.w3.org/2003/12/exif/ns#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rei: <http://www.w3.org/2004/06/rei#> .
+@prefix rsa: <http://www.w3.org/ns/auth/rsa#> .
+@prefix rss: <http://purl.org/rss/1.0/> .
+@prefix sfn: <http://www.w3.org/ns/sparql#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrc: <http://swrc.ontoware.org/ontology#> .
+@prefix types: <http://rdfs.org/sioc/types#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xhtml: <http://www.w3.org/1999/xhtml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ecrwg: <http://example.org/voc/> .
+
+
+<http://example.org/voc/>
+    dc11:description "" ;
+    dc11:title "EarthCube Registry Working Group Vocabulary" ;
+    dc11:identifier "EC RWG Vocabulary v0.1" ;
+    dc:issued "2011-05-11"^^xsd:date ;
+    a owl:Ontology .
+
+<http://example.org/voc/Repository>
+    a rdfs:Class ;
+    rdfs:comment "An Data Repository."@en ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Organization"@en ;
+    rdfs:subClassOf <http://schema.org/Organization> ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+<http://example.org/voc/contactPoint>
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Links to information about a business location for an organization."@en ;
+    rdfs:domain <http://example.org/voc/Organization> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Has Business Contact"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact"
+    rdfs:range <http://example.org/voc/ContactPoint> ;
+    rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+<http://example.org/voc/repositoryName>
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "The name of the organization expressed in text."@en ;
+    rdfs:domain  <http://example.org/voc/Repository> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Repository Name"@en ; 
+    rdfs:range rdf:langString ;
+    rdfs:range <xsd:anyURI>	;
+    rdfs:range <http://www.w3.org/2000/01/rdf-schema#Literal> ;
+    rdfs:subPropertyOf <http://schema.org/name> ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+   
