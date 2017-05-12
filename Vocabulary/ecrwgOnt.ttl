@@ -51,11 +51,8 @@
     rdfs:range <http://example.org/voc/Organization> ;
     rdfs:label "Has Business Contact"@en ;
     rdfs:comment "Links to information about a business location for an organization."@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
     
-    
-    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-
 <http://example.org/voc/repositoryName>
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf <http://schema.org/name> ;
@@ -95,11 +92,22 @@
     rdfs:comment "The date entry made"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
 
+<http://example.org/voc/alertService>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/AlertService> ;
+    rdfs:label "Alert Service"@en ;
+    rdfs:comment "Links to an alerting service for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/syndication" .
+
 <http://example.org/voc/AlertService>
     a owl:Class ;
     rdfs:subClassOf <http://schema.org/ItemList> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
-    rdfs:label "Data Repository"@en ;
+    rdfs:label "Alert Service"@en ;
     rdfs:comment "The alerting service the data repository offers "@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndication" .
 
