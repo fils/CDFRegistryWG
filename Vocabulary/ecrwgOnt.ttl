@@ -35,7 +35,6 @@
     dc:issued "2011-05-11"^^xsd:date ;
     a owl:Ontology .
 
-# thinking about if we should be more specific in calling it http://example.org/voc/DataRepository
 <http://example.org/voc/Repository>
     a rdfs:Class ;
     rdfs:comment "A Data Repository."@en ;
@@ -63,5 +62,37 @@
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" ;
     rdfs:range <http://example.org/voc/ContactPoint> ;
     rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+
+<http://example.org/voc/remarks>
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Free text remarks about the respository."@en ;
+    rdfs:domain <http://example.org/voc/Repository> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Informational remarks"@en ;
+    rdfs:range rdf:langString ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+
+<http://example.org/voc/lastUpdate>
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "The date from which last update was made"@en ;
+    rdfs:domain <http://example.org/voc/Repository> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Date of last update"@en ;
+    rdfs:range xsd:dateTime ;
+    skos:exactMatch <http://schema.org/XXX> ;
+    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+
+
+    <http://example.org/voc/entryDate>
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "The date entry made"@en ;
+    rdfs:domain <http://example.org/voc/Repository> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Date of entry"@en ;
+    rdfs:range xsd:dateTime ;
+    skos:exactMatch <http://schema.org/XXX> ;
     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 
