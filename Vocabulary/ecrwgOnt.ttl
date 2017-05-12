@@ -63,34 +63,71 @@
     rdfs:comment "The name of the data repository expressed in text."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
 
-<http://example.org/voc/remarks>
+
+
+<http://example.org/voc/qualityManagement>
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
     rdfs:range xsd:string ;
-    rdfs:label "Informational remarks"@en ;
-    rdfs:comment "Free text remarks about the respository."@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+    rdfs:label "qualityManagement information and remarks"@en ;
+    rdfs:comment "Free text remarks about the respository qualityManagement."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/qualityManagement" .
 
-<http://example.org/voc/lastUpdate>
+<http://example.org/voc/certificate>
     a owl:DatatypeProperty ;
-    rdfs:subPropertyOf <http://schema.org/XXX> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Date of last update"@en ;
-    rdfs:comment "The date from which last update was made"@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+    rdfs:range xsd:string ;
+    rdfs:label "certificate information and remarks"@en ;
+    rdfs:comment "Free text remarks about the respository certificate."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/certificate" .
 
-<http://example.org/voc/entryDate>
-    a owl:DatatypeProperty ;
-    rdfs:subPropertyOf <http://schema.org/XXX> ;
+
+<http://example.org/voc/metadataStandard>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
-    rdfs:range xsd:dateTime ;
-    rdfs:label "Date of entry"@en ;
-    rdfs:comment "The date entry made"@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+    rdfs:range <http://example.org/voc/MetadataStandard> ;
+    rdfs:label "Metadata standard"@en ;
+    rdfs:comment "Links to a metadata standard for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandard" .
+
+<http://example.org/voc/MetadataStandard>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Metadata standard"@en ;
+    rdfs:comment "The metadata standard the data repository offers "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandard" .
+
+<http://example.org/voc/metadataStandardName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/AlertService> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Matadata standard name"@en ;
+    rdfs:comment "Metadata standard like ISO 115."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardName" .
+
+<http://example.org/voc/metadataStandardUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/AlertService> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Metadata standard URL"@en ;
+    rdfs:comment "Metadata standard  URL like 'http://example.org/metadataX.html'."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardUrl" .
+
+
 
 <http://example.org/voc/alertService>
     a owl:ObjectProperty ;
@@ -123,7 +160,7 @@
     rdfs:comment "Alerting service type like RSS."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndicationType" .
 
-<http://example.org/voc/alertServiceType>
+<http://example.org/voc/alertServiceUrl>
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf <http://schema.org/url> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
@@ -134,3 +171,37 @@
     rdfs:label "Alert Service URL"@en ;
     rdfs:comment "Alerting service URL like 'http://example.org/rss.xml'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndicationUrl" .
+
+
+<http://example.org/voc/remarks>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Informational remarks"@en ;
+    rdfs:comment "Free text remarks about the respository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+
+
+<http://example.org/voc/entryDate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/XXX> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Date of entry"@en ;
+    rdfs:comment "The date entry made"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+
+<http://example.org/voc/lastUpdate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/XXX> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Date of last update"@en ;
+    rdfs:comment "The date from which last update was made"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
+
+
+
