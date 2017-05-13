@@ -63,15 +63,128 @@
     rdfs:comment "The name of the data repository expressed in text."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
 
+<http://example.org/voc/api>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/API> ;
+    rdfs:label "api "@en ;
+    rdfs:comment "Links to a API standard for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/api" .
 
+<http://example.org/voc/API>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "API"@en ;
+    rdfs:comment "An API standard the data repository offers "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/api" .
 
+<http://example.org/voc/apiType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/API> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The type of API"@en ;
+    rdfs:comment "The type of API"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/apiType" .
+
+<http://example.org/voc/apiUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/API> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The URL of the API"@en ;
+    rdfs:comment "The URL of the API"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/apiUrl" .
+
+<http://example.org/voc/apiDocumentation>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/API> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "A link referring to the API documentation"@en ;
+    rdfs:comment "A link referring to the API documentation, a website that states its availability and other information for using the API"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/apiDocumentation" .
+
+<http://example.org/voc/pidSystem>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "pidSystem information and remarks"@en ;
+    rdfs:comment "The persistent identifier system that is used by the RDR."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/pidSystem" .
+
+# this is not a xsd:string but should be constrained to SCOPUS or Data Citation Index
+<http://example.org/voc/citationReference>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "citationReference information and remarks"@en ;
+    rdfs:comment "The RDR is covered by SCOPUS or the Data Citation Index."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/citationReference" .
+
+<http://example.org/voc/metrics>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "metrics information and remarks"@en ;
+    rdfs:comment "Any service, tool, etc. that is used by the RDR to track, measure and visualize the usage of provided research data."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/metrics" .
+
+<http://example.org/voc/citationGuidelineUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Citation Guideline Url"@en ;
+    rdfs:comment "The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.org/whycitedata)."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/citationGuidelineUrl" .
+
+<http://example.org/voc/aidSystem>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "aidSystem information and remarks"@en ;
+    rdfs:comment "The author identifier system that is used by the RDR."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/aidSystem" .
+
+# this is not a xsd:string but should be constrained to yes, no, unknown
+<http://example.org/voc/enhancedPublication>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "enhancedPublication information and remarks"@en ;
+    rdfs:comment "The RDR offers the interlinking between publications and data."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/enhancedPublication" .
+
+# this is not a xsd:string but should be constrained to yes, no, unknown
 <http://example.org/voc/qualityManagement>
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
     rdfs:range xsd:string ;
     rdfs:label "qualityManagement information and remarks"@en ;
-    rdfs:comment "Free text remarks about the respository qualityManagement."@en ;
+    rdfs:comment "Any form of quality management concerning the research data or metadata of the RDR."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/qualityManagement" .
 
 <http://example.org/voc/certificate>
@@ -82,7 +195,6 @@
     rdfs:label "certificate information and remarks"@en ;
     rdfs:comment "Free text remarks about the respository certificate."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/certificate" .
-
 
 <http://example.org/voc/metadataStandard>
     a owl:ObjectProperty ;
@@ -127,8 +239,6 @@
     rdfs:comment "Metadata standard  URL like 'http://example.org/metadataX.html'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardUrl" .
 
-
-
 <http://example.org/voc/alertService>
     a owl:ObjectProperty ;
     # no obvious subproperty pointing to a http://schema.org/ItemList
@@ -172,7 +282,6 @@
     rdfs:comment "Alerting service URL like 'http://example.org/rss.xml'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndicationUrl" .
 
-
 <http://example.org/voc/remarks>
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
@@ -181,7 +290,6 @@
     rdfs:label "Informational remarks"@en ;
     rdfs:comment "Free text remarks about the respository."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/XXXX" .
-
 
 <http://example.org/voc/entryDate>
     a owl:DatatypeProperty ;
