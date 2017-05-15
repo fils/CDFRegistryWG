@@ -63,6 +63,27 @@
     rdfs:comment "The name of the data repository expressed in text."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
 
+<http://example.org/voc/software>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Software"@en ;
+    rdfs:comment "The software used to run the RDR  ex Dspace."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/software" .
+
+
+# this is not a xsd:string but should be constrained to yes, no, unknown
+<http://example.org/voc/versioning>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Versioning"@en ;
+    rdfs:comment "The RDR supports versioning of research data."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/versioning" .
+
+
 <http://example.org/voc/api>
     a owl:ObjectProperty ;
     # no obvious subproperty pointing to a http://schema.org/ItemList
