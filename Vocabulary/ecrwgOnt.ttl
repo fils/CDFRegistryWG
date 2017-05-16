@@ -63,6 +63,504 @@
     rdfs:comment "The name of the data repository expressed in text."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
 
+# --= starting insitution section
+
+<http://example.org/voc/institution>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/Institution> ;
+    rdfs:label "Institution"@en ;
+    rdfs:comment "All institutions being responsible for funding, creating and/or running the RDR (."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institution" .
+
+<http://example.org/voc/Institution>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Institution"@en ;
+    rdfs:comment "All institutions being responsible for funding, creating and/or running the RDR (."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institution" .
+
+<http://example.org/voc/institutionName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution name"@en ;
+    rdfs:comment "Institution name."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionName" .
+
+<http://example.org/voc/institutionAdditionalName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Additional Institution name"@en ;
+    rdfs:comment "Additional Institution name."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionAdditionalName" .
+
+<http://example.org/voc/institutionCountry>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution county name"@en ;
+    rdfs:comment "Institution country name."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionCountry" .
+
+<http://example.org/voc/responsibilityType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution responsibility type"@en ;
+    rdfs:comment "Institution responsibility type."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/responsibilityType" .
+
+<http://example.org/voc/institutionType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution county name"@en ;
+    rdfs:comment "Institution country name."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionType" .
+
+<http://example.org/voc/institutionUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution URL"@en ;
+    rdfs:comment "Institution URL like 'http://example.org'."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionUrl" .
+
+
+<http://example.org/voc/institutionIdentifier>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Insitution> ;
+    rdfs:range <http://example.org/voc/InstitutionIdentifier> ;
+    rdfs:label "Link to Institution Identifier"@en ;
+    rdfs:comment "The identifier for the responsible institution"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifier" .
+
+<http://example.org/voc/InstitutionIdentifier>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Institution Identifier"@en ;
+    rdfs:comment "The identifier for the responsible institution"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifier" .
+
+
+<http://example.org/voc/institutionIdentifierType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/InstitutionIdentifier> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution Identifier type"@en ;
+    rdfs:comment "Institution identifier type"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifierType" .
+
+<http://example.org/voc/institutionIdentifierValue>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/InstitutionIdentifier> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Institution Identifier value"@en ;
+    rdfs:comment "Institution identifier value"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifierValue" .
+
+
+
+<http://example.org/voc/responsibilityStartDate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/XXX> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Responsibility start date"@en ;
+    rdfs:comment "Responsibility start date"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/responsibilityStartDate" .
+
+
+    <http://example.org/voc/responsibilityEndDate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/XXX> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Responsibility end date"@en ;
+    rdfs:comment "Responsibility end date"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/responsibilityEndDate" .
+
+<http://example.org/voc/institutionContact>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Institution> ;
+    rdfs:label "Institution contact point"@en ;
+    rdfs:comment "Institution contact point."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/institutionContact" .
+
+
+# --= ending institution section
+
+
+
+
+
+<http://example.org/voc/policy>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/Policy> ;
+    rdfs:label "Policy"@en ;
+    rdfs:comment "Links to an alerting service for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/policy" .
+
+<http://example.org/voc/Policy>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "policy"@en ;
+    rdfs:comment "The alerting service the data repository offers "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/policy" .
+
+<http://example.org/voc/policyType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Policy> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Policy type"@en ;
+    rdfs:comment "Policy type."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/policytype" .
+
+<http://example.org/voc/policyName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Policy> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Policy name"@en ;
+    rdfs:comment "Policy name."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/policyName" .
+
+<http://example.org/voc/policyUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Policy> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Policye URL"@en ;
+    rdfs:comment "Policy URL like 'http://example.org/policy.html'."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/policyUrl" .
+
+
+
+<http://example.org/voc/databaseAccess>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseRepository> ;
+    rdfs:range <http://example.org/voc/DatabaseAccess> ;
+    rdfs:label "Database Access"@en ;
+    rdfs:comment "Links to a database Access for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccess" .
+
+<http://example.org/voc/DatabaseAccess>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Database Access"@en ;
+    rdfs:comment "The regulation for submitting research data to the RDR "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccess" .
+
+<http://example.org/voc/databaseAccessType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseAccess> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The type of the database Access"@en ;
+    rdfs:comment "The type of the database Access."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccessType" .
+
+<http://example.org/voc/dataAccessRestriction>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseAccess> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "All existing restrictions to the database Access (required if restricted is chosen).."@en ;
+    rdfs:comment "All existing restrictions to the database Access (required if restricted is chosen).."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccessRestriction" .
+
+
+<http://example.org/voc/databaseLicense>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseRepository> ;
+    rdfs:range <http://example.org/voc/DatabaseLicense> ;
+    rdfs:label "Database license  standard"@en ;
+    rdfs:comment "Links to a database license for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicense" .
+
+<http://example.org/voc/DatabaseLicense>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Database license standard"@en ;
+    rdfs:comment "The license for database  "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicense" .
+
+<http://example.org/voc/databaseLicenseName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseLicense> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Data license standard name"@en ;
+    rdfs:comment "Metadata standard like ISO 115."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicenseName" .
+
+<http://example.org/voc/databaseLicenseUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DatabaseLicense> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The data  license URL."@en ;
+    rdfs:comment "The data  license URL."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicenseUrl" .
+
+
+<http://example.org/voc/dataAccess>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/DataAccess> ;
+    rdfs:label "Data Access"@en ;
+    rdfs:comment "Links to a data Access for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccess" .
+
+<http://example.org/voc/DataAccess>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data Access"@en ;
+    rdfs:comment "The regulation for submitting research data to the RDR "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccess" .
+
+<http://example.org/voc/dataAccessType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataAccess> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The type of the data Access"@en ;
+    rdfs:comment "The type of the data Access."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccessType" .
+
+<http://example.org/voc/dataAccessRestriction>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataAccess> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "All existing restrictions to the data Access (required if restricted is chosen).."@en ;
+    rdfs:comment "All existing restrictions to the data Access (required if restricted is chosen).."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccessRestriction" .
+
+
+<http://example.org/voc/dataLicense>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/DataLicense> ;
+    rdfs:label "Data license  standard"@en ;
+    rdfs:comment "Links to a data license for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicense" .
+
+<http://example.org/voc/DataLicense>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data license standard"@en ;
+    rdfs:comment "The license for data  "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicense" .
+
+<http://example.org/voc/dataLicenseName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataLicense> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Data license standard name"@en ;
+    rdfs:comment "Metadata standard like ISO 115."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicenseName" .
+
+<http://example.org/voc/dataLicenseUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataLicense> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The data  license URL."@en ;
+    rdfs:comment "The data  license URL."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicenseUrl" .
+
+
+<http://example.org/voc/dataUpload>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/DataUpload> ;
+    rdfs:label "Data upload"@en ;
+    rdfs:comment "Links to a data upload for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUpload" .
+
+<http://example.org/voc/DataUpload>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data upload"@en ;
+    rdfs:comment "The regulation for submitting research data to the RDR "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUpload" .
+
+<http://example.org/voc/dataUploadType>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataUpload> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The type of the data upload"@en ;
+    rdfs:comment "The type of the data upload."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadType" .
+
+<http://example.org/voc/dataUploadRestriction>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataUpload> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "All existing restrictions to the data upload (required if restricted is chosen).."@en ;
+    rdfs:comment "All existing restrictions to the data upload (required if restricted is chosen).."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadRestriction" .
+
+
+
+<http://example.org/voc/dataUploadLicense>
+    a owl:ObjectProperty ;
+    # no obvious subproperty pointing to a http://schema.org/ItemList
+    # @see text beginning with 'Instances of ItemList may appear as values for the following properties'
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/DataUploadLicense> ;
+    rdfs:label "Data license  standard"@en ;
+    rdfs:comment "Links to a data license for a data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicense" .
+
+<http://example.org/voc/DataUploadLicense>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ItemList> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data license standard"@en ;
+    rdfs:comment "The license for data upload "@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicense" .
+
+<http://example.org/voc/dataUploadLicenseName>
+    a owl:DatatypeProperty ;
+    # no obvious subproperty in http://schema.org/ItemList
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataUploadLicense> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Data license standard name"@en ;
+    rdfs:comment "Metadata standard like ISO 115."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicenseName" .
+
+<http://example.org/voc/dataUploadLicenseUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataUploadLicense> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "The data upload license URL."@en ;
+    rdfs:comment "The data upload license URL."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicenseUrl" .
+
 <http://example.org/voc/software>
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
@@ -240,7 +738,7 @@
     a owl:DatatypeProperty ;
     # no obvious subproperty in http://schema.org/ItemList
     rdfs:isDefinedBy <http://example.org/voc/> ;
-    rdfs:domain <http://example.org/voc/AlertService> ;
+    rdfs:domain <http://example.org/voc/MetadataStandard> ;
     rdfs:range xsd:string ;
     owl:minCardinality 1^^xsd;nonNegativeInteger ;
     owl:maxCardinality 1^^xsd;nonNegativeInteger ;
@@ -252,13 +750,14 @@
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf <http://schema.org/url> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
-    rdfs:domain <http://example.org/voc/AlertService> ;
+    rdfs:domain <http://example.org/voc/MetadataStandard> ;
     rdfs:range xsd:anyURI ;
     owl:minCardinality 1^^xsd;nonNegativeInteger ;
     owl:maxCardinality 1^^xsd;nonNegativeInteger ;
     rdfs:label "Metadata standard URL"@en ;
     rdfs:comment "Metadata standard  URL like 'http://example.org/metadataX.html'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardUrl" .
+
 
 <http://example.org/voc/alertService>
     a owl:ObjectProperty ;
