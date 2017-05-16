@@ -27,6 +27,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ecrwg: <http://example.org/voc/> .
 
+#### Related Docs
+# PDF: http://gfzpublic.gfz-potsdam.de/pubman/item/escidoc:1397899:6/component/escidoc:1398549/re3data_schema_documentation_v3_0.pdf
+# XML schema: http://schema.re3data.org/3-0/re3dataV3-0.xsd
+# CDF Mappings: https://docs.google.com/spreadsheets/d/1_CEr9G257oozFunaLN05Jzs7AWu9X7RymGe5YRuKYmA/edit#gid=0
+####
+
 <http://example.org/voc/>
     a owl:Ontology ;
     dc11:description "Schema.org extension for a Data Repository" ;
