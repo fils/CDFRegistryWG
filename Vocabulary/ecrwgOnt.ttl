@@ -43,25 +43,165 @@
     rdfs:comment "A Data Repository."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repository" .
 
-<http://example.org/voc/contactPoint>
+<http://example.org/voc/identifiers>
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+    rdfs:subPropertyOf <http://schema.org/identifier> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
-    rdfs:range <http://example.org/voc/Organization> ;
-    rdfs:label "Has Business Contact"@en ;
-    rdfs:comment "Links to information about a business location for an organization."@en ;
-    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
-    
+    rdfs:range <http://examples.org/voc/Identifier>;
+    rdfs:label "Identifier"@en ;
+    rdfs:comment "Links to identifiers that uniquely identify the data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/identifiers" .
+
+<http://example.org/voc/Identifier>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/PropertyValue> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data Repository Identifier"@en ;
+    rdfs:comment "A unique identifier with a type and value for the Data Repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryIdentifier" .
+
+# see: Example 1 JSON-LD at: http://schema.org/identifier
+<http://example.org/voc/identifierType>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://schema.org/propertyID> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Identifier> ;
+    rdfs:range <http://example.org/voc/IdentifierType> ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "An identifier's type such as DOI, ARK, URN or for custom types like Re3Data. For example a DOI of doi:10.1234/567890 would have the identifier value of '<http://example.org/voc/IdentifierTypeDOI>'"@en ;
+    rdfs:comment "The type that identifies the domain space for its uniqueness."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryIdentifierType" .
+
+<http://example.org/voc/IdentifierType>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Data Repository Identifier Type"@en ;
+    rdfs:comment "A identifier type for an Identifier."@en .
+
+<http://example.org/voc/IdentifierTypeDOI>
+    a owl:namedIndividual ;
+    rdfs:label "Digital Object Identifier (DOI)"@en .
+
+<http://example.org/voc/IdentifierTypeRe3data>
+    a owl:namedIndividual ;
+    rdfs:label "Specifically a Re3Data Digital Object Identifier (DOI)"@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/re3data" .
+
+<http://example.org/voc/identifierValue>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/value> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Identifier> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "An identifier's value."@en ;
+    rdfs:comment "The value that will be unique within a specifc identifier type. For example a DOI of doi:10.1234/567890 would have the identifier value of '10.1234/567890'"@en ;
+    # NOTE: re3data has this bound to a URI so this is not the same.
+    # Should we talk through why not using the URI is better for Linked Data federated queries.
+    # @see added property here to include re3data identifier url: <http://example.org/voc/identifierUrl>
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryIdentifierValue" .
+
+<http://example.org/voc/identifierUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/Identifier> ;
+    rdfs:range xsd:anyURI ;
+    rdfs:label "An identifier's resolvable URL."@en ;
+    rdfs:comment "The url that will resolve to the identified thing. For example a DOI of doi:10.1234/567890 could have the identifier url of 'https://doi.org/10.1234/567890' and/or 'http://doi.org/10.1234/567890' and/or 'http://dx.doi.org/10.1234/567890', hence it's unbounded cardinality."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryIdentifierValue" .
+
 <http://example.org/voc/repositoryName>
     a owl:DatatypeProperty ;
     rdfs:subPropertyOf <http://schema.org/name> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain  <http://example.org/voc/DataRepository> ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
     rdfs:range xsd:string ;
     rdfs:label "Repository Name"@en ;
     rdfs:comment "The name of the data repository expressed in text."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryName" .
+
+<http://example.org/voc/additionalName>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/additionalName> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Additional Name"@en ;
+    rdfs:comment "The alternative name or acronym for the data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/alternateName" .
+
+<http://example.org/voc/repositoryUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:anyURI ;
+    owl:minCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Data Repository URL"@en ;
+    rdfs:comment "The canonical URL of the data repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryUrl" .
+
+<http://example.org/voc/description>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/description> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range rdf:langString ;
+    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    rdfs:label "Data Repository Description"@en ;
+    rdfs:comment "A textual description providing additional information about the Data Repository (primary language is English). The language should be defined by the xsd datatype of the value. For example, '@en'. See "@en ;
+    # NOTE: the re3data language field that specifies the language of the repository description should be tightly coupled to the description value here as noted in the rdfs:range of rdf:langString.
+    # At see: https://w3c.github.io/data-shapes/shacl/#DatatypeConstraintComponent
+    skos:relatedTo "http://www.re3data.org/schema/3-0/description" .
+
+<http://example.org/voc/contactPoint>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/ContactPoint> ;
+    rdfs:label "Data Repository Contact"@en ;
+    rdfs:comment "The agent to contact."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
+
+<http://example.org/voc/ContactPoint>
+    a owl:Class ;
+    rdfs:subClassOf <http://schema.org/ContactPoint> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Contact Point"@en ;
+    rdfs:comment "The contact point with either an email address or URL for an online contact form."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
+
+<http://example.org/voc/contactEmail>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/email> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/ContactPoint> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Contact Point Email"@en ;
+    rdfs:comment "An email address for a data repository's contact point."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
+
+<http://example.org/voc/contactUrl>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/url> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/ContactPoint> ;
+    rdfs:range xsd:string ;
+    rdfs:label "Contact Point URL"@en ;
+    rdfs:comment "URL for an online contact form."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
+
+# Continue with: <r3d:type>
+
+
 
 # --= starting insitution section
 
