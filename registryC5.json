@@ -20,13 +20,48 @@
         "@type": "Organization",
         "@id": "http://opencoredata.org/id/facilityinfo",
         "name": "Open Core Data",
+        "alternateName": "OCD",
+        "description": "opencoredata is a data infrastructure focused on making data from JRSO and CSDCO scientific drilling data facilities available in a semantic and Linked Open Data manner.",
+        "re3data:contenttypes": "scientific and statistical data sets, structured data, raw data",
         "re3data:datalicense": "http://opencoredata.org/datapolicy.html",
+        "re3data:missionStatementUrl": "http://opencoredata.org/about",
+        "re3data:providerType": "dataProvider",
+        "redata:repositoryLanguage": "eng",
+        "redata:type": "disciplinary",
+        "re3data:software": "https://github.com/OpenCoreData",
         "re3data:keyword": "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism",
+        "re3data:policy": {
+            "re3data:policyName": "NSF Data Sharing Policy",
+            "re3data:policyUrl": "http://www.nsf.gov/bfa/dias/policy/dmp.jsp"
+        },
+        "re3data:databaseAccess": {
+            "re3data:databaseAccessType": "open"
+        },
+        "re3data:databaseLicense": {
+            "re3data:databaseLicenseName": "CC",
+            "re3data:databaseLicenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+        },
+        "re3data:dataAccess": {
+            "re3data:dataAccessType": "open"
+        },
+        "re3data:dataLicense": {
+            "re3data:dataLicenseName": "CC",
+            "re3data:dataLicenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+        },
+        "re3data:dataUpload": {
+            "re3data:dataUploadType": "closed"
+        },
+        "re3data:pdiSystem": "DOI",
+        "re3data:versioning": "Yes",
+        "re3data:enhancedPublication": "Yes",
+        "re3data:qualityManagement": "Yes",
+        "re3data:entryDate": "2016-07-20",
+        "re3data:lastUpdate": "2017-05-18",
         "contactPoint": {
             "@type": "ContactPoint",
             "@id": "http://opencoredata.org/id/facilityinfo#contactPoint",
             "name": "Douglas Fils",
-            "email": "dfilsAToceanleadershipDOTorg",
+            "email": "dfils@oceanleadership.org",
             "url": "http://orcid.org/0000-0002-2257-9127",
             "contactType": "technical support"
         },
