@@ -15,7 +15,8 @@
     {
         "@context": {
             "@vocab": "http://schema.org/",
-            "re3data": "http://example.org/re3data/0.1/"
+            "re3data": "http://example.org/re3data/0.1/",
+            "ecrwg": "http://example.org/ecrwg/0.1/"
         },
         "@type": "Organization",
         "@id": "http://opencoredata.org/id/facilityinfo",
