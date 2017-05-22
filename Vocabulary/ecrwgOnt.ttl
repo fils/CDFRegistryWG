@@ -74,8 +74,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Identifier> ;
     rdfs:range <http://example.org/voc/IdentifierType> ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "An identifier's type such as DOI, ARK, URN or for custom types like Re3Data. For example a DOI of doi:10.1234/567890 would have the identifier value of '<http://example.org/voc/IdentifierTypeDOI>'"@en ;
     rdfs:comment "The type that identifies the domain space for its uniqueness."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryIdentifierType" .
@@ -88,10 +88,12 @@
 
 <http://example.org/voc/IdentifierTypeDOI>
     a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/IdentifierType> ;
     rdfs:label "Digital Object Identifier (DOI)"@en .
 
 <http://example.org/voc/IdentifierTypeRe3data>
     a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/IdentifierType> ;
     rdfs:label "Specifically a Re3Data Digital Object Identifier (DOI)"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/re3data" .
 
@@ -101,8 +103,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Identifier> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "An identifier's value."@en ;
     rdfs:comment "The value that will be unique within a specifc identifier type. For example a DOI of doi:10.1234/567890 would have the identifier value of '10.1234/567890'"@en ;
     # NOTE: re3data has this bound to a URI so this is not the same.
@@ -125,8 +127,8 @@
     rdfs:subPropertyOf <http://schema.org/name> ;
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain  <http://example.org/voc/DataRepository> ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:range xsd:string ;
     rdfs:label "Repository Name"@en ;
     rdfs:comment "The name of the data repository expressed in text."@en ;
@@ -148,8 +150,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain  <http://example.org/voc/DataRepository> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Data Repository URL"@en ;
     rdfs:comment "The canonical URL of the data repository."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryUrl" .
@@ -160,7 +162,7 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
     rdfs:range rdf:langString ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Data Repository Description"@en ;
     rdfs:comment "A textual description providing additional information about the Data Repository (primary language is English). The language should be defined by the xsd datatype of the value. For example, '@en'. See "@en ;
     # NOTE: the re3data language field that specifies the language of the repository description should be tightly coupled to the description value here as noted in the rdfs:range of rdf:langString.
@@ -205,11 +207,321 @@
     rdfs:comment "URL for an online contact form."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryContact" .
 
-# Continue with: <r3d:type>
+<http://example.org/voc/repositoryType>
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://schema.org/additionalType> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/RepositoryType> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Data Repository Type"@en ;
+    rdfs:comment "The type of repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryTypes" .
+
+<http://example.org/voc/RepositoryType>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Repostory Type"@en ;
+    rdfs:comment "The type of repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/type" .
+
+<http://example.org/voc/RepositoryTypeDisciplinary>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Disciplinary repository type"@en .
+
+<http://example.org/voc/RepositoryTypeGovernmental>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Governmental repository type"@en .
+
+<http://example.org/voc/RepositoryTypeInstitutional>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Institutional repository type"@en .
+
+<http://example.org/voc/RepositoryTypeMultidisciplinary>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Multidisciplinary repository type"@en .
+
+<http://example.org/voc/RepositoryTypeProjectRelated>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Project-related repository type"@en .
+
+<http://example.org/voc/RepositoryTypeOther>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/RepositoryType> ;
+    rdfs:label "Other repository type"@en .
+
+<http://example.org/voc/size>
+    a owl:DatatypeProperty ;
+    # need to reconcile the schema.org ItemList to use numberOfItems.
+    rdfs:subPropertyOf <http://schema.org/numberOfItems> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:integer ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Size of Data Repository"@en ;
+    rdfs:comment "The number of items contained in the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/size" .
+
+<http://example.org/voc/startDate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/foundingDate> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:date ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Releasing Date"@en ;
+    rdfs:comment "Releasing date of the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/startDate" .
+
+<http://example.org/voc/endDate>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:date ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Releasing Date"@en ;
+    rdfs:comment "The date the repository ended its service of ingesting new research data and/or providing it."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/endDate" .
+
+<http://example.org/voc/closedDate>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:date ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Closed Date"@en ;
+    rdfs:comment "The date when the repository stopped ingesting new research data to its database. The database and its research data are still available."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/closed" .
+
+<http://example.org/voc/offlineDate>
+    a owl:DatatypeProperty ;
+    rdfs:subPropertyOf <http://schema.org/dissolutionDate> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:date ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Closed Date"@en ;
+    rdfs:comment "The date when the repository went offline. The database and/or the website are no longer available."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/offline" .
 
 
+<http://example.org/voc/userInterfaceLanguage>
+    a owl:DatatypeProperty ;
+    # pre-supposes that this schemaorg field is talking about the UI (http://schema.org/WebSite) of the repository and not the repo itself.
+    rdfs:subPropertyOf <http://schema.org/inLanguage> ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:language ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Repository Language"@en ;
+    rdfs:comment "The user interface language(s) of the RDR."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/repositoryLanguage" .
 
-# --= starting insitution section
+<http://example.org/voc/subjectArea>
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/SubjectArea> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Subject Area"@en ;
+    rdfs:comment "The disciplinary focus of the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subject" .
+
+<http://example.org/voc/SubjectArea>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Subject Area"@en ;
+    rdfs:comment "A disciplinary focus."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subject" .
+
+<http://example.org/voc/subjectScheme>
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/SubjectArea> ;
+    rdfs:range <http://example.org/voc/SubjectScheme> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Subject Area Scheme"@en ;
+    rdfs:comment "The specific scheme for a subject area."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subjectScheme" .
+
+<http://example.org/voc/SubjectScheme>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Subject Scheme"@en ;
+    rdfs:comment "The specific scheme for a subject area."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subjectScheme" .
+
+<http://example.org/voc/DFGSubjectScheme>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/SubjectScheme> ;
+    rdfs:label "DFG"@en ;
+    rdfs:seeAlso "http://www.dfg.de/en/dfg_profile/statutory_bodies/review_boards/subject_areas/index.jsp" .
+
+<http://example.org/voc/subjectId>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/SubjectArea> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Subject Area Identifier"@en ;
+    rdfs:comment "The unique identifier within a specific scheme for a subject area."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subjectId" .
+
+<http://example.org/voc/subjectName>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/SubjectArea> ;
+    rdfs:range xsd:string ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Subject Area Name"@en ;
+    rdfs:comment "The name of a subject within a specific scheme for a subject area."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/subjectName" .
+
+<http://example.org/voc/missionStatementUrl>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range xsd:anyURI ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+    rdfs:label "Mission Statement URL"@en ;
+    rdfs:comment "The URL of a mission statement describing the designated community of the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/missionStatementUrl" .
+
+<http://example.org/voc/contentType>
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/ContentType> ;
+    rdfs:label "Content Type"@en ;
+    rdfs:comment "All types of resources available in the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/contentType" .
+
+<http://example.org/voc/ContentType>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Content Type"@en ;
+    rdfs:comment "The resource available from a repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/contentType" .
+
+<http://example.org/voc/StandardOfficeDocuments>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Standard office documents"@en .
+
+<http://example.org/voc/NetworkbasedData>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Networkbased data"@en .
+
+<http://example.org/voc/Databases>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Databases"@en .
+
+<http://example.org/voc/Images>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Images"@en .
+
+<http://example.org/voc/StructuredGraphics>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Structured graphics"@en .
+
+<http://example.org/voc/AudiovisualData>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Audiovisual data"@en .
+
+<http://example.org/voc/ScientificStatisticalDataFormats>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Scientific and statistical data formats"@en .
+
+<http://example.org/voc/RawData>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Raw data"@en .
+
+<http://example.org/voc/PlainText>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Plain text"@en .
+
+<http://example.org/voc/StructuredText>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Structured text"@en .
+
+<http://example.org/voc/ArchivedData>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Archived data"@en .
+
+<http://example.org/voc/SoftwareApplications>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Software applications"@en .
+
+<http://example.org/voc/SourceCode>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Source code"@en .
+
+<http://example.org/voc/ConfigurationData>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "Configuration data"@en .
+
+<http://example.org/voc/OtherContent>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ContentType> ;
+    rdfs:label "other"@en .
+
+<http://example.org/voc/providerType>
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range <http://example.org/voc/ProviderType> ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
+    rdfs:label "Provider Type"@en ;
+    rdfs:comment "The type of provider."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/providerType" .
+
+<http://example.org/voc/ProviderType>
+    a owl:Class ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:label "Provider Type"@en ;
+    rdfs:comment "The type of provider."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/providerType" .
+
+<http://example.org/voc/DataProvider>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ProviderType> ;
+    rdfs:label "Data Provider"@en .
+
+<http://example.org/voc/ServiceProvider>
+    a owl:namedIndividual ;
+    rdf:type <http://example.org/voc/ProviderType> ;
+    rdfs:label "Service Provider"@en .
+
+<http://example.org/voc/keyword>
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://example.org/voc/> ;
+    rdfs:domain  <http://example.org/voc/DataRepository> ;
+    rdfs:range rdf:langString ;
+    rdfs:label "Keyword"@en ;
+    rdfs:comment "English keyword(s) describing the subject focus of the repository."@en ;
+    skos:relatedTo "http://www.re3data.org/schema/3-0/keyword" .
 
 <http://example.org/voc/institution>
     a owl:ObjectProperty ;
@@ -236,8 +548,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution name"@en ;
     rdfs:comment "Institution name."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionName" .
@@ -248,8 +560,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Additional Institution name"@en ;
     rdfs:comment "Additional Institution name."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionAdditionalName" .
@@ -260,8 +572,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution county name"@en ;
     rdfs:comment "Institution country name."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionCountry" .
@@ -272,8 +584,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution responsibility type"@en ;
     rdfs:comment "Institution responsibility type."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/responsibilityType" .
@@ -284,8 +596,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution county name"@en ;
     rdfs:comment "Institution country name."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionType" .
@@ -296,8 +608,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Institution> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution URL"@en ;
     rdfs:comment "Institution URL like 'http://example.org'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionUrl" .
@@ -329,8 +641,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/InstitutionIdentifier> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution Identifier type"@en ;
     rdfs:comment "Institution identifier type"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifierType" .
@@ -341,8 +653,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/InstitutionIdentifier> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Institution Identifier value"@en ;
     rdfs:comment "Institution identifier value"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionIdentifierValue" .
@@ -379,13 +691,6 @@
     rdfs:comment "Institution contact point."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/institutionContact" .
 
-
-# --= ending institution section
-
-
-
-
-
 <http://example.org/voc/policy>
     a owl:ObjectProperty ;
     # no obvious subproperty pointing to a http://schema.org/ItemList
@@ -411,8 +716,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Policy> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Policy type"@en ;
     rdfs:comment "Policy type."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/policytype" .
@@ -423,8 +728,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Policy> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Policy name"@en ;
     rdfs:comment "Policy name."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/policyName" .
@@ -435,8 +740,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/Policy> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Policye URL"@en ;
     rdfs:comment "Policy URL like 'http://example.org/policy.html'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/policyUrl" .
@@ -468,8 +773,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DatabaseAccess> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The type of the database Access"@en ;
     rdfs:comment "The type of the database Access."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccessType" .
@@ -480,8 +785,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DatabaseAccess> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "All existing restrictions to the database Access (required if restricted is chosen).."@en ;
     rdfs:comment "All existing restrictions to the database Access (required if restricted is chosen).."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/databaseAccessRestriction" .
@@ -512,8 +817,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DatabaseLicense> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Data license standard name"@en ;
     rdfs:comment "Metadata standard like ISO 115."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicenseName" .
@@ -524,8 +829,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DatabaseLicense> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The data  license URL."@en ;
     rdfs:comment "The data  license URL."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/databaseLicenseUrl" .
@@ -556,8 +861,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataAccess> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The type of the data Access"@en ;
     rdfs:comment "The type of the data Access."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccessType" .
@@ -568,8 +873,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataAccess> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "All existing restrictions to the data Access (required if restricted is chosen).."@en ;
     rdfs:comment "All existing restrictions to the data Access (required if restricted is chosen).."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataAccessRestriction" .
@@ -600,8 +905,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataLicense> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Data license standard name"@en ;
     rdfs:comment "Metadata standard like ISO 115."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicenseName" .
@@ -612,8 +917,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataLicense> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The data  license URL."@en ;
     rdfs:comment "The data  license URL."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataLicenseUrl" .
@@ -644,8 +949,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataUpload> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The type of the data upload"@en ;
     rdfs:comment "The type of the data upload."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadType" .
@@ -656,8 +961,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataUpload> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "All existing restrictions to the data upload (required if restricted is chosen).."@en ;
     rdfs:comment "All existing restrictions to the data upload (required if restricted is chosen).."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadRestriction" .
@@ -689,8 +994,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataUploadLicense> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Data license standard name"@en ;
     rdfs:comment "Metadata standard like ISO 115."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicenseName" .
@@ -701,8 +1006,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataUploadLicense> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The data upload license URL."@en ;
     rdfs:comment "The data upload license URL."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/dataUploadLicenseUrl" .
@@ -753,8 +1058,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/API> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The type of API"@en ;
     rdfs:comment "The type of API"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/apiType" .
@@ -765,8 +1070,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/API> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "The URL of the API"@en ;
     rdfs:comment "The URL of the API"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/apiUrl" .
@@ -777,8 +1082,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/API> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "A link referring to the API documentation"@en ;
     rdfs:comment "A link referring to the API documentation, a website that states its availability and other information for using the API"@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/apiDocumentation" .
@@ -817,8 +1122,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/DataRepository> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Citation Guideline Url"@en ;
     rdfs:comment "The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.org/whycitedata)."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/citationGuidelineUrl" .
@@ -886,8 +1191,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/MetadataStandard> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Matadata standard name"@en ;
     rdfs:comment "Metadata standard like ISO 115."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardName" .
@@ -898,8 +1203,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/MetadataStandard> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Metadata standard URL"@en ;
     rdfs:comment "Metadata standard  URL like 'http://example.org/metadataX.html'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/metadataStandardUrl" .
@@ -930,8 +1235,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/AlertService> ;
     rdfs:range xsd:string ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Alert Service Type"@en ;
     rdfs:comment "Alerting service type like RSS."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndicationType" .
@@ -942,8 +1247,8 @@
     rdfs:isDefinedBy <http://example.org/voc/> ;
     rdfs:domain <http://example.org/voc/AlertService> ;
     rdfs:range xsd:anyURI ;
-    owl:minCardinality 1^^xsd;nonNegativeInteger ;
-    owl:maxCardinality 1^^xsd;nonNegativeInteger ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
     rdfs:label "Alert Service URL"@en ;
     rdfs:comment "Alerting service URL like 'http://example.org/rss.xml'."@en ;
     skos:relatedTo "http://www.re3data.org/schema/3-0/syndicationUrl" .

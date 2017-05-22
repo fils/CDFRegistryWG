@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <owl:Ontology rdf:about="http://example.org/voc/">
+    <dc11:description>Schema.org extension for a Data Repository</dc11:description>
+    <dc11:title>EarthCube Registry Working Group Vocabulary</dc11:title>
+    <dc11:identifier>EC RWG Vocabulary v0.1</dc11:identifier>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-05-11</dc:issued>
+    <dc11:creator rdf:resource="https://raw.githubusercontent.com/fils/CDFRegistryWG/master/Vocabulary/some-old-joe-schmoe"/>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://example.org/voc/DataRepository">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data Repository</rdfs:label>
+    <rdfs:comment xml:lang="en">A Data Repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repository</skos:relatedTo>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/identifiers">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://examples.org/voc/Identifier"/>
+    <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to identifiers that uniquely identify the data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/identifiers</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/Identifier">
+    <rdfs:subClassOf rdf:resource="http://schema.org/PropertyValue"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data Repository Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">A unique identifier with a type and value for the Data Repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryIdentifier</skos:relatedTo>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/identifierType">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/propertyID"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Identifier"/>
+    <rdfs:range rdf:resource="http://example.org/voc/IdentifierType"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">An identifier's type such as DOI, ARK, URN or for custom types like Re3Data. For example a DOI of doi:10.1234/567890 would have the identifier value of '&lt;http://example.org/voc/IdentifierTypeDOI&gt;'</rdfs:label>
+    <rdfs:comment xml:lang="en">The type that identifies the domain space for its uniqueness.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryIdentifierType</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/IdentifierType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data Repository Identifier Type</rdfs:label>
+    <rdfs:comment xml:lang="en">A identifier type for an Identifier.</rdfs:comment>
+  </owl:Class>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/IdentifierTypeDOI">
+    <rdf:type rdf:resource="http://example.org/voc/IdentifierType"/>
+    <rdfs:label xml:lang="en">Digital Object Identifier (DOI)</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/IdentifierTypeRe3data">
+    <rdf:type rdf:resource="http://example.org/voc/IdentifierType"/>
+    <rdfs:label xml:lang="en">Specifically a Re3Data Digital Object Identifier (DOI)</rdfs:label>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/re3data</skos:relatedTo>
+  </owl:namedIndividual>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/identifierValue">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/value"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">An identifier's value.</rdfs:label>
+    <rdfs:comment xml:lang="en">The value that will be unique within a specifc identifier type. For example a DOI of doi:10.1234/567890 would have the identifier value of '10.1234/567890'</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryIdentifierValue</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/identifierUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="en">An identifier's resolvable URL.</rdfs:label>
+    <rdfs:comment xml:lang="en">The url that will resolve to the identified thing. For example a DOI of doi:10.1234/567890 could have the identifier url of 'https://doi.org/10.1234/567890' and/or 'http://doi.org/10.1234/567890' and/or 'http://dx.doi.org/10.1234/567890', hence it's unbounded cardinality.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryIdentifierValue</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/repositoryName">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/name"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Repository Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The name of the data repository expressed in text.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/additionalName">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/additionalName"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Additional Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The alternative name or acronym for the data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/alternateName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/repositoryUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Data Repository URL</rdfs:label>
+    <rdfs:comment xml:lang="en">The canonical URL of the data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/description">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/description"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Data Repository Description</rdfs:label>
+    <rdfs:comment xml:lang="en">A textual description providing additional information about the Data Repository (primary language is English). The language should be defined by the xsd datatype of the value. For example, '@en'. See </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/description</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/contactPoint">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/contactPoint"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/ContactPoint"/>
+    <rdfs:label xml:lang="en">Data Repository Contact</rdfs:label>
+    <rdfs:comment xml:lang="en">The agent to contact.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryContact</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/ContactPoint">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ContactPoint"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Contact Point</rdfs:label>
+    <rdfs:comment xml:lang="en">The contact point with either an email address or URL for an online contact form.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryContact</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/contactEmail">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/email"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/ContactPoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Contact Point Email</rdfs:label>
+    <rdfs:comment xml:lang="en">An email address for a data repository's contact point.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryContact</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/contactUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/ContactPoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Contact Point URL</rdfs:label>
+    <rdfs:comment xml:lang="en">URL for an online contact form.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryContact</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/repositoryType">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/additionalType"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/RepositoryType"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <rdfs:label xml:lang="en">Data Repository Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryTypes</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/RepositoryType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Repostory Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/type</skos:relatedTo>
+  </owl:Class>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeDisciplinary">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Disciplinary repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeGovernmental">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Governmental repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeInstitutional">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Institutional repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeMultidisciplinary">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Multidisciplinary repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeProjectRelated">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Project-related repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RepositoryTypeOther">
+    <rdf:type rdf:resource="http://example.org/voc/RepositoryType"/>
+    <rdfs:label xml:lang="en">Other repository type</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/size">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/numberOfItems"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Size of Data Repository</rdfs:label>
+    <rdfs:comment xml:lang="en">The number of items contained in the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/size</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/startDate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/foundingDate"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Releasing Date</rdfs:label>
+    <rdfs:comment xml:lang="en">Releasing date of the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/startDate</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/endDate">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Releasing Date</rdfs:label>
+    <rdfs:comment xml:lang="en">The date the repository ended its service of ingesting new research data and/or providing it.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/endDate</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/closedDate">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Closed Date</rdfs:label>
+    <rdfs:comment xml:lang="en">The date when the repository stopped ingesting new research data to its database. The database and its research data are still available.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/closed</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/offlineDate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/dissolutionDate"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Closed Date</rdfs:label>
+    <rdfs:comment xml:lang="en">The date when the repository went offline. The database and/or the website are no longer available.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/offline</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/userInterfaceLanguage">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/inLanguage"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <rdfs:label xml:lang="en">Repository Language</rdfs:label>
+    <rdfs:comment xml:lang="en">The user interface language(s) of the RDR.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/repositoryLanguage</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/subjectArea">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/SubjectArea"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <rdfs:label xml:lang="en">Subject Area</rdfs:label>
+    <rdfs:comment xml:lang="en">The disciplinary focus of the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subject</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/SubjectArea">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Subject Area</rdfs:label>
+    <rdfs:comment xml:lang="en">A disciplinary focus.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subject</skos:relatedTo>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/subjectScheme">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/SubjectArea"/>
+    <rdfs:range rdf:resource="http://example.org/voc/SubjectScheme"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Subject Area Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en">The specific scheme for a subject area.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subjectScheme</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/SubjectScheme">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Subject Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en">The specific scheme for a subject area.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subjectScheme</skos:relatedTo>
+  </owl:Class>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/DFGSubjectScheme">
+    <rdf:type rdf:resource="http://example.org/voc/SubjectScheme"/>
+    <rdfs:label xml:lang="en">DFG</rdfs:label>
+    <rdfs:seeAlso>http://www.dfg.de/en/dfg_profile/statutory_bodies/review_boards/subject_areas/index.jsp</rdfs:seeAlso>
+  </owl:namedIndividual>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/subjectId">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/SubjectArea"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Subject Area Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">The unique identifier within a specific scheme for a subject area.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subjectId</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/subjectName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/SubjectArea"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Subject Area Name</rdfs:label>
+    <rdfs:comment xml:lang="en">The name of a subject within a specific scheme for a subject area.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/subjectName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/missionStatementUrl">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Mission Statement URL</rdfs:label>
+    <rdfs:comment xml:lang="en">The URL of a mission statement describing the designated community of the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/missionStatementUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/contentType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Content Type</rdfs:label>
+    <rdfs:comment xml:lang="en">All types of resources available in the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/contentType</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/ContentType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Content Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The resource available from a repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/contentType</skos:relatedTo>
+  </owl:Class>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/StandardOfficeDocuments">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Standard office documents</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/NetworkbasedData">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Networkbased data</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/Databases">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Databases</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/Images">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Images</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/StructuredGraphics">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Structured graphics</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/AudiovisualData">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Audiovisual data</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/ScientificStatisticalDataFormats">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Scientific and statistical data formats</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/RawData">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Raw data</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/PlainText">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Plain text</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/StructuredText">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Structured text</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/ArchivedData">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Archived data</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/SoftwareApplications">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Software applications</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/SourceCode">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Source code</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/ConfigurationData">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">Configuration data</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/OtherContent">
+    <rdf:type rdf:resource="http://example.org/voc/ContentType"/>
+    <rdfs:label xml:lang="en">other</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/providerType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/ProviderType"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Provider Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of provider.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/providerType</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/ProviderType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Provider Type</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of provider.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/providerType</skos:relatedTo>
+  </owl:Class>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/DataProvider">
+    <rdf:type rdf:resource="http://example.org/voc/ProviderType"/>
+    <rdfs:label xml:lang="en">Data Provider</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:namedIndividual rdf:about="http://example.org/voc/ServiceProvider">
+    <rdf:type rdf:resource="http://example.org/voc/ProviderType"/>
+    <rdfs:label xml:lang="en">Service Provider</rdfs:label>
+  </owl:namedIndividual>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/keyword">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+    <rdfs:label xml:lang="en">Keyword</rdfs:label>
+    <rdfs:comment xml:lang="en">English keyword(s) describing the subject focus of the repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/keyword</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/institution">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:label xml:lang="en">Institution</rdfs:label>
+    <rdfs:comment xml:lang="en">All institutions being responsible for funding, creating and/or running the RDR (.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institution</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/Institution">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Institution</rdfs:label>
+    <rdfs:comment xml:lang="en">All institutions being responsible for funding, creating and/or running the RDR (.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institution</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution name</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution name.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionAdditionalName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Additional Institution name</rdfs:label>
+    <rdfs:comment xml:lang="en">Additional Institution name.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionAdditionalName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionCountry">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution county name</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution country name.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionCountry</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/responsibilityType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution responsibility type</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution responsibility type.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/responsibilityType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution county name</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution country name.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution URL</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution URL like 'http://example.org'.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/institutionIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Insitution"/>
+    <rdfs:range rdf:resource="http://example.org/voc/InstitutionIdentifier"/>
+    <rdfs:label xml:lang="en">Link to Institution Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">The identifier for the responsible institution</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionIdentifier</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/InstitutionIdentifier">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Institution Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">The identifier for the responsible institution</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionIdentifier</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionIdentifierType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/InstitutionIdentifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution Identifier type</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution identifier type</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionIdentifierType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/institutionIdentifierValue">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/InstitutionIdentifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Institution Identifier value</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution identifier value</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionIdentifierValue</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/responsibilityStartDate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/XXX"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">Responsibility start date</rdfs:label>
+    <rdfs:comment xml:lang="en">Responsibility start date</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/responsibilityStartDate</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/responsibilityEndDate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/XXX"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">Responsibility end date</rdfs:label>
+    <rdfs:comment xml:lang="en">Responsibility end date</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/responsibilityEndDate</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/institutionContact">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/contactPoint"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Institution"/>
+    <rdfs:label xml:lang="en">Institution contact point</rdfs:label>
+    <rdfs:comment xml:lang="en">Institution contact point.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/institutionContact</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/policy">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/Policy"/>
+    <rdfs:label xml:lang="en">Policy</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to an alerting service for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/policy</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/Policy">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">policy</rdfs:label>
+    <rdfs:comment xml:lang="en">The alerting service the data repository offers </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/policy</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/policyType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Policy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Policy type</rdfs:label>
+    <rdfs:comment xml:lang="en">Policy type.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/policytype</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/policyName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Policy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Policy name</rdfs:label>
+    <rdfs:comment xml:lang="en">Policy name.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/policyName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/policyUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/Policy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Policye URL</rdfs:label>
+    <rdfs:comment xml:lang="en">Policy URL like 'http://example.org/policy.html'.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/policyUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/databaseAccess">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DatabaseAccess"/>
+    <rdfs:label xml:lang="en">Database Access</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a database Access for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseAccess</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DatabaseAccess">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Database Access</rdfs:label>
+    <rdfs:comment xml:lang="en">The regulation for submitting research data to the RDR </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseAccess</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/databaseAccessType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseAccess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The type of the database Access</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of the database Access.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseAccessType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataAccessRestriction">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseAccess"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataAccess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">All existing restrictions to the database Access (required if restricted is chosen)..</rdfs:label>
+    <rdfs:label xml:lang="en">All existing restrictions to the data Access (required if restricted is chosen)..</rdfs:label>
+    <rdfs:comment xml:lang="en">All existing restrictions to the database Access (required if restricted is chosen)..</rdfs:comment>
+    <rdfs:comment xml:lang="en">All existing restrictions to the data Access (required if restricted is chosen)..</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseAccessRestriction</skos:relatedTo>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataAccessRestriction</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/databaseLicense">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DatabaseLicense"/>
+    <rdfs:label xml:lang="en">Database license  standard</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a database license for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseLicense</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DatabaseLicense">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Database license standard</rdfs:label>
+    <rdfs:comment xml:lang="en">The license for database  </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseLicense</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/databaseLicenseName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Data license standard name</rdfs:label>
+    <rdfs:comment xml:lang="en">Metadata standard like ISO 115.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseLicenseName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/databaseLicenseUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DatabaseLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The data  license URL.</rdfs:label>
+    <rdfs:comment xml:lang="en">The data  license URL.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/databaseLicenseUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/dataAccess">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DataAccess"/>
+    <rdfs:label xml:lang="en">Data Access</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a data Access for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataAccess</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DataAccess">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data Access</rdfs:label>
+    <rdfs:comment xml:lang="en">The regulation for submitting research data to the RDR </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataAccess</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataAccessType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataAccess"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The type of the data Access</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of the data Access.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataAccessType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/dataLicense">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DataLicense"/>
+    <rdfs:label xml:lang="en">Data license  standard</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a data license for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataLicense</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DataLicense">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data license standard</rdfs:label>
+    <rdfs:comment xml:lang="en">The license for data  </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataLicense</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataLicenseName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Data license standard name</rdfs:label>
+    <rdfs:comment xml:lang="en">Metadata standard like ISO 115.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataLicenseName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataLicenseUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The data  license URL.</rdfs:label>
+    <rdfs:comment xml:lang="en">The data  license URL.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataLicenseUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/dataUpload">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DataUpload"/>
+    <rdfs:label xml:lang="en">Data upload</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a data upload for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUpload</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DataUpload">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data upload</rdfs:label>
+    <rdfs:comment xml:lang="en">The regulation for submitting research data to the RDR </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUpload</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataUploadType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataUpload"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The type of the data upload</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of the data upload.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataUploadRestriction">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataUpload"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">All existing restrictions to the data upload (required if restricted is chosen)..</rdfs:label>
+    <rdfs:comment xml:lang="en">All existing restrictions to the data upload (required if restricted is chosen)..</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadRestriction</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/dataUploadLicense">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/DataUploadLicense"/>
+    <rdfs:label xml:lang="en">Data license  standard</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a data license for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadLicense</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/DataUploadLicense">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Data license standard</rdfs:label>
+    <rdfs:comment xml:lang="en">The license for data upload </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadLicense</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataUploadLicenseName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataUploadLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Data license standard name</rdfs:label>
+    <rdfs:comment xml:lang="en">Metadata standard like ISO 115.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadLicenseName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/dataUploadLicenseUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataUploadLicense"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The data upload license URL.</rdfs:label>
+    <rdfs:comment xml:lang="en">The data upload license URL.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/dataUploadLicenseUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/software">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Software</rdfs:label>
+    <rdfs:comment xml:lang="en">The software used to run the RDR  ex Dspace.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/software</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/versioning">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Versioning</rdfs:label>
+    <rdfs:comment xml:lang="en">The RDR supports versioning of research data.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/versioning</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/api">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/API"/>
+    <rdfs:label xml:lang="en">api </rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a API standard for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/api</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/API">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">API</rdfs:label>
+    <rdfs:comment xml:lang="en">An API standard the data repository offers </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/api</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/apiType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/API"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The type of API</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of API</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/apiType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/apiUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/API"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">The URL of the API</rdfs:label>
+    <rdfs:comment xml:lang="en">The URL of the API</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/apiUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/apiDocumentation">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/API"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">A link referring to the API documentation</rdfs:label>
+    <rdfs:comment xml:lang="en">A link referring to the API documentation, a website that states its availability and other information for using the API</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/apiDocumentation</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/pidSystem">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">pidSystem information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">The persistent identifier system that is used by the RDR.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/pidSystem</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/citationReference">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">citationReference information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">The RDR is covered by SCOPUS or the Data Citation Index.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/citationReference</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/metrics">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">metrics information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">Any service, tool, etc. that is used by the RDR to track, measure and visualize the usage of provided research data.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/metrics</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/citationGuidelineUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Citation Guideline Url</rdfs:label>
+    <rdfs:comment xml:lang="en">The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.org/whycitedata).</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/citationGuidelineUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/aidSystem">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">aidSystem information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">The author identifier system that is used by the RDR.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/aidSystem</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/enhancedPublication">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">enhancedPublication information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">The RDR offers the interlinking between publications and data.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/enhancedPublication</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/qualityManagement">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">qualityManagement information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">Any form of quality management concerning the research data or metadata of the RDR.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/qualityManagement</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/certificate">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">certificate information and remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text remarks about the respository certificate.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/certificate</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/metadataStandard">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/MetadataStandard"/>
+    <rdfs:label xml:lang="en">Metadata standard</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a metadata standard for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/metadataStandard</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/MetadataStandard">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Metadata standard</rdfs:label>
+    <rdfs:comment xml:lang="en">The metadata standard the data repository offers </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/metadataStandard</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/metadataStandardName">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/MetadataStandard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Matadata standard name</rdfs:label>
+    <rdfs:comment xml:lang="en">Metadata standard like ISO 115.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/metadataStandardName</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/metadataStandardUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/MetadataStandard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Metadata standard URL</rdfs:label>
+    <rdfs:comment xml:lang="en">Metadata standard  URL like 'http://example.org/metadataX.html'.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/metadataStandardUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.org/voc/alertService">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://example.org/voc/AlertService"/>
+    <rdfs:label xml:lang="en">Alert Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to an alerting service for a data repository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/syndication</skos:relatedTo>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="http://example.org/voc/AlertService">
+    <rdfs:subClassOf rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:label xml:lang="en">Alert Service</rdfs:label>
+    <rdfs:comment xml:lang="en">The alerting service the data repository offers </rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/syndication</skos:relatedTo>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/alertServiceType">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/AlertService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Alert Service Type</rdfs:label>
+    <rdfs:comment xml:lang="en">Alerting service type like RSS.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/syndicationType</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/alertServiceUrl">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/url"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/AlertService"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:label xml:lang="en">Alert Service URL</rdfs:label>
+    <rdfs:comment xml:lang="en">Alerting service URL like 'http://example.org/rss.xml'.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/syndicationUrl</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/remarks">
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">Informational remarks</rdfs:label>
+    <rdfs:comment xml:lang="en">Free text remarks about the respository.</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/XXXX</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/entryDate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/XXX"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">Date of entry</rdfs:label>
+    <rdfs:comment xml:lang="en">The date entry made</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/XXXX</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.org/voc/lastUpdate">
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/XXX"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.org/voc/"/>
+    <rdfs:domain rdf:resource="http://example.org/voc/DataRepository"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">Date of last update</rdfs:label>
+    <rdfs:comment xml:lang="en">The date from which last update was made</rdfs:comment>
+    <skos:relatedTo>http://www.re3data.org/schema/3-0/XXXX</skos:relatedTo>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>
