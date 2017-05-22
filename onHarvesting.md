@@ -40,3 +40,9 @@ where {
 ![Result Table](./Images/resultTable.png)
 
 
+### Visual Graph 
+A simple visual of some of the relations in the graph.
+
+![Result Table](./Images/CDFRWGgraph.png)
+
+
