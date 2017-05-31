@@ -1,0 +1,4612 @@
+
+<html>
+<head>
+<meta content="text/html;charset=UTF-8" http-equiv="Content-Type"></meta>
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://www.gs1.org/sites/all/themes/custom/gsone_phoenix_toolkit/favicon.ico"></link>
+<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css"></link>
+<link rel="stylesheet" href="css/gs1vocab.css"></link>
+
+
+<title>GS1 Web Vocabulary</title>
+<script src="es6-shim.min.js"></script>
+<script src="jquery-2.1.0.min.js"></script>
+<script id="vocab" type="application/ld+json">
+{
+  "@context": {
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dc1": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/voc/alertServiceUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Alerting service URL like 'http://example.org/rss.xml'."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/AlertService"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Alert Service URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/syndicationUrl"
+    },
+    {
+      "@id": "http://example.org/voc/dataLicenseUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The data  license URL."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The data  license URL."
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataLicenseUrl"
+    },
+    {
+      "@id": "http://example.org/voc/ServiceProvider",
+      "@type": [
+        "http://example.org/voc/ProviderType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Service Provider"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeDisciplinary",
+      "@type": [
+        "http://example.org/voc/RepositoryType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Disciplinary repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeGovernmental",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/RepositoryType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Governmental repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/additionalName",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The alternative name or acronym for the data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Additional Name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:additionalName"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/alternateName"
+    },
+    {
+      "@id": "http://example.org/voc/aidSystem",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The author identifier system that is used by the RDR."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "aidSystem information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/aidSystem"
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeInstitutional",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/RepositoryType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institutional repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/startDate",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Releasing date of the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Releasing Date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:date"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:foundingDate"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/startDate"
+    },
+    {
+      "@id": "http://example.org/voc/identifierUrl",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The url that will resolve to the identified thing. For example a DOI of doi:10.1234/567890 could have the identifier url of 'https://doi.org/10.1234/567890' and/or 'http://doi.org/10.1234/567890' and/or 'http://dx.doi.org/10.1234/567890', hence it's unbounded cardinality."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Identifier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "An identifier's resolvable URL."
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryIdentifierValue"
+    },
+    {
+      "@id": "http://example.org/voc/dataUploadLicenseName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metadata standard like ISO 115."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataUploadLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license standard name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadLicenseName"
+    },
+    {
+      "@id": "http://example.org/voc/size",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The number of items contained in the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Size of Data Repository"
+      },
+      "rdfs:range": {
+        "@id": "xsd:integer"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:numberOfItems"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/size"
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryType",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of repository."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Repostory Type"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/type"
+    },
+    {
+      "@id": "http://example.org/voc/subjectId",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The unique identifier within a specific scheme for a subject area."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/SubjectArea"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Area Identifier"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subjectId"
+    },
+    {
+      "@id": "http://example.org/voc/missionStatementUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The URL of a mission statement describing the designated community of the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Mission Statement URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/missionStatementUrl"
+    },
+    {
+      "@id": "http://example.org/voc/SubjectScheme",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The specific scheme for a subject area."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Scheme"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subjectScheme"
+    },
+    {
+      "@id": "http://example.org/voc/userInterfaceLanguage",
+      "@type": "owl:DatatypeProperty",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The user interface language(s) of the RDR."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Repository Language"
+      },
+      "rdfs:range": {
+        "@id": "xsd:language"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:inLanguage"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryLanguage"
+    },
+    {
+      "@id": "http://example.org/voc/",
+      "@type": "owl:Ontology",
+      "dc1:issued": {
+        "@type": "xsd:date",
+        "@value": "2011-05-11"
+      },
+      "dc:creator": {
+        "@id": "https://raw.githubusercontent.com/fils/CDFRegistryWG/master/Vocabulary/some-old-joe-schmoe"
+      },
+      "dc:description": "Schema.org extension for a Data Repository",
+      "dc:identifier": "EC RWG Vocabulary v0.1",
+      "dc:title": "EarthCube Registry Working Group Vocabulary"
+    },
+    {
+      "@id": "http://example.org/voc/apiUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The URL of the API"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/API"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The URL of the API"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/apiUrl"
+    },
+    {
+      "@id": "http://example.org/voc/closedDate",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The date when the repository stopped ingesting new research data to its database. The database and its research data are still available."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Closed Date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:date"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/closed"
+    },
+    {
+      "@id": "http://example.org/voc/citationReference",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The RDR is covered by SCOPUS or the Data Citation Index."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "citationReference information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/citationReference"
+    },
+    {
+      "@id": "http://example.org/voc/InstitutionIdentifier",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The identifier for the responsible institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution Identifier"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionIdentifier"
+    },
+    {
+      "@id": "http://example.org/voc/metadataStandardName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metadata standard like ISO 115."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/MetadataStandard"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Matadata standard name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/metadataStandardName"
+    },
+    {
+      "@id": "http://example.org/voc/dataUploadRestriction",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "All existing restrictions to the data upload (required if restricted is chosen).."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataUpload"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "All existing restrictions to the data upload (required if restricted is chosen).."
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadRestriction"
+    },
+    {
+      "@id": "http://example.org/voc/dataAccessType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of the data Access."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataAccess"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The type of the data Access"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataAccessType"
+    },
+    {
+      "@id": "http://example.org/voc/dataUploadLicense",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a data license for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license  standard"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DataUploadLicense"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadLicense"
+    },
+    {
+      "@id": "http://example.org/voc/subjectScheme",
+      "@type": "owl:ObjectProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The specific scheme for a subject area."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/SubjectArea"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Area Scheme"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/SubjectScheme"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subjectScheme"
+    },
+    {
+      "@id": "http://example.org/voc/repositoryUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The canonical URL of the data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryUrl"
+    },
+    {
+      "@id": "http://example.org/voc/endDate",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The date the repository ended its service of ingesting new research data and/or providing it."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Releasing Date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:date"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/endDate"
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeProjectRelated",
+      "@type": [
+        "http://example.org/voc/RepositoryType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Project-related repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/dataUploadType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of the data upload."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataUpload"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The type of the data upload"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadType"
+    },
+    {
+      "@id": "http://example.org/voc/SourceCode",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Source code"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/entryDate",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The date entry made"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Date of entry"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:XXX"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/XXXX"
+    },
+    {
+      "@id": "http://example.org/voc/institutionCountry",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution country name."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution county name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionCountry"
+    },
+    {
+      "@id": "http://example.org/voc/dataLicense",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a data license for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license  standard"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DataLicense"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataLicense"
+    },
+    {
+      "@id": "http://example.org/voc/responsibilityType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution responsibility type."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution responsibility type"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/responsibilityType"
+    },
+    {
+      "@id": "http://example.org/voc/ArchivedData",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Archived data"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/identifierType",
+      "@type": "owl:ObjectProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type that identifies the domain space for its uniqueness."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Identifier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "An identifier's type such as DOI, ARK, URN or for custom types like Re3Data. For example a DOI of doi:10.1234/567890 would have the identifier value of '<http://example.org/voc/IdentifierTypeDOI>'"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/IdentifierType"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:propertyID"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryIdentifierType"
+    },
+    {
+      "@id": "http://example.org/voc/institutionAdditionalName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Additional Institution name."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Additional Institution name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionAdditionalName"
+    },
+    {
+      "@id": "http://example.org/voc/institutionName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution name."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionName"
+    },
+    {
+      "@id": "http://example.org/voc/pidSystem",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The persistent identifier system that is used by the RDR."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "pidSystem information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/pidSystem"
+    },
+    {
+      "@id": "http://example.org/voc/institutionIdentifierValue",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution identifier value"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/InstitutionIdentifier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution Identifier value"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionIdentifierValue"
+    },
+    {
+      "@id": "http://example.org/voc/SoftwareApplications",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Software applications"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/databaseLicense",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a database license for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DatabaseRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Database license  standard"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DatabaseLicense"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseLicense"
+    },
+    {
+      "@id": "http://example.org/voc/lastUpdate",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The date from which last update was made"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Date of last update"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:XXX"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/XXXX"
+    },
+    {
+      "@id": "http://example.org/voc/policy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to an alerting service for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Policy"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/Policy"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/policy"
+    },
+    {
+      "@id": "http://example.org/voc/databaseAccessType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of the database Access."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DatabaseAccess"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The type of the database Access"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseAccessType"
+    },
+    {
+      "@id": "http://example.org/voc/institutionIdentifierType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution identifier type"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/InstitutionIdentifier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution Identifier type"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionIdentifierType"
+    },
+    {
+      "@id": "http://example.org/voc/contactUrl",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "URL for an online contact form."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/ContactPoint"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Contact Point URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryContact"
+    },
+    {
+      "@id": "http://example.org/voc/SubjectArea",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A disciplinary focus."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Area"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subject"
+    },
+    {
+      "@id": "http://example.org/voc/responsibilityStartDate",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Responsibility start date"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Responsibility start date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:XXX"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/responsibilityStartDate"
+    },
+    {
+      "@id": "http://example.org/voc/institutionContact",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution contact point."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution contact point"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:contactPoint"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionContact"
+    },
+    {
+      "@id": "http://example.org/voc/Databases",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Databases"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/Identifier",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A unique identifier with a type and value for the Data Repository."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository Identifier"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:PropertyValue"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryIdentifier"
+    },
+    {
+      "@id": "http://example.org/voc/enhancedPublication",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The RDR offers the interlinking between publications and data."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "enhancedPublication information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/enhancedPublication"
+    },
+    {
+      "@id": "http://example.org/voc/versioning",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The RDR supports versioning of research data."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Versioning"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/versioning"
+    },
+    {
+      "@id": "http://example.org/voc/institutionUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution URL like 'http://example.org'."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionUrl"
+    },
+    {
+      "@id": "http://example.org/voc/DataAccess",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The regulation for submitting research data to the RDR "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Access"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataAccess"
+    },
+    {
+      "@id": "http://example.org/voc/apiDocumentation",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A link referring to the API documentation, a website that states its availability and other information for using the API"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/API"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "A link referring to the API documentation"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/apiDocumentation"
+    },
+    {
+      "@id": "http://example.org/voc/description",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A textual description providing additional information about the Data Repository (primary language is English). The language should be defined by the xsd datatype of the value. For example, '@en'. See "
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository Description"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:description"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/description"
+    },
+    {
+      "@id": "http://example.org/voc/institutionIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The identifier for the responsible institution"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Insitution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Link to Institution Identifier"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/InstitutionIdentifier"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionIdentifier"
+    },
+    {
+      "@id": "http://example.org/voc/StandardOfficeDocuments",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Standard office documents"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/dataAccess",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a data Access for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Access"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DataAccess"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataAccess"
+    },
+    {
+      "@id": "http://example.org/voc/DataUploadLicense",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The license for data upload "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license standard"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadLicense"
+    },
+    {
+      "@id": "http://example.org/voc/ContactPoint",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The contact point with either an email address or URL for an online contact form."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Contact Point"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ContactPoint"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryContact"
+    },
+    {
+      "@id": "http://example.org/voc/DatabaseLicense",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The license for database  "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Database license standard"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseLicense"
+    },
+    {
+      "@id": "http://example.org/voc/policyType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Policy type."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Policy"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Policy type"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/policytype"
+    },
+    {
+      "@id": "http://example.org/voc/DataRepository",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A Data Repository."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:Organization"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repository"
+    },
+    {
+      "@id": "http://example.org/voc/Images",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Images"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/Policy",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The alerting service the data repository offers "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "policy"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/policy"
+    },
+    {
+      "@id": "http://example.org/voc/dataUpload",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a data upload for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data upload"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DataUpload"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUpload"
+    },
+    {
+      "@id": "http://example.org/voc/alertService",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to an alerting service for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Alert Service"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/AlertService"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/syndication"
+    },
+    {
+      "@id": "http://example.org/voc/metadataStandardUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metadata standard  URL like 'http://example.org/metadataX.html'."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/MetadataStandard"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Metadata standard URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/metadataStandardUrl"
+    },
+    {
+      "@id": "http://example.org/voc/alertServiceType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Alerting service type like RSS."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/AlertService"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Alert Service Type"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/syndicationType"
+    },
+    {
+      "@id": "http://example.org/voc/keyword",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "English keyword(s) describing the subject focus of the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Keyword"
+      },
+      "rdfs:range": {
+        "@id": "rdf:langString"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/keyword"
+    },
+    {
+      "@id": "http://example.org/voc/dataLicenseName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metadata standard like ISO 115."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license standard name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataLicenseName"
+    },
+    {
+      "@id": "http://example.org/voc/ConfigurationData",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Configuration data"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/ProviderType",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of provider."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Provider Type"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/providerType"
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeOther",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/RepositoryType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Other repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/DFGSubjectScheme",
+      "@type": [
+        "http://example.org/voc/SubjectScheme",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "DFG"
+      },
+      "rdfs:seeAlso": "http://www.dfg.de/en/dfg_profile/statutory_bodies/review_boards/subject_areas/index.jsp"
+    },
+    {
+      "@id": "http://example.org/voc/metadataStandard",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a metadata standard for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Metadata standard"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/MetadataStandard"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/metadataStandard"
+    },
+    {
+      "@id": "http://example.org/voc/apiType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of API"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/API"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The type of API"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/apiType"
+    },
+    {
+      "@id": "http://example.org/voc/policyName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Policy name."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Policy"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Policy name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/policyName"
+    },
+    {
+      "@id": "http://example.org/voc/PlainText",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Plain text"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/repositoryType",
+      "@type": "owl:ObjectProperty",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository Type"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/RepositoryType"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:additionalType"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryTypes"
+    },
+    {
+      "@id": "http://example.org/voc/AudiovisualData",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Audiovisual data"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/providerType",
+      "@type": "owl:ObjectProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The type of provider."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Provider Type"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/ProviderType"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/providerType"
+    },
+    {
+      "@id": "http://example.org/voc/DatabaseAccess",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The regulation for submitting research data to the RDR "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Database Access"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseAccess"
+    },
+    {
+      "@id": "http://example.org/voc/policyUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Policy URL like 'http://example.org/policy.html'."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Policy"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Policye URL"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/policyUrl"
+    },
+    {
+      "@id": "http://example.org/voc/Institution",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "All institutions being responsible for funding, creating and/or running the RDR (."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institution"
+    },
+    {
+      "@id": "http://example.org/voc/IdentifierType",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "A identifier type for an Identifier."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository Identifier Type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/RepositoryTypeMultidisciplinary",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/RepositoryType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Multidisciplinary repository type"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/API",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An API standard the data repository offers "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "API"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/api"
+    },
+    {
+      "@id": "http://example.org/voc/DataProvider",
+      "@type": [
+        "http://example.org/voc/ProviderType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Provider"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/databaseLicenseName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Metadata standard like ISO 115."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DatabaseLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license standard name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseLicenseName"
+    },
+    {
+      "@id": "http://example.org/voc/contentType",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "All types of resources available in the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Content Type"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/ContentType"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/contentType"
+    },
+    {
+      "@id": "http://example.org/voc/databaseAccess",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a database Access for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DatabaseRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Database Access"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/DatabaseAccess"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseAccess"
+    },
+    {
+      "@id": "http://example.org/voc/StructuredGraphics",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Structured graphics"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/remarks",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Free text remarks about the respository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Informational remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/XXXX"
+    },
+    {
+      "@id": "http://example.org/voc/repositoryName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The name of the data repository expressed in text."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Repository Name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:name"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryName"
+    },
+    {
+      "@id": "http://example.org/voc/OtherContent",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "other"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/api",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to a API standard for a data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "api "
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/API"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/api"
+    },
+    {
+      "@id": "http://example.org/voc/IdentifierTypeRe3data",
+      "@type": [
+        "http://example.org/voc/IdentifierType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Specifically a Re3Data Digital Object Identifier (DOI)"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/re3data"
+    },
+    {
+      "@id": "http://example.org/voc/institution",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "All institutions being responsible for funding, creating and/or running the RDR (."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institution"
+    },
+    {
+      "@id": "http://example.org/voc/MetadataStandard",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The metadata standard the data repository offers "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Metadata standard"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/metadataStandard"
+    },
+    {
+      "@id": "http://example.org/voc/identifiers",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Links to identifiers that uniquely identify the data repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Identifier"
+      },
+      "rdfs:range": {
+        "@id": "http://examples.org/voc/Identifier"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:identifier"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/identifiers"
+    },
+    {
+      "@id": "http://example.org/voc/contactPoint",
+      "@type": "owl:ObjectProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The agent to contact."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data Repository Contact"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/ContactPoint"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:contactPoint"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryContact"
+    },
+    {
+      "@id": "http://example.org/voc/software",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The software used to run the RDR  ex Dspace."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Software"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/software"
+    },
+    {
+      "@id": "http://example.org/voc/citationGuidelineUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The URL of the RDR providing information on how to cite its research data. The DataCite citation format is recommended (http://www.datacite.org/whycitedata)."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Citation Guideline Url"
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/citationGuidelineUrl"
+    },
+    {
+      "@id": "http://example.org/voc/dataUploadLicenseUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The data upload license URL."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataUploadLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The data upload license URL."
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUploadLicenseUrl"
+    },
+    {
+      "@id": "http://example.org/voc/certificate",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Free text remarks about the respository certificate."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "certificate information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/certificate"
+    },
+    {
+      "@id": "http://example.org/voc/identifierValue",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The value that will be unique within a specifc identifier type. For example a DOI of doi:10.1234/567890 would have the identifier value of '10.1234/567890'"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Identifier"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "An identifier's value."
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:value"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryIdentifierValue"
+    },
+    {
+      "@id": "http://example.org/voc/responsibilityEndDate",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Responsibility end date"
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Responsibility end date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:dateTime"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:XXX"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/responsibilityEndDate"
+    },
+    {
+      "@id": "http://example.org/voc/qualityManagement",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Any form of quality management concerning the research data or metadata of the RDR."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "qualityManagement information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/qualityManagement"
+    },
+    {
+      "@id": "http://example.org/voc/ScientificStatisticalDataFormats",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Scientific and statistical data formats"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/contactEmail",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "An email address for a data repository's contact point."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/ContactPoint"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Contact Point Email"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:email"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/repositoryContact"
+    },
+    {
+      "@id": "http://example.org/voc/IdentifierTypeDOI",
+      "@type": [
+        "http://example.org/voc/IdentifierType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Digital Object Identifier (DOI)"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/StructuredText",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Structured text"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/DataLicense",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The license for data  "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data license standard"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataLicense"
+    },
+    {
+      "@id": "http://example.org/voc/databaseLicenseUrl",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The data  license URL."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DatabaseLicense"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "The data  license URL."
+      },
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/databaseLicenseUrl"
+    },
+    {
+      "@id": "http://example.org/voc/subjectArea",
+      "@type": "owl:ObjectProperty",
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The disciplinary focus of the repository."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Area"
+      },
+      "rdfs:range": {
+        "@id": "http://example.org/voc/SubjectArea"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subject"
+    },
+    {
+      "@id": "http://example.org/voc/dataAccessRestriction",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": [
+        {
+          "@language": "en",
+          "@value": "All existing restrictions to the database Access (required if restricted is chosen).."
+        },
+        {
+          "@language": "en",
+          "@value": "All existing restrictions to the data Access (required if restricted is chosen).."
+        }
+      ],
+      "rdfs:domain": [
+        {
+          "@id": "http://example.org/voc/DatabaseAccess"
+        },
+        {
+          "@id": "http://example.org/voc/DataAccess"
+        }
+      ],
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "All existing restrictions to the database Access (required if restricted is chosen).."
+        },
+        {
+          "@language": "en",
+          "@value": "All existing restrictions to the data Access (required if restricted is chosen).."
+        }
+      ],
+      "rdfs:range": {
+        "@id": "xsd:anyURI"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:url"
+      },
+      "skos:relatedTo": [
+        "http://www.re3data.org/schema/3-0/databaseAccessRestriction",
+        "http://www.re3data.org/schema/3-0/dataAccessRestriction"
+      ]
+    },
+    {
+      "@id": "http://example.org/voc/offlineDate",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The date when the repository went offline. The database and/or the website are no longer available."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Closed Date"
+      },
+      "rdfs:range": {
+        "@id": "xsd:date"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "schema:dissolutionDate"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/offline"
+    },
+    {
+      "@id": "http://example.org/voc/institutionType",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Institution country name."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/Institution"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Institution county name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/institutionType"
+    },
+    {
+      "@id": "http://example.org/voc/metrics",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Any service, tool, etc. that is used by the RDR to track, measure and visualize the usage of provided research data."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/DataRepository"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "metrics information and remarks"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/metrics"
+    },
+    {
+      "@id": "http://example.org/voc/ContentType",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The resource available from a repository."
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Content Type"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/contentType"
+    },
+    {
+      "@id": "http://example.org/voc/RawData",
+      "@type": [
+        "owl:namedIndividual",
+        "http://example.org/voc/ContentType"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Raw data"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/NetworkbasedData",
+      "@type": [
+        "http://example.org/voc/ContentType",
+        "owl:namedIndividual"
+      ],
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Networkbased data"
+      }
+    },
+    {
+      "@id": "http://example.org/voc/subjectName",
+      "@type": "owl:DatatypeProperty",
+      "owl:maxCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "owl:minCardinality": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The name of a subject within a specific scheme for a subject area."
+      },
+      "rdfs:domain": {
+        "@id": "http://example.org/voc/SubjectArea"
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Subject Area Name"
+      },
+      "rdfs:range": {
+        "@id": "xsd:string"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/subjectName"
+    },
+    {
+      "@id": "http://example.org/voc/DataUpload",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The regulation for submitting research data to the RDR "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Data upload"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/dataUpload"
+    },
+    {
+      "@id": "http://example.org/voc/AlertService",
+      "@type": "owl:Class",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "The alerting service the data repository offers "
+      },
+      "rdfs:isDefinedBy": {
+        "@id": "http://example.org/voc/"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Alert Service"
+      },
+      "rdfs:subClassOf": {
+        "@id": "schema:ItemList"
+      },
+      "skos:relatedTo": "http://www.re3data.org/schema/3-0/syndication"
+    }
+  ]
+}
+</script>
+</head>
+<body lang="en" prefix="xsd: http://www.w3.org/2001/XMLSchema# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# schema: http://schema.org/ gs1: http://gs1.org/voc/">
+<noscript>
+<style type="text/css">
+/* First CSS block searchTerm= [0]*/
+#intro {display: block;}
+#searchBox {display: block;}
+.searchresults {display: none;}
+#triple {display: none;}
+#allClasses {display: none;}
+#allProperties {display: none;}
+#allTypecodes {display: none;}
+#propertiesOfClass {display: none;}
+#propertiesOfParentClass {display: none;}
+#propertiesOfGrandparentClass {display: none;}
+#definedTypecodeinstances {display: none;}
+#subclasses {display: none;}
+#superclasses {display: none;}
+#rangeinfo {display: none;}
+#domaininfo {display: none;}
+#havingrangeinfo {display: none;}
+#siblinginfo {display: none;}
+.termschema {display: none;}
+</style>
+</noscript>
+
+            <div class="toolkit  header-short">
+               <header>
+                  <div class="header-top">
+                     <div class="container">
+                        <div class="logo">
+                           <div class="logo1">
+                              <a href="http://www.gs1.org">
+                                 <img alt="GS1 logo" src="http://www.gs1.org/sites/all/themes/custom/gsone_phoenix_toolkit/logo.png"></img>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </header>
+            </div>
+
+            <div class="container">
+               <div id="mainblock" >
+                  <ol id="breadcrumbTrail" class="breadcrumb"><li id="currentClass">GS1 Web Vocabulary</li></ol>
+
+
+
+          <h1>
+                     <span id="termName" property="rdfs:label" language=$uiLanguage>GS1 Web Vocabulary</span><br>
+                     <small><span id="termURL">http://gs1.org/voc/</span></small>
+                  </h1>
+                  <p id="termComment" property="rdfs:comment"></p>
+
+                  <p id="superclassNote"></p>
+                  <p id="subclassNote"></p>
+        <p class="termschema">Nearest schema.org equivalent: <br><span id="schemaEquivalent"></span><br></p>
+
+
+        <div id="intro">
+        <p>The <a href="http://www.gs1.org/gs1-smartsearch" target="_blank">GS1 SmartSearch standard</a> allows businesses to benefit from:
+<ul>
+<li>Better search results for consumers to find the products and information they need.</li>
+<li>Greater visibility of their products in online searches.</li>
+<li>Improved, accurate online product information.</li>
+<li>Shared product information via consumer-facing mobile devices and websites, which ultimately drive sales.</li>
+</ul>
+</p>
+<p><a href="http://www.gs1.org/gs1-smartsearch" target="_blank">Further information and support tools for the GS1 SmartSearch are available.</a></p>
+<p>This site documents one technical aspect of GS1 SmartSearch -  the GS1 Web Vocabulary.  The initial focus of the GS1 Web Vocabulary is consumer facing properties for clothing, shoes, food beverage/tobacco and properties common to all products. Food/Beverage/Tobacco properties will include properties related to EU 1169 as defined in the GDSN and GS1 Source Standards. In addition, the vocabulary includes the definition of parties and of a product offer (a product offered by a party for a price). Properties and their definitions come from existing GS1 standards including GDSN, GS1 Source and GPC. Exceptions to this rule include the definition of Offer which does not exist in any of the above standards.</p>
+<hr>                <ul>
+          <li><a href="./?show=classes" class="link">Browse all classes</a></li>
+          <li><a href="./?show=properties" class="link">Browse all properties</a></li>
+          <li><a href="./?show=typecodes" class="link">Browse all type codes</a></li>
+        </ul>
+        <hr/>
+        <form action="./" method="post">
+        <p id="searchBox"><input type="search" id="searchTerm" name="searchTerm" placeholder="single keyword"><input type="submit" id="doSearch" value="Search"></p>
+        </form>
+        </div>
+        <div class="searchresults">
+          <div id="classResults" class="tablediv table">
+          <p class="tableheader" >Classes:</p>
+            <table class="table table-striped">
+             <thead id="classResultsHead"><th>Class</th><th>Description</th></thead>
+             <tbody id="classResultsDetails"></tbody>
+          </table>
+          </div>
+
+          <div id="propertyResults" class="tablediv">
+          <p class="tableheader" >Properties:</p>
+            <table class="table table-striped">
+             <thead id="propertyResultsHead"><th>Property</th><th>Expected Type</th><th>Description</th></thead>
+             <tbody id="propertyResultsDetails"></tbody>
+          </table>
+          </div>
+
+          <div id="typecodeResults" class="tablediv">
+          <p class="tableheader" >Type Codes:</p>
+            <table class="table table-striped">
+             <thead id="typecodeResultsHead"><th>TypeCode</th><th>Description</th></thead>
+             <tbody id="typecodeResultsDetails"></tbody>
+          </table>
+          </div>
+          <div id="typecodeinstanceResults" class="tablediv">
+          <p class="tableheader" >Type Code Values:</p>
+            <table class="table table-striped">
+             <thead id="typecodeinstanceResultsHead"><th>Code Value</th><th>Name</th><th>Description and URI</th></thead>
+             <tbody id="typecodeinstanceResultsDetails"></tbody>
+          </table>
+          </div>
+        </div>
+
+
+        <div id="allClasses" class="tablediv">
+        <p class="tableheader">All Classes</p>
+                  <table class="table table-striped">
+                     <thead><th>Class</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails1"></tbody>
+        </table>
+        </div>
+
+        <div id="allProperties" class="tablediv">
+        <p class="tableheader">All Properties</p>
+                  <table class="table table-striped">
+                     <thead><th>Property</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails2"></tbody>
+        </table>
+        </div>
+
+        <div id="allTypecodes" class="tablediv">
+        <p class="tableheader">All Type Codes</p>
+                  <table class="table table-striped">
+                     <thead><th>TypeCode</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails3"></tbody>
+        </table>
+        </div>
+
+        <div id="propertiesOfClass" class="tablediv">
+        <p class="tableheader" id="membertableHeader4"></p>
+                  <table class="table table-striped">
+                     <thead><th>Property</th><th>Expected Type</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails4"></tbody>
+        </table>
+        </div>
+
+        <div id="propertiesOfParentClass" class="tablediv">
+        <p class="tableheader" id="membertableHeader4a"></p>
+                  <table class="table table-striped">
+                     <thead><th>Property</th><th>Expected Type</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails4a"></tbody>
+        </table>
+        </div>
+
+        <div id="propertiesOfGrandparentClass" class="tablediv">
+        <p class="tableheader" id="membertableHeader4b"></p>
+                  <table class="table table-striped">
+                     <thead><th>Property</th><th>Expected Type</th><th>Description</th></thead>
+                     <tbody id="termMemberDetails4b"></tbody>
+        </table>
+        </div>
+
+
+        <div id="definedTypecodeinstances" class="tablediv">
+        <p class="tableheader">Defined values for this Type Code</p>
+                  <table class="table table-striped">
+                     <thead><th>Code Value</th><th>Name</th><th>Description and URI</th></thead>
+                     <tbody id="termMemberDetails5"></tbody>
+        </table>
+        </div>
+
+        <div id="subclasses" class="tablediv">
+        <p class="tableheader">Subclasses &#x21E9;</p>
+                <table class="table table-striped">
+                     <thead><th>Subclass</th><th>URI</th><th>Description</th></thead>
+                     <tbody id="subclassDetails"></tbody>
+        </table>
+        </div>
+
+                <div id="superclasses" class="tablediv">
+        <p class="tableheader">Superclasses &#x21E7;</p>
+                <table class="table table-striped">
+                     <thead><th>Superclass</th><th>URI</th><th>Description</th></thead>
+                     <tbody id="superclassDetails"></tbody>
+        </table>
+        </div>
+
+        <div id="triple" style="width: 100%;">
+        <span class="oval" id="domainOval"></span>
+        <span class="predicate" id="predicateArrow"></span>
+        <span id="rangeShape" class=""></span>
+        </div>
+
+
+                <div id="rangeinfo" class="tablediv">
+        <p class="tableheader">Expects value of type:</p>
+                 <table class="table table-striped">
+                     <thead><th>Value is expected to be of type:</th></thead>
+                     <tbody id="rangeDetails"></tbody>
+        </table>
+        </div>
+
+        <div id="domaininfo" class="tablediv">
+        <p class="tableheader">Classes having this property:</p>
+                 <table class="table table-striped">
+                     <thead><th>Used with these classes:</th></thead>
+                     <tbody id="domainDetails"></tbody>
+        </table>
+        </div>
+
+        <div id="havingrangeinfo" class="tablediv">
+        <p class="tableheader">Properties expecting this type of value:</p>
+                <table class="table table-striped">
+                     <thead><th>Property expecting this type</th><th>Expected Type</th><th>Description</th></thead>
+                     <tbody id="havingRangeDetails"></tbody>
+        </table>
+        </div>
+
+        <div id="siblinginfo" class="tablediv">
+        <p class="tableheader">Related properties (with the same domain and range):</p>
+                <table class="table table-striped">
+                     <thead id="siblingHead"><th>Property</th><th>Expected Type</th><th>Description</th></thead>
+                     <tbody id="siblingDetails"></tbody>
+        </table>
+        </div>
+
+
+
+      </div>
+      <div class="footer">Version 1.1 2016-11-21</div>
+    </div>
+
+<script language="javascript">
+var base_url="http://example.org/voc/";
+
+var vocab=$("#vocab").html();
+var json=JSON.parse(vocab);
+
+var uiLanguage="en";
+var uiText=[];
+uiText["Exact match:"] = "Exact match:";
+uiText["Close match:"] = "Close match:";
+uiText["Broad match:"] = "Broad match:";
+uiText["Related match:"] = "Related match:";
+uiText["Subclass of:"] = "Subclass of:";
+uiText["Subproperty of:"] = "Subproperty of:";
+uiText["Related (within the context of):"] = "Related (within the context of):";
+uiText["See also:"] = "See also:";
+uiText["Properties of"] = "Properties of";
+uiText["A subclass of"] = "A subclass of";
+uiText["Has subclasses"] = "Has subclasses";
+
+
+var objectProperties={};
+var datatypeProperties={};
+var graph=json["@graph"];
+
+var nodeTypes=getNodeTypes();
+
+
+function doSearch() {
+  var searchTerm=$('#searchTerm').val();
+  searchTerm=searchTerm.replace(/[ ]+$/,"");
+  searchTerm=searchTerm.replace(/^[ ]+/,"");
+
+  var searchTermLC=searchTerm.toLowerCase();
+  var classes={};
+  var properties={};
+  var typecodes={};
+  var typecodeinstances={};
+  var foundClass=false;
+  var foundProperty=false;
+  var foundTypecode=false;
+  var foundTypecodeinstance=false;
+  $.each(graph, function( index, value ) {
+    var id=value["@id"];
+    var type=value["@type"] || [];
+    var label=value["rdfs:label"];
+    var comment=value["rdfs:comment"] || [];
+    var prefLabel=value["skos:prefLabel"] || [];
+    var labelvalue=selectLanguage(label,uiLanguage);
+    var commentvalue=selectLanguage(comment,uiLanguage);
+    var haystack=(labelvalue+"\t"+commentvalue+"\t"+prefLabel+"\t"+id).toLowerCase();
+    if (haystack.indexOf(searchTermLC) > -1) {
+      var detType=determineType(id);
+      switch(detType) {
+        case "Class":
+          classes[id]=value;
+          foundClass=true;
+          break;
+        case "property":
+          properties[id]=value;
+          foundProperty=true;
+          break;
+        case "TypeCode":
+          typecodes[id]=value;
+          foundTypecode=true;
+          break;
+        case "typeCodeInstance":
+          typecodeinstances[id]=value;
+          foundTypecodeinstance=true;
+          break;
+        }
+    }
+
+  });
+
+if (foundClass) {
+var tableContents=tabulateClasses(classes);
+$("#classResultsDetails").html(tableContents);
+$("#classResults").show();
+} else {
+$("#classResults").hide();
+}
+
+if (foundProperty) {
+var tableContents=tabulateProperties(properties,true,true);
+$("#propertyResultsDetails").html(tableContents);
+$("#propertyResults").show();
+} else {
+$("#propertyResults").hide();
+}
+
+if (foundTypecode) {
+var tableContents=tabulateTypeCodes(typecodes);
+$("#typecodeResultsDetails").html(tableContents);
+$("#typecodeResults").show();
+} else {
+$("#typecodeResults").hide();
+}
+
+if (foundTypecodeinstance) {
+var tableContents=tabulateInstances(typecodeinstances);
+$("#typecodeinstanceResultsDetails").html(tableContents);
+$("#typecodeinstanceResults").show();
+} else {
+$("#typecodeinstanceResults").hide();
+}
+
+if (foundClass || foundProperty || foundTypecode || foundTypecodeinstance ) {
+$(".searchresults").show();
+}
+
+
+}
+
+$("#classResults").hide();
+$("#propertyResults").hide();
+$("#typecodeResults").hide();
+$("#typecodeinstanceResults").hide();
+
+$('#doSearch').attr('type','button');
+
+
+var searchTermBox = document.getElementById("searchTerm");
+
+
+searchTermBox.addEventListener("keydown", function(event) {
+  if (event.keyCode == 13) { event.preventDefault(); }
+});
+
+searchTermBox.addEventListener("keyup", function(event) {
+    if (($("#searchTerm").val().length > 2)) {
+        doSearch();
+        return false;
+    }
+});
+
+searchTermBox.addEventListener("change", function(event) {
+    if (($("#searchTerm").val().length > 2)) {
+        doSearch();
+        return false;
+    }
+});
+
+
+
+
+$('#doSearch').click( function() {
+doSearch();
+});
+
+function getAllClasses() {
+var classes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var type=value["@type"] || [];
+if ((type.indexOf("owl:Class") > -1) && (id.substring(0,2) !== "_:")) {
+classes[id]=value;
+}
+});
+return classes;
+}
+
+
+
+function getAllProperties() {
+var properties={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var type=value["@type"] || [];
+if (type.indexOf("rdf:Property") > -1) {
+properties[value["@id"]]=value;
+}
+});
+return properties;
+}
+
+function getAllTypeCodes() {
+var typecodes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var type=value["rdfs:subClassOf"] || [];
+if ((type !== null) && (type["@id"]=="gs1:TypeCode")) {
+typecodes[value["@id"]]=value;
+}
+});
+return typecodes;
+}
+
+/*
+function getLinkedIDarray(obj) {
+var r=[];
+if ((obj !== undefined) && (obj !== null)) {
+if (obj["@id"] !== undefined) {
+  r.push(prepareLink(obj["@id"]));
+} else {
+  $.each(obj, function( index, value ) {
+  r.push(prepareLink(value["@id"]));
+  });
+}
+}
+return r;
+}
+*/
+
+function getLinkedIDarray(obj,filter) {
+var r=[];
+if ((obj !== undefined) && (obj !== null)) {
+if (obj["@id"] !== undefined) {
+    if (obj["@id"].indexOf(filter) > -1) {
+      r.push(prepareLink(obj["@id"]));
+    }
+} else {
+  $.each(obj, function( index, value ) {
+    if (value["@id"].indexOf(filter) > -1) {
+      r.push(prepareLink(value["@id"]));
+    }
+  });
+}
+}
+return r;
+}
+
+
+
+function getSubClasses(val) {
+  // get class nodes that are subclasses of specified class
+  return getNodes(val,"rdfs:subClassOf");
+}
+
+function getProperties(val) {
+  // get property nodes that have specified class as their domain
+  return getNodes(val,"rdfs:domain");
+
+}
+
+function getProperties2(term) {
+  var props={};
+  $.each(getAllProperties(), function( index, value ) {
+  var d = value["rdfs:domain"];
+  var fdl = getFlatDomainList(d);
+  if (fdl.indexOf('"'+term+'"') > -1) {
+  props[index]=value;
+  }
+  });
+  return props;
+}
+
+
+
+function getPropertiesOfType(val) {
+  // get property nodes that have specified class as their domain
+  return getNodes(val,"rdfs:range");
+}
+
+function getOfType(val) {
+  // get property nodes of specified type
+  return getNodes2(val,"@type");
+}
+
+function getNodeTypes() {
+var nodetypes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var type=value["@type"] ;
+var parent=value["rdfs:subClassOf"] || [];
+var parentName=parent["@id"] ;
+var ubertype = type || parentName;
+nodetypes[id]=ubertype;
+});
+return nodetypes;
+}
+
+
+
+function getNode(val) {
+var nodes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+if (id == val) {
+nodes[value["@id"]]=value;
+}
+});
+return nodes;
+}
+
+function getSuperClasses(val) {
+var superclasses=[];
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+if (id == val) {
+var parent=value["rdfs:subClassOf"] || [];
+var parentName=parent["@id"] || "";
+
+superclasses.push(parentName);
+}
+});
+
+return superclasses;
+}
+
+
+function getNodes(val,predicate) {
+// builds an object (associative array) {@nodeid: node} for all matching nodes where nodeid predicate val
+var nodes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var node=value[predicate] || [];
+
+if (Array.isArray(node)) {
+
+  $.each(node, function( index, nodeEl ) {
+    var nodeName = nodeEl["@id"] || "";
+    if (nodeName == val) {
+      nodes[value["@id"]]=value;
+    }
+  });
+
+
+} else {
+
+  var nodeName = node["@id"] || "";
+  if (nodeName == val) {
+    nodes[value["@id"]]=value;
+  }
+
+}
+
+
+});
+
+
+
+return nodes;
+}
+
+
+function getNodes2(val,predicate) {
+// builds an object (associative array) {@nodeid: node} for all matching nodes where nodeid predicate val
+var nodes={};
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+var node=value[predicate] || [];
+
+if (Array.isArray(node)) {
+
+  $.each(node, function( index, nodeEl ) {
+    var nodeName = nodeEl["@id"] || "";
+    if (nodeName == val) {
+      nodes[value["@id"]]=value;
+    }
+  });
+
+} else {
+
+  if (node == val) {
+  nodes[value["@id"]]=value;
+  }
+
+}
+
+});
+return nodes;
+}
+
+
+function listValues(obj) {
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var value=obj[keyname];
+});
+}
+
+function listObject(obj) {
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var value=obj[keyname];
+});
+}
+
+function listArray(obj) {
+$.each(obj, function(index,value) {
+});
+}
+
+function listProperties(obj) {
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var value=obj[keyname];
+var range=value["rdfs:range"] || [];
+});
+}
+
+function listClasses(obj) {
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var value=obj[keyname];
+var parent=value["rdfs:subClassOf"] || [];
+var parentClassName = parent["@id"] || "";
+if (parentClassName !== "") {
+var scNote=uiText["A subclass of"]+" "+prepareLink(parentClassName);
+$("#subclassNote").html(scNote);
+$("#subclassNote").show();
+} else {
+$("#subclassNote").hide();
+}
+});
+}
+
+function getSingleNode(val) {
+var rtnval=null;
+var found=false;
+$.each(graph, function( index, value ) {
+var id=value["@id"];
+if (id == val) {
+found=true;
+rtnvalue=value;
+}
+});
+if (!found) {
+rtnvalue=null;
+}
+return rtnvalue;
+}
+
+function prepareLink(val) {
+console.log(val);
+var url;
+var target;
+var link=val;
+if ((val !== undefined) && (val !== null)) {
+
+if (val.indexOf(base_url) == 0) {
+  url=val.replace(/^http:\/\/gs1\.org\/voc\//g , "");
+  link='<a href="'+url+'" class="link">gs1:'+url+'</a>';
+}
+if (val.indexOf("gs1:") == 0) {
+  url=val.replace(/^gs1:/g , "");
+  link='<a href="'+url+'" class="link">'+val+'</a>';
+}
+if (val.indexOf("rdf:") == 0) {
+  url=val.replace(/^rdf:/g , "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+if (val.indexOf("xsd:") == 0) {
+  url=val.replace(/^xsd:/g , "http://www.w3.org/2001/XMLSchema#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+if (val.indexOf("foaf:") == 0) {
+  url=val.replace(/^foaf:/g , "http://xmlns.com/foaf/0.1/");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+if (val.indexOf("vcard:") == 0) {
+  url=val.replace(/^vcard:/g , "http://www.w3.org/2006/vcard/ns#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+if (val.indexOf("gr:") == 0) {
+  url=val.replace(/^vcard:/g , "http://purl.org/goodrelations/v1#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+if (val.indexOf("schema:") == 0) {
+  url=val.replace(/^schema:/g , "http://schema.org/");
+  link='<a href="'+url+'"  class="link" target="_blank">'+val+'</a>';
+}
+
+}
+
+return link;
+}
+
+function prepareLink2(val,label) {
+var url;
+var target;
+var link=val;
+if ((val !== undefined) && (val !== null)) {
+
+if (val.indexOf("http://gs1.org/voc/") == 0) {
+  url=val.replace(/^http:\/\/gs1\.org\/voc\//g , "");
+  link='<a href="'+url+'" class="link">'+label+'</a>';
+}
+if (val.indexOf("gs1:") == 0) {
+  url=val.replace(/^gs1:/g , "");
+  link='<a href="'+url+'" class="link">'+label+'</a>';
+}
+if (val.indexOf("rdf:") == 0) {
+  url=val.replace(/^rdf:/g , "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+if (val.indexOf("xsd:") == 0) {
+  url=val.replace(/^xsd:/g , "http://www.w3.org/2001/XMLSchema#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+if (val.indexOf("foaf:") == 0) {
+  url=val.replace(/^foaf:/g , "http://xmlns.com/foaf/0.1/");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+if (val.indexOf("vcard:") == 0) {
+  url=val.replace(/^vcard:/g , "http://www.w3.org/2006/vcard/ns#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+if (val.indexOf("gr:") == 0) {
+  url=val.replace(/^vcard:/g , "http://purl.org/goodrelations/v1#");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+if (val.indexOf("schema:") == 0) {
+  url=val.replace(/^schema:/g , "http://schema.org/");
+  link='<a href="'+url+'"  class="link" target="_blank">'+label+'</a>';
+}
+
+}
+
+return link;
+}
+
+
+function determineType(val) {
+var type=null;
+var first=nodeTypes[val] || "";
+var second=nodeTypes[first] || "";
+    if ( (first.indexOf('owl:Class') > -1) || (first.indexOf('rdfs:Class') > -1 ) ) {
+  type="Class";
+  }
+
+  if ( (first.indexOf('rdf:Property') > -1) || (first.indexOf('owl:ObjectProperty') > -1) || (first.indexOf('owl:DatatypeProperty') > -1) ) {
+  type="property";
+  }
+
+  if ( first.indexOf('gs1:TypeCode') > -1  ) {
+  type="TypeCode";
+  }
+
+  if ( second.indexOf('gs1:TypeCode') > -1  ) {
+  type="typeCodeInstance";
+  }
+
+
+return type;
+}
+
+function tabulateRange(obj) {
+  var tableContents="";
+  var tableRow="";
+  var range = obj["rdfs:range"];
+
+  if ( range instanceof Array) {
+    $.each(range, function( index, value ) {
+    var rangeid=value["@id"] || [];
+    tableRow+="<tr><td>"+prepareLink(rangeid)+"</td></tr>";
+    tableContents+=tableRow;
+    });
+
+  } else {
+    var rangeid=range["@id"] || [];
+    tableRow="<tr><td>"+prepareLink(rangeid)+"</td></tr>";
+    tableContents=tableRow;
+  }
+  return tableContents;
+}
+
+function getFlatDomainList(domain) {
+  var rv=[];
+
+  if (domain["@id"] !== undefined) {
+
+
+
+    if  (domain["@id"].substring(0,2) == "_:" ) {
+      var blanknode = domain["@id"];
+      var struc = getNode(blanknode)[blanknode]["owl:unionOf"]["@list"];
+      $.each(struc, function( index, value ) {
+      rv.push(value["@id"]);
+      });
+    } else {
+      rv.push(domain["@id"]);
+    }
+
+
+  }
+
+  if (domain["owl:unionOf"] !== undefined) {
+    $.each(domain["owl:unionOf"]["@list"], function( index, value ) {
+    rv.push(value["@id"]);
+    });
+  }
+
+  return JSON.stringify(rv.sort());
+}
+
+function tabulateDomain(obj) {
+  var tableContents=[];
+  var tableRow="";
+  var domain = obj["rdfs:domain"];
+
+  if (domain["@id"] !== undefined) {
+
+
+
+    if  (domain["@id"].substring(0,2) == "_:" ) {
+      var blanknode = domain["@id"];
+      var struc = getNode(blanknode)[blanknode]["owl:unionOf"]["@list"];
+      $.each(struc, function( index, value ) {
+      tableRow="<tr><td>"+prepareLink(value["@id"])+"</td></tr>";
+      tableContents.push(tableRow);
+      });
+    } else {
+    tableRow="<tr><td>"+prepareLink(domain["@id"])+"</td></tr>";
+    tableContents.push(tableRow);
+    }
+
+
+  }
+
+  if (domain["owl:unionOf"] !== undefined) {
+    $.each(domain["owl:unionOf"]["@list"], function( index, value ) {
+    tableRow="<tr><td>"+prepareLink(value["@id"])+"</td></tr>";
+    tableContents.push(tableRow);
+    });
+
+
+  }
+
+  return tableContents.join("<br>");
+}
+
+function tabulateSiblings(obj) {
+  var tableContents="";
+  var selfid=obj["@id"];
+  var domain = obj["rdfs:domain"]["@id"];
+  var fdl1 = getFlatDomainList(obj["rdfs:domain"]);
+
+  var range = obj["rdfs:range"]["@id"];
+  var sibling={};
+  $.each(graph, function( index, value ) {
+    var id=value["@id"];
+    var r=value["rdfs:range"] || [];
+    var d=value["rdfs:domain"] || [];
+    var fdl2=getFlatDomainList(d);
+
+    if ((range == r["@id"]) && ( (fdl1 == fdl2) ) && (id !== selfid)) {
+      sibling[id]=value;
+    }
+  });
+
+  var sortedKeys=Object.keys(sibling).sort();
+  $.each(sortedKeys, function(index,keyname) {
+
+  var tableRow="";
+  var value=sibling[keyname];
+  var comment=value["rdfs:comment"] || [];
+  var url=value["@id"] || "";
+  var label=value["rdfs:label"];
+  var range=value["rdfs:range"]["@id"] || "";
+
+  tableRow+='<tr>';
+  tableRow+='<td class="firstCol3">'+selectLanguage(label,uiLanguage)+'<div class="code-value-uri">'+prepareLink(url)+'</div></td>';
+  tableRow+='<td class="secondCol3">'+prepareLink(range)+'</td>';
+  tableRow+='<td property="rdfs:comment" class="thirdCol3">'+selectLanguage(comment,uiLanguage);
+  tableRow+='</td>';
+  tableRow+='</tr>';
+  tableContents+=tableRow;
+  });
+
+  return tableContents;
+}
+
+
+
+function prepareSubclassList(obj) {
+var list=[];
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var url=keyname;
+if (url !== null) {
+list.push(prepareLink(url));
+}
+
+});
+return list.join(", ");
+}
+
+
+
+
+function tabulateSubclasses(obj) {
+var tableContents="";
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+var tableRow="";
+var value=obj[keyname];
+var label=value["rdfs:label"];
+var url=value["@id"];
+var comment=value["rdfs:comment"] || [];
+tableRow+='<tr about="'+url+'" rev="rdfs:subClassOf">';
+tableRow+='<td property="rdfs:label" class="firstCol3">'+selectLanguage(label,uiLanguage)+'</td>';
+tableRow+='<td class="secondCol3">'+prepareLink(url)+'</td>';
+tableRow+='<td property="rdfs:label" class="thirdCol3">'+selectLanguage(comment,uiLanguage)+'</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+});
+return tableContents;
+}
+
+function tabulateSuperclasses(obj) {
+var tableContents="";
+if (obj instanceof Array) {
+$.each(obj, function(index,value) {
+var tableRow="";
+var node=getSingleNode(value);
+if (node !== null) {
+var label=node["rdfs:label"];
+var url=node["@id"];
+var comment=node["rdfs:comment"] || [];
+tableRow+='<tr about="'+url+'" property="rdfs:subClassOf">';
+tableRow+='<td property="rdfs:label" class="firstCol3">'+selectLanguage(label,uiLanguage)+'</td>';
+tableRow+='<td class="secondCol3">'+prepareLink(url)+'</td>';
+tableRow+='<td property="rdfs:label" class="thirdCol3">'+selectLanguage(comment,uiLanguage)+'</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+}
+});
+} else {
+var node=getSingleNode(obj);
+if (node !== null) {
+var label=node["rdfs:label"];
+var url=node["@id"];
+var comment=node["rdfs:comment"] || [];
+var tableRow="";
+tableRow+='<tr about="'+url+'" property="rdfs:subClassOf">';
+tableRow+='<td property="rdfs:label" class="firstCol3">'+selectLanguage(label,uiLanguage)+'</td>';
+tableRow+='<td class="secondCol3">'+prepareLink(url)+'</td>';
+tableRow+='<td property="rdfs:label" class="thirdCol3">'+selectLanguage(comment,uiLanguage)+'</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+}
+}
+return tableContents;
+}
+
+function tabulateClasses(obj) {
+var tableContents="";
+
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+
+var tableRow="";
+var value=obj[keyname];
+var comment=value["rdfs:comment"] || [];
+var url=value["@id"] || "";
+var label=value["rdfs:label"];
+
+tableRow+='<tr>';
+tableRow+='<td class="firstCol2">'+prepareLink(url)+'</td>';
+tableRow+='<td property="rdfs:comment" class="secondCol2">'+selectLanguage(comment,uiLanguage);
+tableRow+='</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+});
+return tableContents;
+}
+
+function tabulateTypeCodes(obj) {
+var tableContents="";
+
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+
+var tableRow="";
+var value=obj[keyname];
+var comment=value["rdfs:comment"] || [];
+var url=value["@id"] || "";
+var label=value["rdfs:label"];
+
+tableRow+='<tr>';
+tableRow+='<td class="firstCol2">'+prepareLink(url)+'</td>';
+tableRow+='<td class="secondCol2">'+selectLanguage(label,uiLanguage);
+tableRow+='</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+});
+return tableContents;
+}
+
+function populateBreadcrumbTrail(val,type,node,label) {
+  var html="";
+  switch (type) {
+    case "Class" :
+      html+='<li><a href="./" class="link">GS1 Web Vocabulary</a></li>';
+      html+='<li><a href="./?show=classes" class="link">All Classes</a></li>';
+      html+='<li id="currentClass">'+label+'</li>';
+      break;
+    case "property" :
+      html+='<li><a href="./" class="link">GS1 Web Vocabulary</a></li>';
+      html+='<li><a href="./?show=properties" class="link">All Properties</a></li>';
+      html+='<li id="currentClass">'+label+'</li>';
+      break;
+    case "TypeCode" :
+      html+='<li><a href="./" class="link">GS1 Web Vocabulary</a></li>';
+      html+='<li><a href="./?show=typecodes" class="link">All Type Codes</a></li>';
+      html+='<li id="currentClass">'+label+'</li>';
+  }
+  $("#breadcrumbTrail").html(html);
+}
+
+function tabulateProperties(obj,linkMiddle,includeMiddle) {
+var tableContents="";
+
+var sortedKeys=Object.keys(obj).sort();
+
+if (includeMiddle) {
+numcols=3;
+finalcolumn="thirdCol3";
+} else {
+numcols=2;
+finalcolumn="secondCol2";
+}
+
+$.each(sortedKeys, function(index,keyname) {
+
+var tableRow="";
+var value=obj[keyname];
+var range=value["rdfs:range"]["@id"] || [];
+var comment=value["rdfs:comment"] || [];
+var url=value["@id"] || "";
+var label=value["rdfs:label"];
+
+tableRow+='<tr typeof="rdfs:Property" resource="'+url+'">';
+tableRow+='<td property="rdfs:label" class="firstCol'+numcols+'">'+selectLanguage(label,uiLanguage)+'<div class="code-value-uri">'+prepareLink(url)+'</div>'+'</td>';
+if (includeMiddle) {
+  tableRow+='<td property="schema:rangeIncludes" class="secondCol'+numcols+'">';
+  if (linkMiddle) {
+  tableRow+=prepareLink(range);
+  } else {
+  tableRow+=range;
+  }
+  tableRow+='</td>';
+}
+tableRow+='<td property="rdfs:comment" class="'+finalcolumn+'">'+selectLanguage(comment,uiLanguage);
+tableRow+='</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+});
+return tableContents;
+}
+
+function tabulateInstances(obj) {
+var tableContents="";
+
+var sortedKeys=Object.keys(obj).sort();
+$.each(sortedKeys, function(index,keyname) {
+
+var tableRow="";
+var value=obj[keyname];
+var url=value["@id"] || "";
+var label=value["rdfs:label"];
+var comment=value["rdfs:comment"];
+var skosPrefLabel=value["skos:prefLabel"];
+var commentText=selectLanguage(comment,uiLanguage);
+if (commentText !== "") {
+commentText+="<br>";
+}
+
+tableRow+='<tr>';
+tableRow+='<td class="firstCol3">'+skosPrefLabel+'</td>';
+tableRow+='<td class="secondCol3">'+selectLanguage(label,uiLanguage)+'</td>';
+tableRow+='<td class="thirdCol3">'+commentText+'<div class="code-value-uri">'+prepareLink(url)+'</div>';
+tableRow+='</td>';
+tableRow+='</tr>';
+tableContents+=tableRow;
+});
+return tableContents;
+}
+
+
+
+function expandGS1Prefix(val) {
+return val.replace(/^gs1:/g, "http://gs1.org/voc/");
+}
+
+function selectLanguage(obj,langTag) {
+
+  var r="";
+  if ((obj !== undefined) && (obj !== null)) {
+  if (obj instanceof Array) {
+    $.each(obj, function( index, value ) {
+      if (value["@language"]==langTag) {
+        r = value["@value"];
+      }
+    });
+  } else {
+    if (obj["@language"] == langTag) {
+    r = obj["@value"];
+    }
+  }
+  }
+  return r;
+}
+
+
+function updatestate2(val) {
+  val = val.replace(/^\.\//g,"");
+  console.log(val);
+  if (val == "") {
+    $(document).prop('title', 'GS1 SmartSearch web vocabulary');
+    $("#termName").html("GS1 Web Vocabulary");
+    $('#breadcrumbTrail').html('<li id="currentClass">GS1 Web Vocabulary</li>');
+
+    $('#breadcrumbTrail').show();
+    $('#intro').show();
+    $('#termComment').html('');
+    $('#termComment').hide();
+    $('#termURL').html('http://gs1.org/voc/');
+    $('#allClasses').hide();
+    $('#allProperties').hide();
+    $('#allTypecodes').hide();
+    $('#propertiesOfClass').hide();
+    $('#propertiesOfParentClass').hide();
+    $('#propertiesOfGrandparentClass').hide();
+    $('#definedTypecodeinstances').hide();
+    $('#subclasses').hide();
+    $('#superclasses').hide();
+    $('#havingrangeinfo').hide();
+    $('#siblinginfo').hide();
+    $('#rangeinfo').hide();
+    $('#domaininfo').hide();
+    $('#triple').hide();
+    $("#superclassNote").hide();
+    $("#subclassNote").hide();
+    $(".termschema").hide();
+  } else {
+    $(document).prop('title', 'gs1:'+val);
+    $('#intro').hide();
+    $('#termComment').show();
+    $('#breadcrumbTrail').show();
+    $("#termName").html(val);
+
+
+    var term="gs1:"+val;
+    var node=getSingleNode(term);
+    var type=determineType(term);
+    if (node !== null) {
+      var termURL=expandGS1Prefix(node["@id"]);
+      $("#termURL").html(termURL);
+      var termComment = node["rdfs:comment"];
+      var termLabel = node["rdfs:label"];
+      var label = selectLanguage(termLabel,uiLanguage)
+      $("#termName").html(label);
+      populateBreadcrumbTrail(val,type,node,label);
+    } else {
+      switch(val) {
+        case "?show=classes":
+          $('#triple').hide();
+          $('#termComment').hide();
+          $('#termURL').html('http://gs1.org/voc/');
+          $('#allClasses').show();
+          $('#allProperties').hide();
+          $('#allTypecodes').hide();
+          $('#propertiesOfClass').hide();
+          $('#propertiesOfParentClass').hide();
+          $('#propertiesOfGrandparentClass').hide();
+          $('#definedTypecodeinstances').hide();
+          $('.searchresults').hide();
+          $(".termschema").hide();
+          $('#subclassNote').hide();
+          $('#superclassNote').hide();
+          $("#termName").html("All Classes");
+          $('#breadcrumbTrail').html('<li><a href="./" class="link">GS1 Web Vocabulary</a></li><li id="currentClass">All Classes</a></li>');
+          var classes=getAllClasses();
+          var tableContents=tabulateClasses(classes);
+          $("#termMemberDetails1").html(tableContents);
+          break;
+
+        case "?show=properties":
+          $('#triple').hide();
+          $('#termComment').hide();
+          $('#termURL').html('http://gs1.org/voc/');
+          $('#subclassNote').hide();
+          $('#superclassNote').hide();
+          $('#allClasses').hide();
+          $('#allProperties').show();
+          $('#allTypecodes').hide();
+          $('#propertiesOfClass').hide();
+          $('#propertiesOfParentClass').hide();
+          $('#propertiesOfGrandparentClass').hide();
+          $('#definedTypecodeinstances').hide();
+          $('.searchresults').hide();
+          $(".termschema").hide();
+          $("#termName").html("All Properties");
+          $('#breadcrumbTrail').html('<li><a href="./" class="link">GS1 Web Vocabulary</a></li><li id="currentClass">All Properties</a></li>');
+          var properties=getAllProperties();
+          var tableContents=tabulateProperties(properties,true,false);
+          $("#termMemberDetails2").html(tableContents);
+          break;
+          $('#triple').hide();
+
+        case "?show=typecodes":
+          $('#allClasses').hide();
+          $('#allProperties').hide();
+          $('#allTypecodes').show();
+          $('#propertiesOfClass').hide();
+          $('#propertiesOfParentClass').hide();
+          $('#propertiesOfGrandparentClass').hide();
+          $('#definedTypecodeinstances').hide();
+          $('.searchresults').hide();
+          $(".termschema").hide();
+          $('#termComment').hide();
+          $('#subclassNote').hide();
+          $('#superclassNote').hide();
+          $('#termURL').html('http://gs1.org/voc/');
+          $("#termName").html("All Type Codes");
+          $('#breadcrumbTrail').html('<li><a href="./" class="link">GS1 Web Vocabulary</a></li><li id="currentClass">All Type Codes</a></li>');
+
+          var typecodes=getAllTypeCodes();
+          var tableContents=tabulateTypeCodes(typecodes);
+          $("#termMemberDetails3").html(tableContents);
+          break;
+
+        default:
+          $('#triple').hide();
+          $("#termName").html("Not found! ["+val+"]");
+          $('#allClasses').hide();
+          $('#allProperties').hide();
+          $('#allTypecodes').hide();
+          $('#propertiesOfClass').hide();
+          $('#propertiesOfParentClass').hide();
+          $('#propertiesOfGrandparentClass').hide();
+          $('#definedTypecodeinstances').hide();
+          break;
+      }
+    $('#subclasses').hide();
+    $('#superclasses').hide();
+    $('#havingrangeinfo').hide();
+    $('#siblinginfo').hide();
+    $('#rangeinfo').hide();
+    $('#domaininfo').hide();
+  }
+
+  if (type == "Class") {
+    var properties=getProperties2(term);
+    var tableContents=tabulateProperties(properties,true,true);
+    $("#termMemberDetails4").html(tableContents);
+    $("#membertableHeader4").html(uiText["Properties of"]+' '+term);
+
+    $("#termComment").html(selectLanguage(termComment,uiLanguage));
+    $('#triple').hide();
+
+    var skosExactMatch=getLinkedIDarray(node["skos:exactMatch"],"schema:");
+    var skosCloseMatch=getLinkedIDarray(node["skos:closeMatch"],"schema:");
+    var skosBroadMatch=getLinkedIDarray(node["skos:broadMatch"],"schema:");
+    var skosRelatedMatch=getLinkedIDarray(node["skos:relatedMatch"],"schema:");
+    var skosRelated=getLinkedIDarray(node["skos:related"],"schema:");
+    var subClassOf=getLinkedIDarray(node["rdfs:subClassOf"],"schema:");
+    var seeAlso=getLinkedIDarray(node["rdfs:seeAlso"],"schema:");
+
+    var schemaEquivalent="";
+
+    if (skosExactMatch.length > 0) {
+      schemaEquivalent+=uiText["Exact match:"]+" "+skosExactMatch.join(", ")+"<br>";
+    }
+
+    if (skosCloseMatch.length > 0) {
+      schemaEquivalent+=uiText["Close match:"]+" "+skosCloseMatch.join(", ")+"<br>";
+    }
+
+    if (skosBroadMatch.length > 0) {
+      schemaEquivalent+=uiText["Broad match:"]+" "+skosBroadMatch.join(", ")+"<br>";
+    }
+
+    if (skosRelatedMatch.length > 0) {
+      schemaEquivalent+=uiText["Related match:"]+" "+skosRelatedMatch.join(", ")+"<br>";
+    }
+
+    if (subClassOf.length > 0) {
+      schemaEquivalent+=uiText["Subclass of:"]+" "+subClassOf.join(", ")+"<br>";
+    }
+
+    if (skosRelated.length > 0) {
+      schemaEquivalent+=uiText["Related (within the context of):"]+" "+skosRelated.join(", ")+"<br>";
+    }
+
+    if (seeAlso.length > 0) {
+      schemaEquivalent+=uiText["See also:"]+" "+seeAlso.join(", ")+"<br>";
+    }
+
+    $("#schemaEquivalent").html(schemaEquivalent);
+    if (schemaEquivalent.indexOf('schema:') > -1) {
+    $(".termschema").show();
+  } else {
+    $(".termschema").hide();
+  }
+
+  $("#allClasses").hide();
+  $("#allProperties").hide();
+  $("#allTypecodes").hide();
+  $("#propertiesOfClass").show();
+  $("#propertiesOfParentClass").hide();
+  $("#propertiesOfGrandparentClass").hide();
+  $("#definedTypecodeinstances").hide();
+
+  var subClasses=getSubClasses(term);
+  if (Object.keys(subClasses).length > 0) {
+    var subclassContents = tabulateSubclasses(subClasses);
+    var subclassList = prepareSubclassList(subClasses);
+    $("#subclassDetails").html(subclassContents);
+    $("#subclassNote").html("&#x21E9; "+uiText["Has subclasses"]+": "+subclassList);
+    $("#subclassNote").show();
+    $('#subclasses').show();
+  } else {
+    $("#subclassNote").hide();
+    $('#subclasses').hide();
+  }
+
+  var superClasses=getSuperClasses(term);
+  if ((superClasses.length > 0) && (superClasses[0] !== "")) {
+    parentName=superClasses[0];
+    if (parentName !== "") {
+      var scNote='&#x21E7; '+uiText["A subclass of"]+' '+prepareLink(parentName);
+      if (parentName.indexOf("gs1:") > -1) {
+        $('#propertiesOfParentClass').show();
+      }
+      $("#superclassNote").html(scNote);
+      $("#superclassNote").show();
+    } else {
+      $("#superclassNote").hide();
+    }
+  }
+
+  var parentClass="";
+  if ((Object.keys(superClasses).length > 0) && (superClasses[0] !== "") && (superClasses[0] !== "owl:Thing")) {
+    parentClass=superClasses[0];
+    $("#membertableHeader4a").html(uiText["Properties of"]+' '+parentClass);
+
+    var parentProperties=getProperties2(parentClass);
+    var tableContents=tabulateProperties(parentProperties,true,true);
+    $("#termMemberDetails4a").html(tableContents);
+    $("#propertiesOfParentClass").show();
+
+
+    var grandparentClasses=getSuperClasses(parentClass);
+    var grandparentClass="";
+    if ((Object.keys(grandparentClasses).length > 0) && (grandparentClasses[0] !== "") && (grandparentClasses[0] !== "owl:Thing")) {
+      grandparentClass=grandparentClasses[0];
+      $("#membertableHeader4b").html(uiText["Properties of"]+' '+grandparentClass);
+
+      var grandparentProperties=getProperties2(grandparentClass);
+      var tableContents=tabulateProperties(grandparentProperties,true,true);
+      $("#termMemberDetails4b").html(tableContents);
+      $("#propertiesOfGrandparentClass").show();
+    }
+
+    var superclassContents = tabulateSuperclasses(superClasses);
+    $("#superclassDetails").html('<span rel="rdfs:subClassOf">'+superclassContents+'</span>');
+    $('#superclasses').show();
+  } else {
+    if (superClasses[0] == "owl:Thing") {
+      $("#superclassDetails").html('<tr><td class="firstCol3">owl:Thing</td><td class="secondCol3"><a href="http://www.w3.org/2002/07/owl#Thing" target="_blank"  class="link">owl:Thing</a></td><td class="thirdCol3">Thing. The class of OWL individuals.</td></tr>');
+      $('#superclasses').show();
+    } else {
+      $('#superclasses').hide();
+    }
+  }
+
+
+  var propertiesHavingThisRange=getPropertiesOfType(term);
+  if (Object.keys(propertiesHavingThisRange).length > 0) {
+  var havingRangeContents=tabulateProperties(propertiesHavingThisRange,false,true);
+
+  $("#havingRangeDetails").html(havingRangeContents);
+  $('#havingrangeinfo').show();
+  } else {
+  $('#havingrangeinfo').hide();
+  }
+
+  $('#rangeinfo').hide();
+  $('#domaininfo').hide();
+  $('#siblinginfo').hide();
+
+  }
+
+  if (type == "TypeCode") {
+  $("#superclassNote").hide();
+  $("#subclassNote").hide();
+  $(".termschema").hide();
+
+  $('#triple').hide();
+  var instances=getOfType(term);
+  var tableContents=tabulateInstances(instances);
+  $("#termMemberDetails5").html(tableContents);
+
+
+
+  var propertiesHavingThisRange=getPropertiesOfType(term);
+  if (Object.keys(propertiesHavingThisRange).length > 0) {
+  var havingRangeContents=tabulateProperties(propertiesHavingThisRange,false,true);
+  $("#havingRangeDetails").html(havingRangeContents);
+  $('#havingrangeinfo').show();
+  } else {
+  $('#havingrangeinfo').hide();
+  }
+
+  $('#allClasses').hide();
+  $('#allProperties').hide();
+  $('#allTypecodes').hide();
+  $('#propertiesOfClass').hide();
+  $('#propertiesOfParentClass').hide();
+  $('#propertiesOfGrandparentClass').hide();
+  $('#definedTypecodeinstances').show();
+  $('#subclasses').hide();
+  $('#superclasses').hide();
+  $('#rangeinfo').hide();
+  $('#domaininfo').hide();
+  $('#siblinginfo').hide();
+  }
+
+  if (type == "property") {
+  $('#triple').show();
+  $('#superclassNote').hide();
+  $('#subclassNote').hide();
+
+  var skosExactMatch=getLinkedIDarray(node["skos:exactMatch"],"schema:");
+  var skosCloseMatch=getLinkedIDarray(node["skos:closeMatch"],"schema:");
+  var skosBroadMatch=getLinkedIDarray(node["skos:broadMatch"],"schema:");
+  var skosRelatedMatch=getLinkedIDarray(node["skos:relatedMatch"],"schema:");
+  var skosRelated=getLinkedIDarray(node["skos:related"],"schema:");
+  var subPropertyOf=getLinkedIDarray(node["rdfs:subPropertyOf"],"schema:");
+  var seeAlso=getLinkedIDarray(node["rdfs:seeAlso"],"schema:");
+
+  var schemaEquivalent="";
+
+  if (skosExactMatch.length > 0) {
+    schemaEquivalent+=uiText["Exact match:"]+" "+skosExactMatch.join(", ")+"<br>";
+  }
+
+  if (skosCloseMatch.length > 0) {
+    schemaEquivalent+=uiText["Close match:"]+" "+skosCloseMatch.join(", ")+"<br>";
+  }
+
+  if (skosBroadMatch.length > 0) {
+    schemaEquivalent+=uiText["Broad match:"]+" "+skosBroadMatch.join(", ")+"<br>";
+  }
+
+  if (skosRelatedMatch.length > 0) {
+    schemaEquivalent+=uiText["Related match:"]+" "+skosRelatedMatch.join(", ")+"<br>";
+  }
+
+  if (subPropertyOf.length > 0) {
+    schemaEquivalent+=uiText["Subproperty of:"]+" "+subPropertyOf.join(", ")+"<br>";
+  }
+
+  if (skosRelated.length > 0) {
+    schemaEquivalent+=uiText["Related (within the context of):"]+" "+skosRelated.join(", ")+"<br>";
+  }
+
+  if (seeAlso.length > 0) {
+    schemaEquivalent+=uiText["See also:"]+" "+seeAlso.join(", ")+"<br>";
+  }
+
+  $("#schemaEquivalent").html(schemaEquivalent);
+  if (schemaEquivalent.indexOf('schema:') > -1) {
+  $(".termschema").show();
+  } else {
+  $(".termschema").hide();
+  }
+
+
+
+  $("#termComment").html(selectLanguage(termComment,uiLanguage));
+  var rangeTableContent=tabulateRange(node);
+  $("#rangeDetails").html(rangeTableContent);
+  $("#rangeShape").html(rangeTableContent);
+  if ( (rangeTableContent.indexOf('rdf:langString') > -1) || (rangeTableContent.indexOf('xsd:') > -1) ) {
+  $("#rangeShape").attr('class','rect');
+  } else {
+  $("#rangeShape").attr('class','oval');
+  }
+
+  var domainTableContent=tabulateDomain(node);
+  $("#domainDetails").html(domainTableContent);
+  $("#domainOval").html(domainTableContent);
+  $("#predicateArrow").html(term);
+
+  var siblingTableContent=tabulateSiblings(node);
+  if (siblingTableContent !== "") {
+  $("#siblingDetails").html(siblingTableContent);
+  $("#siblinginfo").show();
+  } else {
+  $("#siblinginfo").hide();
+  }
+
+  $('#allClasses').hide();
+  $('#allProperties').hide();
+  $('#allTypecodes').hide();
+  $('#propertiesOfClass').hide();
+  $('#propertiesOfParentClass').hide();
+  $('#propertiesOfGrandparentClass').hide();
+  $('#definedTypecodeinstances').hide();
+  $('#subclasses').hide();
+  $('#superclasses').hide();
+  $('#havingrangeinfo').hide();
+  $('#rangeinfo').show();
+  $('#domaininfo').show();
+
+  }
+  if (type == "typeCodeInstance") {
+  $('#triple').hide();
+  $('#superclassNote').hide();
+  $('#subclassNote').hide();
+  $(".termschema").hide();
+
+
+  var node=getSingleNode(term);
+  var typecode=nodeTypes[term];
+  var typecodenode = getSingleNode(typecode);
+  var typecodeLabel = typecodenode["rdfs:label"];
+  var typecodelabeltext = selectLanguage(typecodeLabel,uiLanguage)
+  var termLabelen = selectLanguage(termLabel,uiLanguage);
+  var termCommentText = selectLanguage(termComment,uiLanguage);
+  $("#termComment").html(termCommentText);
+
+
+  $("#breadcrumbTrail").html('<li><a href="./" class="link">GS1 Web Vocabulary</a></li><li><a href="./?show=typecodes" class="link">All Type Codes</a></li><li>'+prepareLink2(typecode,typecodelabeltext)+'</li><li id="currentClass">'+termLabelen+'</li>');
+
+
+  $('#allClasses').hide();
+  $('#allProperties').hide();
+  $('#allTypecodes').hide();
+  $('#propertiesOfClass').hide();
+  $('#propertiesOfParentClass').hide();
+  $('#propertiesOfGrandparentClass').hide();
+  $('#definedTypecodeinstances').hide();
+  $('#subclasses').hide();
+  $('#superclasses').hide();
+  $('#havingrangeinfo').hide();
+  $('#siblinginfo').hide();
+  $('#rangeinfo').hide();
+  $('#domaininfo').hide();
+  }
+
+
+  }
+  refreshCatchLinks();
+
+  window.scrollTo(0, 0);
+}
+
+function show(url) {
+history.pushState(null, null, url);
+updatestate2(url);
+}
+
+function refreshCatchLinks() {
+$( ".link" ).each(function( index ) {
+var orig = $( this ).attr('href');
+if (orig !== undefined) {
+  if ((! orig.startsWith("javascript:show(") ) && (! orig.startsWith("http://")) ) {
+    $( this ).attr('href',"javascript:show('"+orig+"');");
+  }
+}
+});
+}
+
+refreshCatchLinks();
+
+function getTerm() {
+var url=window.location.href;
+var ilastslash=url.lastIndexOf("/");
+ilastslash++;
+var term=url.substr(ilastslash);
+return term;
+}
+
+
+var term=getTerm();
+updatestate2(term);
+
+window.onpopstate = function(event)
+{
+var term=getTerm();
+updatestate2(term);
+};
+
+</script>
+</body>
+</html>
