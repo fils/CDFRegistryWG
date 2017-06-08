@@ -5,6 +5,11 @@
         "url": "https://www.opencoredata.org/",
         "keywords": "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism",
         "description": "opencoredata is a data infrastructure focused on making data from JRSO and CSDCO scientific drilling data facilities available in a semantic and Linked Open Data manner.",
+        "mainEntityOfPage": {
+            "@type": "URL",
+            "@id": "http://opencoredata.org#mainEntityOfPage",
+            "url": "http://opencoredata.org/catalogs"
+        },
         "potentialAction": {
             "@type": "SearchAction",
             "@id": "http://opencoredata.org#searchAction",
