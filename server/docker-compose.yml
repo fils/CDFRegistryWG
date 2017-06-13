@@ -1,0 +1,55 @@
+version: '2'
+
+services:
+  traefik:
+    image: traefik
+    command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml
+    networks:
+      - traefik_default
+
+
+  sparql:
+    image: 59f934911041
+    ports:
+      - "8890:9999"
+    labels:
+      - "traefik.backend=sparql"
+      - "traefik.frontend.rule=Host:opencore.dev;PathPrefix:/sparql"
+    networks:
+      - traefik_default
+
+
+  # sparql:
+  #   image: tenforce/virtuoso
+  #   ports:
+  #     - "8890:8890"
+  #     - "1111:1111"
+  #   labels:
+  #     - "traefik.backend=sparql"
+  #     - "traefik.frontend.rule=Host:opencore.dev;PathPrefix:/sparql"
+  #   environment:
+  #     - DBA_PASSWORD=myDbaPassword
+  #     - SPARQL_UPDATE=true
+  #     - DEFAULT_GRAPH=http://www.earthcube.org/cdfrwg
+  #   volumes:
+  #     - /Users/dfils/src/EarthCube/CDFRegistryWG/server/dataVolume/data:/data
+  #   networks:
+  #     - traefik_default
+
+ # web:
+  #   image: opencoredata/ocdweb:0.3
+  #   labels:
+  #     - "traefik.backend=web"
+  #     - "traefik.frontend.rule=Host:opencore.dev"
+  #   environment:
+  #     - MONGO_HOST=mongodb:27017
+  #   networks:
+  #     - traefik_default
+
+networks:
+  traefik_default:
