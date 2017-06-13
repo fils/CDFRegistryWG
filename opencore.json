@@ -1,8 +1,14 @@
 {
-    "@context": "http://schema.org/",
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "re3data": "http://example.org/re3data/0.1/",
+        "ecrwg": "http://example.org/ecrwg/0.1/"
+    },
     "@type": "Organization",
     "@id": "http://opencoredata.org/id/facilityinfo",
     "name": "Open Core Data",
+    "description": "opencoredata is a data infrastructure focused on making data from JRSO and CSDCO ocean and continental scientific drilling data facilities available in a semantic and Linked Open Data manner.",
+    "re3data:keyword": "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism",
     "contactPoint": {
         "@type": "ContactPoint",
         "name": "Douglas Fils",
@@ -31,7 +37,7 @@
             "target": {
                 "@type": "EntryPoint",
                 "urlTemplate": "http://opencoredata.org/apidocs.json",
-                "description": "Swagger 1.2 description document",
+                "description": "Swagger 1.2 description document for spatial, neptune, and other API's for ocean and continental scientific drilling data.",
                 "httpMethod": "GET"
             }
         },
@@ -40,7 +46,7 @@
             "target": {
                 "@type": "EntryPoint",
                 "urlTemplate": "http://opencoredata.org/sparql",
-                "description": "SPARQL endpoint",
+                "description": "SPARQL endpoint for searching the RDF triples.",
                 "httpMethod": "GET"
             }
         },
@@ -49,7 +55,7 @@
             "target": {
                 "@type": "EntryPoint",
                 "urlTemplate": "http://opencoredata.org/rdf/void.ttl",
-                "description": "VoID document",
+                "description": "VoID document with pointers to GeoLink and other derived graphs",
                 "httpMethod": "GET"
             }
         }
@@ -58,7 +64,7 @@
         "@type": "DigitalDocument",
         "fileformat": "HTML",
         "keywords": "Swagger",
-        "description": "User interface for the swagger document",
+        "description": "User interface for reviewing and testing the APIs defined in the swagger document",
         "url": "http://opencoredata.org/common/swagger-ui/"
     }]
 }

@@ -122,7 +122,7 @@ class: center, middle, inverse
 6. Michael Witt
 7. Lynne
 
-Acknowledgement:  This work is support by the NSF EarthCube ESSO office which provides
+Acknowledgement:  This work is support by NSF EarthCube and the ESSO office which provides
 the infrastructure to support group interaction.  
 
 
@@ -131,7 +131,11 @@ the infrastructure to support group interaction.
 # Agenda
 
 1. Introduction
-2. Deep-dive
+2. Vocabulary
+3. External connections and broader impacts
+4. FAIR
+5. Prototype supporting infrastructure
+6. Future
 
 
 ---
@@ -153,17 +157,7 @@ the infrastructure to support group interaction.
 ---
 # Vocabulary elements
 
----
-# Current Providers
 
-1. Open Core Data
-2. BCO-DMO
-3. R2R
-4. UNAVCO
-5. IRIS
-6. Open Topology
-7. IEDA (future)
-8. WHOI (future)
 
 ---
 # Connections (re3data)
@@ -183,35 +177,51 @@ It's an experiment, that still has benefits right now by increasing SEO
 # FAIR
 
 
+
+---
+# Current Providers
+
+1. Open Core Data
+2. BCO-DMO
+3. R2R
+4. UNAVCO
+5. IRIS
+6. Open Topology
+--
+
+7. IEDA (future)
+8. WHOI (future)
+
 ---
 # Effort required by Providers
 
-At the current scope effort is small.  However, it will grow as we expend
+At the current scope effort is relatively small.  However, it will grow as we expend
 exposed content.  Such expansion though can be controlled by the repository.
 
 
 .small[
 ```html
+<html lang="en">
+<head>
     ...
-    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript">
-      var hljs = remark.highlighter.engine;
-    </script>
-    <script src="terminal.language.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      var slideshow = remark.create({
-        highlightStyle: 'monokai'
-      });
-      // extract the embedded styling from ansi spans
-      $('code.terminal span.hljs-ansi').replaceWith(function(i, x) {
-        return x.replace(/&lt;(\/?(\w+).*?)&gt;/g, '<$1>')
-      });
-    </script>
-    ...
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Organization",
+            "name": "Open Core Data",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                ...
 ```
 ]
 
+
+However, the JSON-LD has to be generated.  We have been working from templates, but 
+that is unlikely to scale.   
+
+Some thought needs to go into how to assist groups in generating this content if it is seen
+as a way forward.  
 
 
 ---
@@ -249,7 +259,7 @@ To capture directly to clipboard, use:
 # Search and visualize
 
 
---
+---
 # Future
 
 1. Extend to DataCatalog -> DataSet -> Measurements -> Variables
@@ -261,9 +271,9 @@ To capture directly to clipboard, use:
 
 # Thanks
 
-1. Contact
-2. Repo
-3. Test site
+1. Contact Us
+2. Repo URL
+3. Test site URL 
 
 
 
