@@ -6,6 +6,6 @@
   <context-param>
    <description>When true, the REST API will not permit mutation operations.</description>
    <param-name>readOnly</param-name>
-   <param-value>true</param-value>
+   <param-value>false</param-value>
   </context-param>
 </web-app>

@@ -5,10 +5,11 @@
 # & (the first one) detaches the command from stdin.
 # >/dev/null detaches the shell session from stdout and stderr.
 # &disown removes the command from the shell's job list.
-java -server -Xmx4g -jar blazegraph.jar &>/dev/null &disown
+# java -server -Xmx4g -jar blazegraph.jar &>/dev/null &disown
+java -server -Xmx4g -jar blazegraph.jar &>/dev/null  &
 # java -server -Xmx4g -jar blazegraph.jar  &
  
-sleep 15s
+sleep 30s
 
 FILE_OR_DIR=$1
 

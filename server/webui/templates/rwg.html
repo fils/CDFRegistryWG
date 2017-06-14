@@ -8,7 +8,23 @@
 
 <body>
     <h1>Search results only a coder could love: </h1>
-    <pre>{{.}}</pre>
+
+
+    <ul>
+        {{range $loop := .}}
+
+        <li>{{$loop.Place}}</li>
+        <li>{{$loop.Index}}</li>
+        <li>{{$loop.Score}}</li>
+        <li>{{$loop.ID}}</li>
+        <ul>
+            {{range $loop2 := $loop.Fragments}}
+            <li>{{$loop2.Key}} : {{$loop2.Value}}</li>
+            {{end}}
+        </ul>
+        {{end}}
+    </ul>
+
 </body>
 
 </html>

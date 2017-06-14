@@ -13,7 +13,7 @@ type MyServer struct {
 }
 
 func main() {
-	// Simpler services to support the web UI
+	// Simpler search handler function to support the web UI
 	searchroute := mux.NewRouter()
 	searchroute.HandleFunc("/", search.DoSearch)
 	http.Handle("/", searchroute)

@@ -19,3 +19,41 @@ docker run --name my-virtuoso \
     -v /my/path/to/the/virtuoso/db:/data \
     -d tenforce/virtuoso
 ```
+
+
+### SPARQL
+
+```
+prefix bds: <http://www.bigdata.com/rdf/search#>
+select DISTINCT ?name ?url ?progname ?description
+where {
+ 
+  { ?s <http://schema.org/name> ?name   .
+  ?s <http://schema.org/url> ?url}
+  
+ UNION
+  
+ {?s <http://schema.org/programName> ?progname   . 
+  ?s <http://schema.org/hostingOrganization> ?ho .
+  ?ho <http://schema.org/url> ?url
+ }
+  
+ UNION
+  
+ {?s <http://schema.org/description> ?description .
+   ?s <http://schema.org/url> ?url
+}
+
+}
+```
+
+```
+SELECT DISTINCT *
+WHERE {
+  ?s <http://schema.org/url> <http://www.bco-dmo.org> .
+  optional {?s <http://schema.org/description> ?desc } .
+  optional {?s rdf:type ?type } .
+  ?s ?pred ?obj   
+}
+
+```
