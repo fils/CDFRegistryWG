@@ -1,10 +1,12 @@
 package search
 
 import (
+	"bytes"
 	"fmt"
 	"html/template"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/blevesearch/bleve"
 	"oceanleadership.org/CDFRegistryWG/server/webui/sparql"
@@ -23,6 +25,12 @@ type Fragment struct {
 	Value []string
 }
 
+type SearchMetaData struct {
+	Term    string
+	Count   int
+	Message string
+}
+
 // DoSearch is there to do searching..  (famous documentation style intact!)
 func DoSearch(w http.ResponseWriter, r *http.Request) {
 	log.Printf("r path: %s\n", r.URL.Query())
@@ -33,9 +41,15 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 
 	// var queryResults DocumentMatchCollection{}
 	queryResults := indexCall(queryterm)
-	fmt.Println(queryResults)
-
 	len := len(queryResults)
+
+	// Set up some metadata on the search results to return
+	var searchmeta SearchMetaData
+	searchmeta.Term = queryterm
+	searchmeta.Count = len
+	if len == 0 {
+		searchmeta.Message = "No results found for this search"
+	}
 
 	// If we have a term.. search the triplestore
 	var spres sparql.SPres
@@ -51,7 +65,7 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 		log.Printf("template parse failed: %s", err)
 	}
 
-	err = ht.ExecuteTemplate(w, "Q", queryterm) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer
+	err = ht.ExecuteTemplate(w, "Q", searchmeta) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer
 	if err != nil {
 		log.Printf("Template execution failed: %s", err)
 	}
@@ -67,6 +81,22 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// termReWrite puts the bleve ~1 or ~2 term options on for fuzzy matching
+func termReWrite(phrase string) string {
+	terms := strings.Split(phrase, " ")
+	distanceAppend := "~2"
+
+	for k, _ := range terms {
+		var str bytes.Buffer
+		str.WriteString(strings.TrimSpace(terms[k]))
+		str.WriteString(distanceAppend)
+		terms[k] = str.String()
+	}
+
+	fmt.Println(strings.Join(terms, " "))
+	return strings.Join(terms, " ")
+}
+
 // return JSON string..  enables use of func for REST call too
 func indexCall(phrase string) []FreeTextResults {
 	indexPath := "/Users/dfils/src/go/src/oceanleadership.org/CDFRegistryWG/server/webui/index/rwg.bleve"
@@ -80,11 +110,10 @@ func indexCall(phrase string) []FreeTextResults {
 		log.Printf("registered index: at %s", indexPath)
 	}
 
-	// query := bleve.NewMatchQuery(phrase)
-	query := bleve.NewQueryStringQuery(phrase)
+	// parse string and add ~2 to each term/word, then rebuild as a string.
+	query := bleve.NewQueryStringQuery(termReWrite(phrase))
 	search := bleve.NewSearchRequestOptions(query, 10, 0, false) // no explanation
-	// search. = bleve.NewTextFieldMapping  ["potentialAction.target.description"]
-	search.Highlight = bleve.NewHighlight() // need Stored and IncludeTermVectors in index
+	search.Highlight = bleve.NewHighlight()                      // need Stored and IncludeTermVectors in index
 	searchResults, err := index.Search(search)
 
 	hits := searchResults.Hits // array of struct DocumentMatch
@@ -102,9 +131,5 @@ func indexCall(phrase string) []FreeTextResults {
 		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags})
 	}
 
-	// TODO..  just return the documentmatch struct collection (hits) and parse it in the template...
 	return results
-
-	// jsonResults, _ := json.MarshalIndent(hits, " ", " ")
-	// return string(jsonResults)
 }

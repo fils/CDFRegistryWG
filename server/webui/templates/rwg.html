@@ -93,7 +93,7 @@
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span style="margin-left: 20px" class="mdl-layout-title">EarthCube CDF Registry Working Group demo UI</span>
+                <span style="margin-left: 20px" class="mdl-layout-title">EarthCube CDF Registry Working Group demo search</span>
                 <div class="mdl-layout-spacer"></div>
                 <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
@@ -131,13 +131,15 @@
                     <div class="mdl-cell mdl-cell--5-col">
                         <form id="formcall" action="/" method="GET">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="q" value="{{.}}" id="q">
+                                <input class="mdl-textfield__input" type="text" name="q" value="{{.Term}}" id="q">
                                 <label class="mdl-textfield__label" for="sample3">Search repository metadata...</label>
                                 <a href="javascript: submitform()">Search</a>
                             </div>
                         </form>
+                        {{if .Count}} Found: {{.Count}} {{end}} {{if .Message}} {{.Message}} {{end}}
                     </div>
                 </div>
+
                 {{end}} {{define "T"}}
 
                 <div class="mdl-grid" style="max-width:80%">
@@ -160,7 +162,7 @@
                                 </ul>
                             </div>
                             <div class="mdl-card__actions">
-
+                                TODO: redata link other links here
                             </div>
                         </div>
                         {{end}} {{end}} {{define "S"}}
@@ -182,8 +184,6 @@
                                 {{.Desc}}
                             </div>
                         </div>
-                        {{else}}
-                        <p>No results found...</p>
                         {{end}}
 
 
