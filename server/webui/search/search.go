@@ -28,8 +28,6 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	log.Printf("r path: %s\n", r.URL.Query())
 	queryterm := r.URL.Query().Get("q")
 
-	// if q == ""  (no term) then need to get out...
-
 	// Make a var in case I want other templates I switch to later...
 	templateFile := "./templates/rwg.html"
 
@@ -38,10 +36,8 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(queryResults)
 
 	len := len(queryResults)
-	// TODO  if len = 0 get out and present "no results" to the user
 
 	// If we have a term.. search the triplestore
-
 	var spres sparql.SPres
 	if len > 0 {
 		topResult := queryResults[0] // pass this as a new template section TR!
@@ -53,6 +49,11 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	ht, err := template.New("Template").ParseFiles(templateFile) //open and parse a template text file
 	if err != nil {
 		log.Printf("template parse failed: %s", err)
+	}
+
+	err = ht.ExecuteTemplate(w, "Q", queryterm) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer
+	if err != nil {
+		log.Printf("Template execution failed: %s", err)
 	}
 
 	err = ht.ExecuteTemplate(w, "T", queryResults) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer

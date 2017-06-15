@@ -1,4 +1,4 @@
-{{define "T"}}
+{{define "Q"}}
 
 <!doctype html>
 <html lang="en">
@@ -131,14 +131,14 @@
                     <div class="mdl-cell mdl-cell--5-col">
                         <form id="formcall" action="/" method="GET">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" name="q" id="q">
+                                <input class="mdl-textfield__input" type="text" name="q" value="{{.}}" id="q">
                                 <label class="mdl-textfield__label" for="sample3">Search repository metadata...</label>
                                 <a href="javascript: submitform()">Search</a>
                             </div>
                         </form>
                     </div>
                 </div>
-
+                {{end}} {{define "T"}}
 
                 <div class="mdl-grid" style="max-width:80%">
                     <div class="mdl-cell mdl-cell--6-col">
@@ -170,6 +170,7 @@
 
                     <div class="mdl-cell mdl-cell--4-col">
 
+                        {{if .Desc}}
                         <div class="mdl-card">
                             <div class="mdl-card__title">
                                 <h2 class="mdl-card__title-text">Top SPARQL result here</h2>
@@ -180,17 +181,15 @@
                             <div class="mdl-card__supporting-text">
                                 {{.Desc}}
                             </div>
-
                         </div>
+                        {{else}}
+                        <p>No results found...</p>
+                        {{end}}
+
 
                     </div>
 
-
                 </div>
-
-
-
-
 
             </div>
         </main>
