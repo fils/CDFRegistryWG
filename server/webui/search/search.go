@@ -7,9 +7,10 @@ import (
 	"net/http"
 
 	"github.com/blevesearch/bleve"
+	"oceanleadership.org/CDFRegistryWG/server/webui/sparql"
 )
 
-type SearchResults struct {
+type FreeTextResults struct {
 	Place     int
 	Index     string
 	Score     float64
@@ -27,6 +28,8 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	log.Printf("r path: %s\n", r.URL.Query())
 	queryterm := r.URL.Query().Get("q")
 
+	// if q == ""  (no term) then need to get out...
+
 	// Make a var in case I want other templates I switch to later...
 	templateFile := "./templates/rwg.html"
 
@@ -35,48 +38,36 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(queryResults)
 
 	len := len(queryResults)
-	fmt.Println(len)
+	// TODO  if len = 0 get out and present "no results" to the user
 
-	// get SPARQL results
-	// need a for each loop on the search results
-	sparqlCall("url")
+	// If we have a term.. search the triplestore
+
+	var spres sparql.SPres
+	if len > 0 {
+		topResult := queryResults[0] // pass this as a new template section TR!
+		fmt.Println(topResult.ID)
+		spres = sparql.DoCall(topResult.ID)
+		fmt.Print(spres.Desc)
+	}
 
 	ht, err := template.New("Template").ParseFiles(templateFile) //open and parse a template text file
 	if err != nil {
 		log.Printf("template parse failed: %s", err)
 	}
 
-	// If we have a term.. search the index
-	topResult := queryResults[0] // pass this as a new template section TR!
-
-	fmt.Printf("Top results %v \n", topResult)
-
 	err = ht.ExecuteTemplate(w, "T", queryResults) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer
+	if err != nil {
+		log.Printf("Template execution failed: %s", err)
+	}
+
+	err = ht.ExecuteTemplate(w, "S", spres) //substitute fields in the template 't', with values from 'user' and write it out to 'w' which implements io.Writer
 	if err != nil {
 		log.Printf("Template execution failed: %s", err)
 	}
 }
 
-func sparqlCall(uri string) {
-	log.Println("SPARQL call..   results to struct pointer")
-
-	/*
-	   Something like this but also with logo
-
-	   SELECT DISTINCT *
-	   WHERE {
-	     ?s <http://schema.org/url> <http://www.bco-dmo.org> .
-	     optional {?s <http://schema.org/description> ?desc } .
-	     optional {?s rdf:type ?type } .
-	     ?s ?pred ?obj
-	   }
-
-	*/
-
-}
-
 // return JSON string..  enables use of func for REST call too
-func indexCall(phrase string) []SearchResults {
+func indexCall(phrase string) []FreeTextResults {
 	indexPath := "/Users/dfils/src/go/src/oceanleadership.org/CDFRegistryWG/server/webui/index/rwg.bleve"
 
 	index, err := bleve.OpenUsing(indexPath, map[string]interface{}{
@@ -97,17 +88,17 @@ func indexCall(phrase string) []SearchResults {
 
 	hits := searchResults.Hits // array of struct DocumentMatch
 
-	var results []SearchResults
+	var results []FreeTextResults
 
 	for k, item := range hits {
-		fmt.Printf("\n%d: %s, %f, %s, %v\n", k, item.Index, item.Score, item.ID, item.Fragments)
+		// fmt.Printf("\n%d: %s, %f, %s, %v\n", k, item.Index, item.Score, item.ID, item.Fragments)
 		// fmt.Printf("%v\n", item.Fields["potentialAction.target.description"])
 		var frags []Fragment
 		for key, frag := range item.Fragments {
-			fmt.Printf("%s   %s\n", key, frag)
+			// fmt.Printf("%s   %s\n", key, frag)
 			frags = append(frags, Fragment{key, frag})
 		}
-		results = append(results, SearchResults{k, item.Index, item.Score, item.ID, frags})
+		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags})
 	}
 
 	// TODO..  just return the documentmatch struct collection (hits) and parse it in the template...

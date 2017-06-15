@@ -18,6 +18,14 @@ func main() {
 	searchroute.HandleFunc("/", search.DoSearch)
 	http.Handle("/", searchroute)
 
+	imageRouter := mux.NewRouter()
+	imageRouter.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("./images"))))
+	http.Handle("/images/", &MyServer{imageRouter})
+
+	cssRouter := mux.NewRouter()
+	cssRouter.PathPrefix("/css/").Handler(http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
+	http.Handle("/css/", &MyServer{cssRouter})
+
 	// Start the server...
 	log.Printf("About to listen on 9900. Go to http://127.0.0.1:9900/")
 
