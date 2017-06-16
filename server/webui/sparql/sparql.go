@@ -107,19 +107,34 @@ func DoCall(url string) SPres {
 	data := SPres{}
 	bindingsTest2 := res.Bindings() // map[string][]rdf.Term
 
+	// This whole aspect seems verbose... there has to be a better Go way to do this check?
 	data.Description = "No description provided by facility"
 	if len(bindingsTest2) > 0 {
 		data.Repository = bindingsTest2["repository"][0].String()
 		if len(bindingsTest2["description"]) > 0 {
 			data.Description = bindingsTest2["description"][0].String()
 		}
-		data.Name = bindingsTest2["name"][0].String()
-		data.URL = bindingsTest2["url"][0].String()
-		data.Logo = bindingsTest2["logo"][0].String()
-		data.ContactName = bindingsTest2["contact_name"][0].String()
-		data.ContactEmail = bindingsTest2["contact_email"][0].String()
-		data.ContactURL = bindingsTest2["contact_url"][0].String()
-		data.ContactRole = bindingsTest2["contact_role"][0].String()
+		if len(bindingsTest2["name"]) > 0 {
+			data.Name = bindingsTest2["name"][0].String()
+		}
+		if len(bindingsTest2["url"]) > 0 {
+			data.URL = bindingsTest2["url"][0].String()
+		}
+		if len(bindingsTest2["logo"]) > 0 {
+			data.Logo = bindingsTest2["logo"][0].String()
+		}
+		if len(bindingsTest2["contact_name"]) > 0 {
+			data.ContactName = bindingsTest2["contact_name"][0].String()
+		}
+		if len(bindingsTest2["contact_email"]) > 0 {
+			data.ContactEmail = bindingsTest2["contact_email"][0].String()
+		}
+		if len(bindingsTest2["contact_url"]) > 0 {
+			data.ContactURL = bindingsTest2["contact_url"][0].String()
+		}
+		if len(bindingsTest2["contact_role"]) > 0 {
+			data.ContactRole = bindingsTest2["contact_role"][0].String()
+		}
 	}
 
 	return data

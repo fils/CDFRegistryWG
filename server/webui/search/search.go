@@ -40,7 +40,7 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	templateFile := "./templates/rwg.html"
 
 	// var queryResults DocumentMatchCollection{}
-	queryResults := indexCall(queryterm)
+	queryResults := indexCall(queryterm, "")
 	len := len(queryResults)
 
 	// Set up some metadata on the search results to return
@@ -87,9 +87,8 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 }
 
 // termReWrite puts the bleve ~1 or ~2 term options on for fuzzy matching
-func termReWrite(phrase string) string {
+func termReWrite(phrase string, distanceAppend string) string {
 	terms := strings.Split(phrase, " ")
-	distanceAppend := "~2"
 
 	for k, _ := range terms {
 		var str bytes.Buffer
@@ -103,9 +102,15 @@ func termReWrite(phrase string) string {
 }
 
 // return JSON string..  enables use of func for REST call too
-func indexCall(phrase string) []FreeTextResults {
+func indexCall(phrase string, distance string) []FreeTextResults {
 	if phrase == "" {
 		return nil
+	}
+
+	// TODO ..  improve this..
+	// Really need to check if it is ~1 or ~2.  If not, set to empty
+	if distance == "" {
+		distance = ""
 	}
 
 	indexPath := "./index/rwg.bleve"
@@ -120,7 +125,7 @@ func indexCall(phrase string) []FreeTextResults {
 	}
 
 	// parse string and add ~2 to each term/word, then rebuild as a string.
-	query := bleve.NewQueryStringQuery(termReWrite(phrase))
+	query := bleve.NewQueryStringQuery(termReWrite(phrase, distance))
 	search := bleve.NewSearchRequestOptions(query, 10, 0, false) // no explanation
 	search.Highlight = bleve.NewHighlight()                      // need Stored and IncludeTermVectors in index
 	searchResults, err := index.Search(search)
@@ -140,9 +145,24 @@ func indexCall(phrase string) []FreeTextResults {
 		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags})
 	}
 
-	// TODO..
+	fmt.Printf("Looping status count:%d, distance:%s\n", len(results), distance)
+
+	// TODO..  Yet Another Ugly Section (YAUS)  (I've named it..  that is just sad)
 	// check here..  if results are 0 then recursive call with ~1
 	// check here and if 0 then try again with ~2
+	var finalResults []FreeTextResults
+	if len(results) == 0 {
+		if distance == "" {
+			finalResults = indexCall(phrase, "~1")
+		}
+		if distance == "~1" {
+			finalResults = indexCall(phrase, "~2")
+		}
+	}
 
-	return results
+	if len(results) > 0 {
+		finalResults = results
+	}
+
+	return finalResults
 }
