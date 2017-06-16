@@ -62,7 +62,7 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 		topResult := queryResults[0] // pass this as a new template section TR!
 		fmt.Println(topResult.ID)
 		spres = sparql.DoCall(topResult.ID)
-		fmt.Print(spres.Desc)
+		fmt.Print(spres.Description)
 	}
 
 	ht, err := template.New("Template").ParseFiles(templateFile) //open and parse a template text file
@@ -139,6 +139,10 @@ func indexCall(phrase string) []FreeTextResults {
 		}
 		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags})
 	}
+
+	// TODO..
+	// check here..  if results are 0 then recursive call with ~1
+	// check here and if 0 then try again with ~2
 
 	return results
 }

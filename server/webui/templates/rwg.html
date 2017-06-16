@@ -152,7 +152,7 @@
                             <div class="mdl-card__title">
                                 <h3 class="mdl-card__title-text"><a href="{{$loop.ID}}">{{$loop.ID}}</a> </h3>
                             </div>
-                            <div class="mdl-card__media">
+                            <div class="mdl-card__media" style="background-color:white">
                                 <img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">
                             </div>
                             <div class="mdl-card__supporting-text">
@@ -174,16 +174,21 @@
 
                     <div class="mdl-cell mdl-cell--4-col">
 
-                        {{if .Desc}}
+                        {{if .Description}}
                         <div class="mdl-card">
                             <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text">Top SPARQL result here</h2>
+                                <h2 class="mdl-card__title-text">Resource Details</h2>
                             </div>
-                            <div class="mdl-card__media">
-                                <img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">
+                            <div class="mdl-card__media" style="background-color:white">
+                                <img src="{{.Logo}}" width="50%" border="0" alt="" style="padding:10px;">
                             </div>
                             <div class="mdl-card__supporting-text">
-                                {{.Desc}}
+
+
+                                <p>{{.Name}}</p>
+                                <p>{{.URL}}</p>
+                                <p>{{.Description}}</p>
+                                <p>{{.ContactName}}</p>
                             </div>
                         </div>
                         {{end}}

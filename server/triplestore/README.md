@@ -1,4 +1,6 @@
 ########### Get Repository info
+
+```
 PREFIX schemaorg: <http://schema.org/>
 SELECT DISTINCT ?repository ?name ?url ?logo ?description ?contact_name ?contact_email ?contact_url ?contact_role
 WHERE {
@@ -23,7 +25,9 @@ WHERE {
   }
 }
 LIMIT 1
+```
 
+```
 ########### Get Repository Endpoints
 PREFIX schemaorg: <http://schema.org/>
 SELECT DISTINCT ?repository ?endpoint_url ?endpoint_description ?endpoint_method
@@ -43,3 +47,4 @@ WHERE {
     ?action schemaorg:httpMethod ?endpoint_method .
   }
 }
+```

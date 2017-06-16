@@ -70,5 +70,11 @@
         "keywords": "Swagger",
         "description": "User interface for reviewing and testing the APIs defined in the swagger document",
         "url": "http://opencoredata.org/common/swagger-ui/"
+    }, {
+        "@type": "DataCatalog",
+        "fileformat": "HTML",
+        "keywords": "GeoLink, RDF",
+        "description": "A collection of graphs to support the GeoLink project using the GeoLink ontology",
+        "url": "http://opencoredata.org/id/x/y/z"
     }]
 }
