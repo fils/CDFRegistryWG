@@ -9,7 +9,7 @@
 java -server -Xmx4g -jar blazegraph.jar &>/dev/null  &
 # java -server -Xmx4g -jar blazegraph.jar  &
  
-sleep 30s
+sleep 45s
 
 FILE_OR_DIR=$1
 

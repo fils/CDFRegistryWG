@@ -86,7 +86,7 @@ type SPres struct {
 
 // SPARQLCall calls triple store and returns results
 func DoCall(url string) SPres {
-	repo, err := sparql.NewRepo("http://0.0.0.0:7777/blazegraph/namespace/ecrwg/sparql")
+	repo, err := sparql.NewRepo("http://sparql:9999/blazegraph/namespace/ecrwg/sparql")
 	if err != nil {
 		log.Printf("query make repo: %v\n", err)
 	}

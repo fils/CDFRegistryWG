@@ -1,4 +1,4 @@
-# FROM  java:8
+#FROM  java:8
 FROM jetty:9.4.2-jre8-alpine
 
 LABEL authors="dfils@oceanleadership.org"
