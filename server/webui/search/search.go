@@ -33,8 +33,9 @@ type SearchMetaData struct {
 
 // DoSearch is there to do searching..  (famous documentation style intact!)
 func DoSearch(w http.ResponseWriter, r *http.Request) {
-	log.Printf("r path: %s\n", r.URL.Query())
+	log.Printf("r path: %s\n", r.URL.Query()) // need to log this better so I can filter out search terms later
 	queryterm := r.URL.Query().Get("q")
+	queryterm = strings.TrimSpace(queryterm) // remove leading and trailing white spaces a user might put in (not internal spaces though)
 
 	// Make a var in case I want other templates I switch to later...
 	templateFile := "./templates/rwg.html"
@@ -147,7 +148,7 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 
 	fmt.Printf("Looping status count:%d, distance:%s\n", len(results), distance)
 
-	// TODO..  Yet Another Ugly Section (YAUS)  (I've named it..  that is just sad)
+	// TODO..  Yet Another Ugly Section (YAUS)  (I've named the pattern..  that is just sad)
 	// check here..  if results are 0 then recursive call with ~1
 	// check here and if 0 then try again with ~2
 	var finalResults []FreeTextResults

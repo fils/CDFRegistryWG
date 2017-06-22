@@ -13,7 +13,13 @@
         "potentialAction": {
             "@type": "SearchAction",
             "@id": "http://opencoredata.org#searchAction",
-            "target": "https://www.opencoredata.org/search?q={search_term_string}",
+            "target": {
+                "@type": "EntryPoint",
+                "contentType": "application/opensearchdescription+xml",
+                "urlTemplate": "https://www.opencoredata.org/search?q={search_term_string}",
+                "description": "OpenSearch style end point for free text searching OCd holdings",
+                "httpMethod": "GET"
+            },
             "query-input": "required name=search_term_string"
         }
     },
