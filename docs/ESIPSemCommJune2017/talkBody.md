@@ -127,7 +127,17 @@ that is unlikely to scale.
 Some thought needs to go into how to assist groups in generating this content if it is seen
 as a way forward.  
 
+---
+# Assembling  (more on the big part)
 
+Fortunately we have tools to help us build schema.org packages:
+
+[https://json-ld.org/](https://json-ld.org/)
+
+Fortunately this is very much in line with the sort of data pipelines
+the data facilities are doing now.  
+
+#### put an example link to some code here...  
 ---
 
 # Harvesting
