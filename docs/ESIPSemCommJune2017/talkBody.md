@@ -105,13 +105,15 @@ and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuil
 ### Publishing by providers: Self hosting metadata  
 #### Secondary benefit:  organic search benefits
 
+_Authority, Relevance and Trust_
+
 The approach has benefit beyond EarthCube's goals.  It is an approach leveraging 
 standards based approaches to organization description.  It's arguably both a metadata
 publishing and outreach activity.  
 
 It is a path to address "semantic search optimization" for organizations.
 
-This secondary benefit has not been assessed 
+This secondary benefit has not been assessed.
 
 ---
 # Effort required by Providers
@@ -170,7 +172,8 @@ providers.  This is obviously an area to engage the larger audience of people do
 
 The code is re-purposed from a previous abandoned experiment.  So for a package with "context" in
 the name..  there is very little context. 
-<img style="width:100%"  src="../../Images/harvestv2.png">
+
+<img style="width:75%"  src="../../Images/harvestv2.png">
 
 ---
 # Search and visualize
