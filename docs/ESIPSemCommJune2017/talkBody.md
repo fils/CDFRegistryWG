@@ -1,6 +1,6 @@
 class: center, middle, inverse
 
-<img style="width:100px"  src="../../images/logo_earthcube_cube-only_0.png">
+<img style="width:100px"  src="../../Images/logo_earthcube_cube-only_0.png">
 
 # Report on EarthCube CDF Registry Working Group
 ## Work to Date
@@ -170,7 +170,7 @@ providers.  This is obviously an area to engage the larger audience of people do
 
 The code is re-purposed from a previous abandoned experiment.  So for a package with "context" in
 the name..  there is very little context. 
-<img style="width:100%"  src="../../images/harvestv2.png">
+<img style="width:100%"  src="../../Images/harvestv2.png">
 
 ---
 # Search and visualize
@@ -179,7 +179,7 @@ the name..  there is very little context.
 
 2. Simple search UI to exercise the index and graph. [http://eccdf.cloudapp.net/?q=ocean+chemistry](http://eccdf.cloudapp.net/?q=ocean+chemistry)
 
-<img style="width:75%"  src="../../images/eccdfUI.png">
+<img style="width:75%"  src="../../Images/eccdfUI.png">
 
 
 ---
