@@ -20,6 +20,9 @@
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
     <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
+    <!-- google icon link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
@@ -153,7 +156,9 @@
                                 <h3 class="mdl-card__title-text"><a target="_blank" href="{{$loop.ID}}">{{$loop.ID}}</a> </h3>
                             </div>
                             <div class="mdl-card__media" style="background-color:white">
-                                <img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">
+                                <!--<img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">-->
+                                <i style="float:left;font-size:48px" class="material-icons">{{$loop.IconName}}</i> This is a data file_download file from the index: {{$loop.Index}}
+
                             </div>
                             <div class="mdl-card__supporting-text">
                                 Position {{$loop.Place}} with score {{$loop.Score}}
@@ -164,7 +169,7 @@
                                 </ul>
                             </div>
                             <div class="mdl-card__actions">
-                                This space for rent....
+                                NOTE: Do not index or share this site. Test only, will fade into the void soon.
                             </div>
                         </div>
                         {{end}} {{end}} {{define "S"}}

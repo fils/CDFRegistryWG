@@ -18,6 +18,7 @@ type FreeTextResults struct {
 	Score     float64
 	ID        string
 	Fragments []Fragment
+	IconName  string
 }
 
 type Fragment struct {
@@ -62,8 +63,8 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	if len > 0 {
 		topResult := queryResults[0] // pass this as a new template section TR!
 		fmt.Println(topResult.ID)
-		spres = sparql.DoCall(topResult.ID)
-		fmt.Print(spres.Description)
+		spres = sparql.DoCall(topResult.ID) // turn sparql call on / off
+		// fmt.Print(spres.Description)
 	}
 
 	ht, err := template.New("Template").ParseFiles(templateFile) //open and parse a template text file
@@ -114,16 +115,34 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 		distance = ""
 	}
 
-	indexPath := "./index/rwg.bleve"
+	// indexPath := "./index/rwg.bleve"
+	// index, err := bleve.OpenUsing(indexPath, map[string]interface{}{
+	// 	"read_only": true,
+	// })
+	// if err != nil {
+	// 	log.Printf("error opening index %s: %v", indexPath, err)
+	// } else {
+	// 	log.Printf("registered index: at %s", indexPath)
+	// }
 
-	index, err := bleve.OpenUsing(indexPath, map[string]interface{}{
+	// Playing with index aliases
+	// Open all indexes in an alias and use this in a named call
+	log.Printf("Start building Codex index \n")
+
+	index1, err := bleve.OpenUsing("./index/rwg.bleve", map[string]interface{}{
 		"read_only": true,
 	})
 	if err != nil {
-		log.Printf("error opening index %s: %v", indexPath, err)
-	} else {
-		log.Printf("registered index: at %s", indexPath)
+		log.Printf("Error with index alias: %v", err)
 	}
+	index2, err := bleve.OpenUsing("./index/rwgdata.bleve", map[string]interface{}{
+		"read_only": true,
+	})
+	if err != nil {
+		log.Printf("Error with index alias: %v", err)
+	}
+	index := bleve.NewIndexAlias(index1, index2)
+	log.Printf("Codex index built\n")
 
 	// parse string and add ~2 to each term/word, then rebuild as a string.
 	query := bleve.NewQueryStringQuery(termReWrite(phrase, distance))
@@ -143,7 +162,16 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 			// fmt.Printf("%s   %s\n", key, frag)
 			frags = append(frags, Fragment{key, frag})
 		}
-		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags})
+
+		var iconName string
+		if item.Index == "./index/rwgdata.bleve" {
+			iconName = "file_download" // material design icon name used in template
+		}
+		if item.Index == "./index/rwg.bleve" {
+			iconName = "graphic_eq" // material design icon name used in template
+		}
+
+		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags, iconName})
 	}
 
 	fmt.Printf("Looping status count:%d, distance:%s\n", len(results), distance)

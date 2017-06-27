@@ -12,6 +12,21 @@ Build Go binary for Linux for use in Docker
  docker build -t earthcube/cdfrwgweb:0.5 .
 ```
 
+
+```
+docker-compose up -d
+```
+
+```
+docker-compose down
+```
+
+Transferer command
+```
+docker save earthcube/cdfrwgweb:0.8 | bzip2 |  ssh fils@eccdf.cloudapp.net 'bunzip2 | docker load'
+```
+
+
 Since I am using docker-compose I need to reference the servers via the docker network name as defined
 in the docker-compose.yml file.  Like for the SPARQL calls in sparql.go.   I should pass these in as a 
 parameter at compile time to support non-docker runs.  

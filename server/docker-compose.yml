@@ -22,7 +22,7 @@ services:
       - traefik_default
 
   web:
-    image: earthcube/cdfrwgweb:0.7
+    image: earthcube/cdfrwgweb:0.8
     labels:
       - "traefik.backend=web"
       - "traefik.frontend.rule=Host:opencore.dev"
