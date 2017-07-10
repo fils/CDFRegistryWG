@@ -12,8 +12,8 @@ The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group
 ## Ohter documemts
 
 * [Members](members.md)
-* [ESIP Presentation](./doc/ESIPSemCommJune2017/talkBody.md)
-* [EarthCube All Hands Poster](./doc/ECAHM_poster.pdf)
+* [ESIP Presentation](./docs/ESIPSemCommJune2017/talkBody.md)
+* [EarthCube All Hands Poster](./docs/ECAHM_poster.pdf)
 * [Harvesting (old)](onHarvesting.md)
 * [Implementation (old)](onImplementation.md)
 
