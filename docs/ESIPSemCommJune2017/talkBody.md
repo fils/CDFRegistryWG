@@ -57,8 +57,8 @@ and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuil
 
 #### Supporting data pipeline
 
-* Encode in JSON-LD (schema.org and re3data vocabularies)
-* Encode basic facility / repository metadata and links to service descriptions
+* Encode in JSON-LD (schema.org/Organization and re3data vocabularies)
+* Encode basic facility / repository metadata and links to service description documents (OGC, Swagger, VoID, etc)
 * Harvest via simple whitelist crawl
 * Generate graph and index and explore use of these products
 
@@ -71,6 +71,7 @@ and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuil
 1. Table of possible extensions to the base re3data XML schema to support CDF facility description 
 1. A reference approach to implementing facility description using scehma.org type Organization and the developed ontology.    (Reference example: https://github.com/fils/CDFRegistryWG/blob/master/opencore.json)
 1. A crawler software package (repurposed) that extracts JSON-LD to RDF triples and generates a full text index from these crawls  (https://github.com/fils/contextBuilder)  See also https://github.com/fils/CDFRegistryWG/blob/master/onHarvesting.md (which is old and out of date)
+1. RDF graph and text index   (exploring with SPARQL and Gremlin and Bleve)
 1. A simple client to explore interface options on the graph and index.  Client provides feedback on usability aspects of these products to aid assessment.   (http://eccdf.cloudapp.net/)   
 
 ---

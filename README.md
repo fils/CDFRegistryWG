@@ -53,7 +53,8 @@ site.  Any number of groups or organizations could harvest and provide access to
 The following image gives a brief overview of how facilities might take their descriptor documents and metadata
 and expose this material up through a workflow to aggregation and interface clients.  
 
-![Image of Flow](./Images/bubbles.png)
+<img style="width:33%" src="./Images/bubbles.png">
+
 
 
 ## Errata 

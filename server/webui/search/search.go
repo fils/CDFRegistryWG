@@ -163,12 +163,13 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 			frags = append(frags, Fragment{key, frag})
 		}
 
+		// set up a material icon   ref:  https://material.io/icons/
 		var iconName string
 		if item.Index == "./index/rwgdata.bleve" {
 			iconName = "file_download" // material design icon name used in template
 		}
 		if item.Index == "./index/rwg.bleve" {
-			iconName = "graphic_eq" // material design icon name used in template
+			iconName = "http" // material design icon name used in template  alts:  web_asset or web
 		}
 
 		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags, iconName})
