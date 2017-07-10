@@ -9,6 +9,14 @@ The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group
 * [COPDESS](http://www.copdess.org/)
 
 
+## Ohter documemts
+
+* [Members](members.md)
+* [ESIP Presentation](./doc/ESIPSemCommJune2017/talkBody.md)
+* [EarthCube All Hands Poster](./doc/ECAHM_poster.pdf)
+* [Harvesting (old)](onHarvesting.md)
+* [Implementation (old)](onImplementation.md)
+
 
 ## Files
 The following files are being generated to test out various approaches to encoding the facility metadata.  The "C" files are "candidate" or "test" files.  The files with facility names represent examples of using these tests to do an example encoding of a particular facility's data.  
@@ -53,8 +61,8 @@ site.  Any number of groups or organizations could harvest and provide access to
 The following image gives a brief overview of how facilities might take their descriptor documents and metadata
 and expose this material up through a workflow to aggregation and interface clients.  
 
-<img style="width:33%" src="./Images/bubbles.png">
 
+![Image of Flow](./Images/bubbles.png)
 
 
 ## Errata 
