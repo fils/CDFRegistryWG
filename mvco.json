@@ -8,7 +8,6 @@
     "@id": "http://opencoredata.org/id/facilityinfo",
     "name": "Marthas Vineyard Coastal Observatory",
     "description": "The MVCO is a cabled observatory consisting of a shoreside met station; a sub-sea 12m node and an air-sea interaction tower.  It provides near-realtime data for hosted reasearch projects and the public via an ftp server or JGOFS.",
-    "re3data:keyword": "geoscience,oceanography, atmospheric",
     "contactPoint": {
         "@type": "ContactPoint",
         "name": "Janet Fredericks",
@@ -16,6 +15,7 @@
         "url": "http://orcid.org/0000-0001-6143-5700",
         "contactType": "technical support"
     },
+    "re3data:keyword": "geoscience,oceanography, atmospheric",
     "logo": {
         "@type": "ImageObject",
         "url": "http://mvcodata.whoi.edu/images/MVCOv2.png"
@@ -48,26 +48,10 @@
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "http://mvcodata.whoi.edu/sparql",
-                "description": "SPARQL endpoint for searching the RDF triples.",
-                "httpMethod": "GET"
-            }
-        },
-        {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "EntryPoint",
                 "urlTemplate": "http://mvcodata.whoi.edu:8080/q2o/adcp?service=SOS&version=1.0&request=GetCapabilities",
                 "description": "OGC SWE-SOS GetCapabilities:  access to Wave Parameters with QC",
                 "httpMethod": "GET"
             }
         }
-    ],
-    "mainEntityOfPage": [{
-        "@type": "DigitalDocument",
-        "fileformat": "HTML",
-        "keywords": "Swagger",
-        "description": "User interface for reviewing and testing the APIs defined in the swagger document",
-        "url": "http://opencoredata.org/common/swagger-ui/"
-    }]
+    ]
 }
