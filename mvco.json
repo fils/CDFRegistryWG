@@ -5,7 +5,6 @@
         "ecrwg": "http://example.org/ecrwg/0.1/"
     },
     "@type": "Organization",
-    "@id": "http://opencoredata.org/id/facilityinfo",
     "name": "Marthas Vineyard Coastal Observatory",
     "description": "The MVCO is a cabled observatory consisting of a shoreside met station; a sub-sea 12m node and an air-sea interaction tower.  It provides near-realtime data for hosted reasearch projects and the public via an ftp server or JGOFS.",
     "contactPoint": {
