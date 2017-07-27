@@ -23,7 +23,7 @@ docker-compose down
 
 Transferer command
 ```
-docker save earthcube/cdfrwgweb:0.8 | bzip2 |  ssh fils@eccdf.cloudapp.net 'bunzip2 | docker load'
+docker save earthcube/cdfrwgweb:0.8 | bzip2 |  ssh fils@repograph.net 'bunzip2 | docker load'
 ```
 
 
@@ -35,6 +35,13 @@ parameter at compile time to support non-docker runs.
 Blazegraph 
 ```
 docker run -d -p 9999:9999 opencoredata/blazegraph:0.2
+
+
+CGO_ENABLED=0 env GOOS=linux go build .
+
+docker build -t earthcube/cdfrwgweb:0.9.2  -t earthcube/cdfrwgweb:latest .
+docker tag 61d6b42ba6aa earthcube/cdfrwgweb:latest
+
 ```
 
 From playing with virtuoso
@@ -47,6 +54,11 @@ docker run --name my-virtuoso \
     -v /my/path/to/the/virtuoso/db:/data \
     -d tenforce/virtuoso
 ```
+
+
+### Tagging in Docker
+
+
 
 
 ### SPARQL

@@ -25,6 +25,10 @@ func main() {
 	cssRouter.PathPrefix("/css/").Handler(http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
 	http.Handle("/css/", &MyServer{cssRouter})
 
+	htmlRouter := mux.NewRouter()
+	htmlRouter.PathPrefix("/html/").Handler(http.StripPrefix("/html/", http.FileServer(http.Dir("./html"))))
+	http.Handle("/html/", &MyServer{htmlRouter})
+
 	log.Printf("About to listen on 9900. Go to http://127.0.0.1:9900/")
 
 	err := http.ListenAndServe(":9900", nil)

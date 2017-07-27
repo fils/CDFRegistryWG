@@ -12,6 +12,12 @@ set of RDF files (nquads format) will be feed into a triple store and used for b
 
 ![havesting diagram](./Images/harvest.png)
 
+## Thoughts
+There are several approaches to extracting the triples from the JSON-LD.   In this early
+testing we are justing some Go RDF libraries.   However, a group doing this might also be 
+interested in using something like the Apache Any23 or other such projects to extract the 
+triples.  
+
 ### Issues
 The biggest issue is the fact that default JSON-LD results in blank nodes in a RDF representation.  
 While this is fine in terms of SPARQL where blank nodes are effectively variables it is not so good in a 

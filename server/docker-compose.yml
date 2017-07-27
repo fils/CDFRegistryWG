@@ -12,20 +12,20 @@ services:
     networks:
       - traefik_default
 
-  sparql:
-    image: 6016ca8db0f0
+  rwgsparql:
+    image: earthcube/cdfrwgrdf:latest
     labels:
-      - "traefik.backend=sparql"
+      - "traefik.backend=rwgsparql"
       - "traefik.port=9999" # force to pick 9999 ignore the 8080 admin port
-      - "traefik.frontend.rule=Host:opencore.dev;Method:GET,POST;PathPrefix:/blazegraph"
+      - "traefik.frontend.rule=Host:rwg.dev;Method:GET,POST;PathPrefix:/blazegraph"
     networks:
       - traefik_default
 
-  web:
-    image: earthcube/cdfrwgweb:0.8
+  rwgweb:
+    image: earthcube/cdfrwgweb:latest
     labels:
-      - "traefik.backend=web"
-      - "traefik.frontend.rule=Host:opencore.dev"
+      - "traefik.backend=rwgweb"
+      - "traefik.frontend.rule=Host:rwg.dev"
     networks:
       - traefik_default
 

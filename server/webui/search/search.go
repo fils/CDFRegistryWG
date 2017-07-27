@@ -3,33 +3,40 @@ package search
 import (
 	"bytes"
 	"fmt"
-	"html/template"
 	"log"
 	"net/http"
+	"regexp"
 	"strings"
+	"text/template"
 
 	"github.com/blevesearch/bleve"
 	"oceanleadership.org/CDFRegistryWG/server/webui/sparql"
 )
 
 type FreeTextResults struct {
-	Place     int
-	Index     string
-	Score     float64
-	ID        string
-	Fragments []Fragment
-	IconName  string
+	Place           int
+	Index           string
+	Score           float64
+	ID              string
+	Fragments       []Fragment
+	IconName        string
+	IconDescription string
 }
 
 type Fragment struct {
 	Key   string
-	Value []string
+	Value string //[]string
 }
 
 type SearchMetaData struct {
 	Term    string
 	Count   int
 	Message string
+}
+
+type Qstring struct {
+	Query      string
+	Qualifiers map[string]string
 }
 
 // DoSearch is there to do searching..  (famous documentation style intact!)
@@ -41,16 +48,45 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	// Make a var in case I want other templates I switch to later...
 	templateFile := "./templates/rwg.html"
 
+	// parse the queryterm to get the colon based qualifiers
+	qstring := parse(queryterm)
+
 	// var queryResults DocumentMatchCollection{}
-	queryResults := indexCall(queryterm, "")
-	len := len(queryResults)
+	distance := ""
+	queryResults := indexCall(qstring, distance)
+	qrl := len(queryResults)
+
+	// moved the len test and string mod to here
+	// TODO..  Yet Another Ugly Section (YAUS)  (I've named the pattern..  that is just sad)
+	// check here..  if results are 0 then recursive call with ~1
+	// check here and if 0 then try again with ~2
+	// var finalResults []FreeTextResults
+	fmt.Printf("Len: %d    distance: %s \n", qrl, distance)
+	if qrl == 0 {
+		if strings.Contains(distance, "") {
+			fmt.Println("Call ~1")
+			queryResults = indexCall(qstring, "~1")
+		}
+	}
+	qrl = len(queryResults)
+
+	if qrl == 0 {
+		if strings.Contains(distance, "~1") {
+			fmt.Println("Call ~2")
+			queryResults = indexCall(qstring, "~2")
+		}
+	}
+
+	// if len(results) > 0 {
+	// 	finalResults = results
+	// }
 
 	// Set up some metadata on the search results to return
 	var searchmeta SearchMetaData
-	searchmeta.Term = queryterm
-	searchmeta.Count = len
-	if len == 0 {
-		if queryterm == "" {
+	searchmeta.Term = queryterm // We don't use qstring.Query here since we want the full string including qualifiers, returned to the page for rendering with results
+	searchmeta.Count = qrl
+	if qrl == 0 {
+		if qstring.Query == "" {
 			searchmeta.Message = "Search EarthCube CDF RWG demo index"
 
 		} else {
@@ -60,10 +96,14 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 
 	// If we have a term.. search the triplestore
 	var spres sparql.SPres
-	if len > 0 {
+	if qrl > 0 {
 		topResult := queryResults[0] // pass this as a new template section TR!
 		fmt.Println(topResult.ID)
-		spres = sparql.DoCall(topResult.ID) // turn sparql call on / off
+		var err error
+		spres, err = sparql.DoCall(topResult.ID) // turn sparql call on / off
+		if err != nil {
+			log.Printf("SPARQL call failed: %s", err)
+		}
 		// fmt.Print(spres.Description)
 	}
 
@@ -88,6 +128,27 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func parse(qstring string) Qstring {
+	re_inside_whtsp := regexp.MustCompile(`[\s\p{Zs}]{2,}`) // get rid of multiple spaces
+	qstring = re_inside_whtsp.ReplaceAllString(qstring, " ")
+	sa := strings.Split(qstring, " ")
+
+	var buffer bytes.Buffer
+	qpairs := make(map[string]string)
+	for _, item := range sa {
+		if strings.ContainsAny(item, ":") {
+			qualpair := strings.Split(item, ":")
+			qpairs[qualpair[0]] = qualpair[1]
+		} else {
+			buffer.WriteString(item)
+			buffer.WriteString(" ")
+		}
+	}
+
+	qs := Qstring{Query: buffer.String(), Qualifiers: qpairs}
+	return qs
+}
+
 // termReWrite puts the bleve ~1 or ~2 term options on for fuzzy matching
 func termReWrite(phrase string, distanceAppend string) string {
 	terms := strings.Split(phrase, " ")
@@ -104,26 +165,10 @@ func termReWrite(phrase string, distanceAppend string) string {
 }
 
 // return JSON string..  enables use of func for REST call too
-func indexCall(phrase string, distance string) []FreeTextResults {
-	if phrase == "" {
+func indexCall(qstruct Qstring, distance string) []FreeTextResults {
+	if qstruct.Query == "" {
 		return nil
 	}
-
-	// TODO ..  improve this..
-	// Really need to check if it is ~1 or ~2.  If not, set to empty
-	if distance == "" {
-		distance = ""
-	}
-
-	// indexPath := "./index/rwg.bleve"
-	// index, err := bleve.OpenUsing(indexPath, map[string]interface{}{
-	// 	"read_only": true,
-	// })
-	// if err != nil {
-	// 	log.Printf("error opening index %s: %v", indexPath, err)
-	// } else {
-	// 	log.Printf("registered index: at %s", indexPath)
-	// }
 
 	// Playing with index aliases
 	// Open all indexes in an alias and use this in a named call
@@ -141,15 +186,27 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 	if err != nil {
 		log.Printf("Error with index alias: %v", err)
 	}
-	index := bleve.NewIndexAlias(index1, index2)
+
+	var index bleve.IndexAlias
+
+	if strings.Contains(qstruct.Qualifiers["type"], "organization") {
+		index = bleve.NewIndexAlias(index1)
+	} else if strings.Contains(qstruct.Qualifiers["type"], "data") {
+		index = bleve.NewIndexAlias(index2)
+	} else {
+		index = bleve.NewIndexAlias(index1, index2)
+	}
+
 	log.Printf("Codex index built\n")
 
 	// parse string and add ~2 to each term/word, then rebuild as a string.
-	query := bleve.NewQueryStringQuery(termReWrite(phrase, distance))
-	search := bleve.NewSearchRequestOptions(query, 10, 0, false) // no explanation
-	search.Highlight = bleve.NewHighlight()                      // need Stored and IncludeTermVectors in index
+	query := bleve.NewQueryStringQuery(termReWrite(qstruct.Query, distance))
+	search := bleve.NewSearchRequestOptions(query, 100, 0, false) // no explanation
+	search.Highlight = bleve.NewHighlight()                       // need Stored and IncludeTermVectors in index
 	searchResults, err := index.Search(search)
+	// index.Close()  // null index bug test..  didn't work
 
+	// TODO  make var hits, check for nil and do nothing when nil....
 	hits := searchResults.Hits // array of struct DocumentMatch
 
 	var results []FreeTextResults
@@ -160,39 +217,24 @@ func indexCall(phrase string, distance string) []FreeTextResults {
 		var frags []Fragment
 		for key, frag := range item.Fragments {
 			// fmt.Printf("%s   %s\n", key, frag)
-			frags = append(frags, Fragment{key, frag})
+			frags = append(frags, Fragment{key, frag[0]})
 		}
 
 		// set up a material icon   ref:  https://material.io/icons/
 		var iconName string
+		var iconDescription string
 		if item.Index == "./index/rwgdata.bleve" {
-			iconName = "file_download" // material design icon name used in template
+			iconName = "file_download"                                  // material design icon name used in template
+			iconDescription = "Data resource of type data landing page" // material design icon name used in template
 		}
 		if item.Index == "./index/rwg.bleve" {
-			iconName = "http" // material design icon name used in template  alts:  web_asset or web
+			iconName = "http"                                                  // material design icon name used in template  alts:  web_asset or web
+			iconDescription = "Organization or other related on-line resource" // material design icon name used in template  alts:  web_asset or web
 		}
 
-		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags, iconName})
+		results = append(results, FreeTextResults{k, item.Index, item.Score, item.ID, frags, iconName, iconDescription})
 	}
 
 	fmt.Printf("Looping status count:%d, distance:%s\n", len(results), distance)
-
-	// TODO..  Yet Another Ugly Section (YAUS)  (I've named the pattern..  that is just sad)
-	// check here..  if results are 0 then recursive call with ~1
-	// check here and if 0 then try again with ~2
-	var finalResults []FreeTextResults
-	if len(results) == 0 {
-		if distance == "" {
-			finalResults = indexCall(phrase, "~1")
-		}
-		if distance == "~1" {
-			finalResults = indexCall(phrase, "~2")
-		}
-	}
-
-	if len(results) > 0 {
-		finalResults = results
-	}
-
-	return finalResults
+	return results // finalResults
 }

@@ -85,10 +85,12 @@ type SPres struct {
 }
 
 // SPARQLCall calls triple store and returns results
-func DoCall(url string) SPres {
-	repo, err := sparql.NewRepo("http://sparql:9999/blazegraph/namespace/ecrwg/sparql")
+func DoCall(url string) (SPres, error) {
+	data := SPres{}
+	repo, err := sparql.NewRepo("http://rwgsparql:9999/blazegraph/namespace/ecrwg/sparql")
 	if err != nil {
 		log.Printf("query make repo: %v\n", err)
+		return data, err
 	}
 
 	f := bytes.NewBufferString(queries)
@@ -97,14 +99,15 @@ func DoCall(url string) SPres {
 	q, err := bank.Prepare("orgInfo", struct{ URL string }{url})
 	if err != nil {
 		log.Printf("query bank prepair: %v\n", err)
+		return data, err
 	}
 
 	res, err := repo.Query(q)
 	if err != nil {
 		log.Printf("query call: %v\n", err)
+		return data, err
 	}
 
-	data := SPres{}
 	bindingsTest2 := res.Bindings() // map[string][]rdf.Term
 
 	// This whole aspect seems verbose... there has to be a better Go way to do this check?
@@ -137,5 +140,5 @@ func DoCall(url string) SPres {
 		}
 	}
 
-	return data
+	return data, err
 }

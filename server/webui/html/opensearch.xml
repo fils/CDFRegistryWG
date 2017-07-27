@@ -1,0 +1,6 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<ShortName>earthcube-cdf</ShortName>
+<Description>Search EarthCube CDF RWG index</Description>
+<Image height="16" width="16" type="image/vnd.microsoft.icon">http://repograph.net/images/favicon.ico</Image>
+<Url type="text/html" template="http://repograph.net/?q={searchTerms}"/>
+</OpenSearchDescription>

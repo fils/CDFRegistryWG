@@ -177,6 +177,13 @@ the name..  there is very little context.
 <img style="width:75%"  src="../../Images/harvestv2.png">
 
 ---
+# Value add on harvesting
+
+1. Through JSON-LD the contact point of a page can bit directly contacted.  This means that docs can be linted or reviewed and issues sent to the user.
+
+
+
+---
 # Search and visualize
 
 1. The resulting graph is TINY..  so it's mostly done by simple inspection with tools like Gephi, Cayley and Cytoscape
