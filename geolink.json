@@ -28,7 +28,8 @@
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "http://data.geolink.org/sparql",
+                "contentType": "application/sparql-query",
+                "url": "http://data.geolink.org/sparql",
                 "description": "SPARQL Endpoint",
                 "httpMethod": "GET"
             }
