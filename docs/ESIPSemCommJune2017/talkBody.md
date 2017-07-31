@@ -72,7 +72,7 @@ and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuil
 1. A reference approach to implementing facility description using scehma.org type Organization and the developed ontology.    (Reference example: https://github.com/fils/CDFRegistryWG/blob/master/opencore.json)
 1. A crawler software package (repurposed) that extracts JSON-LD to RDF triples and generates a full text index from these crawls  (https://github.com/fils/contextBuilder)  See also https://github.com/fils/CDFRegistryWG/blob/master/onHarvesting.md (which is old and out of date)
 1. RDF graph and text index   (exploring with SPARQL and Gremlin and Bleve)
-1. A simple client to explore interface options on the graph and index.  Client provides feedback on usability aspects of these products to aid assessment.   (http://eccdf.cloudapp.net/)   
+1. A simple client to explore interface options on the graph and index.  Client provides feedback on usability aspects of these products to aid assessment.   (http://repograph.net/)   
 
 ---
 # Reference use case
@@ -180,6 +180,10 @@ the name..  there is very little context.
 # Value add on harvesting
 
 1. Through JSON-LD the contact point of a page can bit directly contacted.  This means that docs can be linted or reviewed and issues sent to the user.
+1. Google, Bing, etc will index these pages as concepts
+1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata
+1. Web arch based harvesting can be implemented by many consumers (Consumers distinguish themselves by their "value add")
+1. Common community governed vocabulary
 
 
 
@@ -188,7 +192,7 @@ the name..  there is very little context.
 
 1. The resulting graph is TINY..  so it's mostly done by simple inspection with tools like Gephi, Cayley and Cytoscape
 
-2. Simple search UI to exercise the index and graph. [http://eccdf.cloudapp.net/?q=ocean+chemistry](http://eccdf.cloudapp.net/?q=ocean+chemistry)
+2. Simple search UI to exercise the index and graph. [http://repograph.net/?q=ocean+chemistry](http://repograph.net/?q=ocean+chemistry)
 
 <img style="width:75%"  src="../../Images/eccdfUI.png">
 
