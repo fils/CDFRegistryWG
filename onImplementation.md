@@ -12,8 +12,8 @@ do a "view source" on the page.  The contents of the ``` <script type="applicati
 is JSON-LD.  Examples of JSON-LD can be seen in this repository in the form of
 the files:
 
-* [BCO-DMO](https://github.com/fils/CDFRegistryWG/blob/master/bcodmo.json)  
-* [OpenCore](https://github.com/fils/CDFRegistryWG/blob/master/opencore.json)  
+* [BCO-DMO](https://github.com/fils/CDFRegistryWG/blob/master/jsonldDocuments/facilityExamples/bcodmo.json)  
+* [OpenCore](https://github.com/fils/CDFRegistryWG/blob/master/jsonldDocuments/facilityExamples/opencore.json)  
 
 and others.
 
@@ -71,12 +71,12 @@ visit the [JSON-LD Playground](http://json-ld.org/playground/).
 
 
 ### Some early tests / linting
-The following links show results of tests on the opencore.json file.  Note that the 
+The following links show results of tests on the BCO-DMO JSON-LD file.  Note that the 
 URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
 
 #### Results from Google Structure Data Testing Tool
-[View results](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
+[View results](https://search.google.com/structured-data/testing-tool/u/0/#url=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2FjsonldDocuments%2FfacilityExamples%2Fbcodmo.json)
 
 #### Structured Data Linter
-[View results](http://linter.structured-data.org/?url=https:%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
+[View results](http://linter.structured-data.org/?url=https:%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2FjsonldDocuments%2FfacilityExamples%2Fbcodmo.json)
 

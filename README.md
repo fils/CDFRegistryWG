@@ -1,5 +1,11 @@
 # EarthCube CDF Registry Working Group
 
+## TLDR;
+The work of the registry working group can be summed up rather quickly.  Use existing 
+vocabularies like schema.org and re3data terms to expose facility metadata using web architecture
+patterns.   Leverage HTML5 microdata publishing, JSON-LD and standard web architecture (hypermedia) 
+to both expose and collect metadata. 
+
 ## About
 The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group to review alignment of existing approaches to research facility description and discovery.  The involved parties include the EarthCube CDF, Coalition for Publishing Data in the Earth and Space Sciences (COPDESS) and the Registry of Research Data Repositories (re3data).   
 
@@ -8,7 +14,7 @@ The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group
 * [COPDESS](http://www.copdess.org/)
 
 
-## Other documents
+## Documents
 
 * [Members](members.md)
 * [Presentation](./docs/ESIPSemCommJune2017/talkBody.pdf)
@@ -17,7 +23,7 @@ The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group
 * [Implementation (old)](onImplementation.md)
 
 
-## Directory structure
+## Repository structure
 
 * [JSON-LD Docuements](./jsonldDocuments)  A collection of JONS-LD documents being used
 to test ideas and use of the schema.org and re3data types and terms.
@@ -31,12 +37,6 @@ This is the service available at [repograph.net](http://repograph.net/)
 creating a method to allow more human approachable schema.org building.  Like what can be seen
 at [Structured Markup Editor](http://www.stoumann.dk/examples/editor/) but focused on CDF needs.
   
-
-## TLDR;
-The work of the registry working group can be summed up rather quickly.  Use existing 
-vocabularies like schema.org and re3data terms to expose facility metadata using web architecture
-patterns.   Leverage HTML5 microdata publishing, JSON-LD and standard web architecture (hypermedia) 
-to both expose and collect metadata. 
 
 #### Simple Scenario 
 
@@ -65,14 +65,15 @@ and interface clients.
 
 ## Errata 
 ### On ad hoc implementation 
-As noted in item 4 a test crawler, harvester and indexer is being developed at 
+As noted a test crawler, harvester and indexer is being developed at 
 [contextBuilder](https://github.com/fils/contextBuilder).  This is a simple (and not 
 production ready) application for harvesting from a whitelist and extracting the JSON-LD
 package.  The next step will be to convert this JSON-LD to triples and moved into a standard 
-triple store.  
+triple store.  A focused JSON-LD crawler is also in development at 
+[https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl](https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl)
 
 ### On external vocabularies
-registryC5 is testing some external vocabulary uses.  It is valid JSON-LD but 
+The registryC5 file is testing some external vocabulary uses.  It is valid JSON-LD but 
 Google will always through an error since it doesn't see this as a property of some
 known schema.org class.  This should be fine and I have tested this, but it is always
 a worry with Google that you will not know when how they deal with this case
