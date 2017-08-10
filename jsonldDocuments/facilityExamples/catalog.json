@@ -1,0 +1,18 @@
+{
+    "@context": "http://schema.org",
+    "@type": "DataCatalog",
+    "@id": "http://opencoredata.org/catalogs",
+    "url": "http://opencoredata.org/catalogs",
+    "description": "Can I use this approach to reference this catalog from type WebSite",
+    "dataset": [{
+            "@type": "Dataset",
+            "description": "An example dataset 1",
+            "url": "http://opencoredata.org/id/rdf/geolink1.ttl"
+        },
+        {
+            "@type": "Dataset",
+            "description": "An example dataset 2",
+            "url": "http://opencoredata.org/id/rdf/cruises.ttl"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 # EarthCube CDF Registry Working group members and providers
 
 ### Members
+EarthCube CDF RWG members
 
 * Tim Ahern
 * Bob Arko
@@ -14,12 +15,14 @@
 
 
 ### Providers
+A list of current providers...  
 
 * R2R
 * Open Core Data
 * BCO-DMO
-* Open Topolography
-* IEDA (in progress)
-* WHOI (in progress)
+* Open Topography
 * IRIS
 * UNAVCO
+* UNIDATA
+* MVCO
+* IEDA (in progress)

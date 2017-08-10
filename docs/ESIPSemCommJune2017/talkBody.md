@@ -21,17 +21,20 @@ class: center, middle, inverse
 | Bob Arko        | LDEO / Columbia  | R2R            |
 | Doug Fils       | Ocean Leadership | Open Core Data |
 | Danie Kinkade   | WHOI             | BCO-DMO        |
-| Lynne Schreiber | EarthCube ESSO   |                |
+| Lynne Schreiber | EarthCube ESSO   | Ucar           |
 | Adam Shepherd   | WHOI             | BCO-DMO        |
 | Shelley Stall   | AGU              | COPDESS        |
 | Mike Stults     | IRIS             | IRIS           |
 | Michael Witt    | Purdue           | re3data        |
 
 
-Acknowledgement:  This work is support by the NSF EarthCube Program and the EarthCube Science Support Office (ESSO) which provides infrastructure and administrative support for the group.   We are a working group..  NOT a funded project.
+Acknowledgement:  This work is support by the NSF EarthCube Program and the EarthCube Science Support Office (ESSO) which provides infrastructure and administrative support for the group.   
 
-Group work is found at [https://github.com/fils/CDFRegistryWG](https://github.com/fils/CDFRegistryWG) 
-and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder)
+We are a working group..  NOT a funded project.
+
+Code, docs and other products at:
+ * [https://github.com/fils/CDFRegistryWG](https://github.com/fils/CDFRegistryWG) 
+ * [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder)
 
 
 ---
@@ -41,70 +44,70 @@ and [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuil
 #### Objectives
 1. Formalize a set of repository parameters-of-interest to CDF members.
 1. Review the alignment of those parameters with re3data and COPDESS.
-1. Develop strategies for CDF members to express/expose this information.
-1. Develop a means to encode this schema in a machine readable format.
-1. Demonstrate the use of schema.org for publishing and accessing this metadata.
-1. Leverage re3data as a reference implementation for collecting and exposing this metadata.
+1. Demonstrate a web platform based approach to encode this information in a machine readable format.
+1. Demonstrate strategies for CDF members to express/expose this information via the web
+1. Demonstrate the use of schema.org patterns for publishing and accessing this metadata.
+1. Leverage re3data as a reference implementation for collecting and utilizing this metadata.
 
 #### Benefits
-* Repositories have control over their metadata and can update at any time.
-* These new standard guidelines for publishing repository metadata can be adopted across all ESS repositories and other scientific domains to support repository discovery and access.
-* CDF will recommend these standards to their membership and work towards adoption by all NSF-funded ESS repositories as complying with the standard.
+* Repositories have control over their metadata and can maintain one copy for multiple users.
+* Web platform / architecture based leveraging existing strong standards guidance and governance 
+* A base common vocabulary with domain or community extensibility 
 
 ---
 # Objectives and Benefits 
 <img style="float:right;width:30%"  src="../../Images/bubbles.png">
 
-#### Supporting data pipeline
+#### Current work flow
 
-* Encode in JSON-LD (schema.org/Organization and re3data vocabularies)
+* Encode in JSON-LD (schema.org/Organization and re3data vocabularies (mostly))
 * Encode basic facility / repository metadata and links to service description documents (OGC, Swagger, VoID, etc)
 * Harvest via simple whitelist crawl
-* Generate graph and index and explore use of these products
+* Generate graph and index and explore use of these products  (simple JSON-LD transform)
+* Starting to implement schema.org/DataCatalog and DataSet to explore extension to data
 
 
 
 ---
-# Deliverables in support of pipeline
+# Working group deliverables to support workflow
 
 1. A draft ontology based on the re3data XML schema (https://github.com/fils/CDFRegistryWG/tree/master/Vocabulary) (A basis to encode extension review to re3 voc)
-1. Table of possible extensions to the base re3data XML schema to support CDF facility description 
+1. Table of possible extensions (terms) to the base re3data XML schema to support CDF facility description 
 1. A reference approach to implementing facility description using scehma.org type Organization and the developed ontology.    (Reference example: https://github.com/fils/CDFRegistryWG/blob/master/opencore.json)
-1. A crawler software package (repurposed) that extracts JSON-LD to RDF triples and generates a full text index from these crawls  (https://github.com/fils/contextBuilder)  See also https://github.com/fils/CDFRegistryWG/blob/master/onHarvesting.md (which is old and out of date)
-1. RDF graph and text index   (exploring with SPARQL and Gremlin and Bleve)
-1. A simple client to explore interface options on the graph and index.  Client provides feedback on usability aspects of these products to aid assessment.   (http://repograph.net/)   
+1. A crawler software package (re-purposed) that extracts JSON-LD, converts to RDF triples and generates a full text index (https://github.com/fils/contextBuilder)  See also https://github.com/fils/CDFRegistryWG/blob/master/onHarvesting.md (which is old and out of date)
+1. RDF graph and text index explored with SPARQL/Gremlin and Bleve
+1. A simple client to explore interface options on the graph and index.  Client provides feedback on usability aspects of these products to aid assessment and development.   (http://repograph.net/)   
 
 ---
 # Reference use case
-## re3data "harvest" mode
+## re3data "harvest" option
 
 <img style="width:100%"  src="../../Images/re3Flow.png">
 
 
 ---
-# Reference use case
-### Publishing by providers: Self hosting metadata  
-#### Thank you all very much!
+# Testers
+### Live testing by providers self hosting metadata  (Thank you!)
 
-
-| Institute      | People                              | Status and Link                                                       |
-| -------------- | ----------------------------------- | --------------------------------------------------------------------- |
-| R2R            | Bob Arko                            | [Published](http://api.rvdata.us/cdf.html)                            |
-| Open Core Data | Doug Fils                           | [Published](http://opencoredata.org)                                  |
-| BCO-DMO        | Adam Shepherd / Danie Kinkade       | [Published](http://bco-dmo.org)                                       |
-| IRIS           | Mike Stults / Tim Ahern             | [Published](http://ds.iris.edu/files/cdfregistrywg/IRISfacility.html) |
-| UNAVCO         | Jim Riley / Chuck Meertens          | [Published](http://www.unavco.org)                                    |
-| Open Topology  | Vishu Nandigam / Christopher Crosby | [Published](http://www.opentopography.org)                            |
-
+| Institute                                    | People                              | Status and Link                                                       |
+| -------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------- |
+| R2R                                          | Bob Arko                            | [Published](http://api.rvdata.us/cdf.html)                            |
+| Open Core Data                               | Doug Fils                           | [Published](http://opencoredata.org)                                  |
+| BCO-DMO                                      | Adam Shepherd / Danie Kinkade       | [Published](http://bco-dmo.org)                                       |
+| IRIS                                         | Mike Stults / Tim Ahern             | [Published](http://ds.iris.edu/files/cdfregistrywg/IRISfacility.html) |
+| UNAVCO                                       | Jim Riley / Chuck Meertens          | [Published](http://www.unavco.org)                                    |
+| Open Topology                                | Vishu Nandigam / Christopher Crosby | [Published](http://www.opentopography.org)                            |
+| UNIDATA                                      | Ethan Davis                         | [Published](http://www.unidata.ucar.edu/)                             |
+| Martha's Vineyard Coastal Observatory (WHOI) | Janet Fredericks                    | [Published](http://mvcodata.whoi.edu/mvco.html)                       |
+| GeoLink                                      | Adam Shepherd                       | [Published](http://www.geolink.org)                                   |
 
 * Check the URLs for contact point if you want to discuss this
 * Publishing patterns are evolving  (would love some shared experiences)
-* Additionally IEDA and WHOI have expressed interest in publishing a well
 ---
-# Reference use case
+# Publishing
 
 ### Publishing by providers: Self hosting metadata  
-#### Secondary benefit:  organic search benefits
+#### Secondary benefit:  organic search benefits (Google, Bing, Yandex, etc)
 
 _Authority, Relevance and Trust_
 
@@ -117,13 +120,14 @@ It is a path to address "semantic search optimization" for organizations.
 This secondary benefit has not been assessed.
 
 ---
-# Effort required by Providers
+# Effort required by Publishers
 
 At the current time the effort is relatively small since it scope only facility data normally found in a top page 
 of a domain.   Document contains links, if any, to existing service description documents.  
 
  A single page with a single JSON-LD document that can be hand crafted from templates (not scale-able).
 
+This is a very simple 1st step.
 
 .small[
 ```html
@@ -177,13 +181,13 @@ the name..  there is very little context.
 <img style="width:75%"  src="../../Images/harvestv2.png">
 
 ---
-# Value add on harvesting
+# Value add on harvesting via the web platform
 
 1. Through JSON-LD the contact point of a page can bit directly contacted.  This means that docs can be linted or reviewed and issues sent to the user.
-1. Google, Bing, etc will index these pages as concepts
-1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata
+1. Google, Bing, etc will index these pages as concepts  (noted previously)
+1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata locally, not at N sites
 1. Web arch based harvesting can be implemented by many consumers (Consumers distinguish themselves by their "value add")
-1. Common community governed vocabulary
+1. Common community governed vocabularies can be used (and improved) broadly
 
 
 
@@ -227,18 +231,27 @@ The approach benefits both structured domain specific indexing as well as larger
 # Future
 
 * Complete pilot effort to test guidelines.
+ 
 * Coordinate with schema.org as a potential external vocabulary for repository metadata for on-going management and governance.
+ 
 * Provide guidelines to CDF members and other ESS NSF repositories to embed metadata information as JSON-LD (schema.org).
+
 * Monitor and encourage adoption by CDF members and ESS NSF repositories 
 
 ---
 # Next steps
 
 * Exploring extending the connection down to DataCatalog (then to DataSet from there)
+
 * Exploring use of schema.org proposed types: MeasurementTechnique and VariablesMeasured  (leverage CSV for the Web patterns)
+
 * JSON-LD walking leveraging JSON-LD Framing [https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl/simpleCrawler](https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl/simpleCrawler)
-* Making products and patterns more usable by a wider range of value add services 
+
+* Making products and patterns more usable by a wider range of value add 3rd parties  (publishers and consumers) 
+
 * more...  
+
+\#UseThePlatform
 
 
 ---
@@ -254,9 +267,4 @@ The approach benefits both structured domain specific indexing as well as larger
 * ESIP Semantic Committee June 2017 [Presentation](https://github.com/fils/CDFRegistryWG/tree/master/docs/ESIPSemCommJune2017)
 * DataONE Members Meeting July 2017 [Poster](https://github.com/fils/CDFRegistryWG/blob/master/docs/ECAHM_poster.pdf)
 * EarthCube CDF July 2017 Report out at [ESIP Summer 2017](http://www.esipfed.org/meetings/upcoming-meetings/esip-summer-meeting-2017)
-
-
-
-
-
 

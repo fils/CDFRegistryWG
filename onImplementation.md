@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The basic approach to including JSON-LD based microdata in a web page is to simply
+The basic approach to including JSON-LD based HTML5 microdata in a web page is to simply
 include a ``` <script type="application/ld+json"> ``` tag in the body of the page. 
 Normally this is done within the ```<head>``` tag of the page but in practice can be anywhere in the 
 document.
@@ -68,4 +68,15 @@ directly from that domain.   For more detailed examples of JSON-LD look at the e
 
 For more information on JSON-LD as well as tools and examples 
 visit the [JSON-LD Playground](http://json-ld.org/playground/).
+
+
+### Some early tests / linting
+The following links show results of tests on the opencore.json file.  Note that the 
+URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
+
+#### Results from Google Structure Data Testing Tool
+[View results](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
+
+#### Structured Data Linter
+[View results](http://linter.structured-data.org/?url=https:%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
 

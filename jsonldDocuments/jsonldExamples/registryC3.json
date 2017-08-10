@@ -1,0 +1,78 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Lead Data Center Name",
+    "url": "http://foo.org/main",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Karen Stocks",
+        "email": "kstocks@ucsd.edu",
+        "url": "http://orcid.org/0000-0000-0000-0000",
+        "contactType": "technical support"
+    },
+    "subOrganization": [{
+            "@type": "Organization",
+            "name": "SIO Explorer",
+            "url": "http://foo.org/sioexp",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "name": "Jane Doe",
+                "email": "jd@ucsd.edu",
+                "url": "http://orcid.org/0000-0000-0000-0000",
+                "contactType": "technical support"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "http://foo.org/sioexp/swagger",
+                    "description": "Swagger description document",
+                    "httpMethod": "GET"
+                }
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "Site Survey Data Bank",
+            "url": "http://foo.org/ssdb",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "name": "Jane Doe",
+                "email": "jd@ucsd.edu",
+                "url": "http://orcid.org/0000-0000-0000-0000",
+                "contactType": "technical support"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "http://foo.org/ssdb/swagger",
+                    "description": "Swagger description document",
+                    "httpMethod": "GET"
+                }
+            }
+        },
+        {
+            "@type": "Organization",
+            "name": "GDC Archives",
+            "url": "http://foo.org/sioexp",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "name": "Jane Doe",
+                "email": "jd@ucsd.edu",
+                "url": "http://orcid.org/0000-0000-0000-0000",
+                "contactType": "technical support"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "http://foo.org/gdcarchive/swagger",
+                    "description": "Swagger description document",
+                    "httpMethod": "GET"
+                }
+            }
+        }
+
+    ]
+}

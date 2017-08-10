@@ -1,6 +1,5 @@
 # EarthCube CDF Registry Working Group
 
-
 ## About
 The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group to review alignment of existing approaches to research facility description and discovery.  The involved parties include the EarthCube CDF, Coalition for Publishing Data in the Earth and Space Sciences (COPDESS) and the Registry of Research Data Repositories (re3data).   
 
@@ -9,38 +8,35 @@ The EarthCube Council of Data Facilities (CDF) formed the Registry Working Group
 * [COPDESS](http://www.copdess.org/)
 
 
-## Ohter documemts
+## Other documents
 
 * [Members](members.md)
-* [ESIP Presentation](./docs/ESIPSemCommJune2017/talkBody.md)
-* [EarthCube All Hands Poster](./docs/ECAHM_poster.pdf)
+* [Presentation](./docs/ESIPSemCommJune2017/talkBody.pdf)
+* [Poster](./docs/DataOneESIP_poster.pdf)
 * [Harvesting (old)](onHarvesting.md)
 * [Implementation (old)](onImplementation.md)
 
 
-## Files
-The following files are being generated to test out various approaches to encoding the facility metadata.  The "C" files are "candidate" or "test" files.  The files with facility names represent examples of using these tests to do an example encoding of a particular facility's data.  
+## Directory structure
 
-#### Facility examples
-* opencore.json : Example of encoding Open Core services into this schema.org
-* bcodmo.json : Example for BCO-DMO
-* iris.json : Example for IRIS with a mix of machine and human focused resources
+* [JSON-LD Docuements](./jsonldDocuments)  A collection of JONS-LD documents being used
+to test ideas and use of the schema.org and re3data types and terms.
+* [Documentation](./docs)  Assorted presentations and posters.
+* [Notebooks](./notebooks) A simple notebook (Jupyter) to demonstrate a potential 
+where more human approachable formats like YAML allow people to more easily create
+example JSON-LD documents for reference. 
+* [Server code](./server)  The Go based code for hosting the test interface and triple store
+This is the service available at [repograph.net](http://repograph.net/)
+* [Schema Builder](./schemaBuilder) Related to the "notebooks" above this is a thought about
+creating a method to allow more human approachable schema.org building.  Like what can be seen
+at [Structured Markup Editor](http://www.stoumann.dk/examples/editor/) but focused on CDF needs.
+  
 
-
-#### Candidate encodings :  Some test of various encoding ideas
-* registryC5.json : A test of multiple context entries..  to allow us to use
-other context for things like controlled voc. 
-* registryC4.json : Simple example with some ContactPoint
-* registryC3.json : A test to see how use of subOrganization would work for 
-groups that scope several projects 
-* registryC2.json : Uses the SearchAction object.  Best candidate so far.
-* registryC1.json : Early test... used DigitalDocument which is likely not a proper 
-use of this type.  However, it might apply to the VoID document in some ways.   
- 
-
-## Notes on approaches
-The following are a few brief note on how this might all fit together into an example 
-implementation.  
+## TLDR;
+The work of the registry working group can be summed up rather quickly.  Use existing 
+vocabularies like schema.org and re3data terms to expose facility metadata using web architecture
+patterns.   Leverage HTML5 microdata publishing, JSON-LD and standard web architecture (hypermedia) 
+to both expose and collect metadata. 
 
 #### Simple Scenario 
 
@@ -55,11 +51,13 @@ use of external vocabularies.  This is then placed into the facility landing pag
 4. The white list of site/URLs is feed through something like [https://github.com/fils/contextBuilder](https://github.com/fils/contextBuilder) or by DateOne tools.  This example code will look for schema.org JSON-LD packages defined in item 2.  More advanced crawling solutions might use tools like: https://github.com/anaskhan96/soup or https://github.com/PuerkitoBio/fetchbot 
 
 After reading in the JSON-LD it could be converted to RDF for a triple store 
-or other data store approaches used by a harvesting group.   There is no blessed harvesting or presentation 
-site.  Any number of groups or organizations could harvest and provide access to this material. 
+or other data storage or index approaches used by a harvesting group.   
+There is no blessed harvesting or presentation site.  Any number of groups or organizations 
+could harvest and provide access to this material. 
 
-The following image gives a brief overview of how facilities might take their descriptor documents and metadata
-and expose this material up through a workflow to aggregation and interface clients.  
+The following image gives a brief overview of how facilities might take their descriptor
+documents and metadata and expose this material up through a workflow to aggregation 
+and interface clients.  
 
 
 ![Image of Flow](./Images/bubbles.png)
@@ -73,7 +71,6 @@ production ready) application for harvesting from a whitelist and extracting the
 package.  The next step will be to convert this JSON-LD to triples and moved into a standard 
 triple store.  
 
-
 ### On external vocabularies
 registryC5 is testing some external vocabulary uses.  It is valid JSON-LD but 
 Google will always through an error since it doesn't see this as a property of some
@@ -81,14 +78,4 @@ known schema.org class.  This should be fine and I have tested this, but it is a
 a worry with Google that you will not know when how they deal with this case
 will be changed.   Their typical response has been, "try and get things you need 
 in core schema.org".  
-
-### Some early tests / linting
-The following links show results of tests on the opencore.json file.  Note that the 
-URL error at the Google tool is related to hosting the file at a domain different than what it referees to.
-
-#### Results from Google Structure Data Testing Tool
-[View results](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
-
-#### Structured Data Linter
-[View results](http://linter.structured-data.org/?url=https:%2F%2Fraw.githubusercontent.com%2Ffils%2FCDFRegistryWG%2Fmaster%2Fopencore.json)
 

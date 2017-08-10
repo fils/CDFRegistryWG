@@ -1,8 +1,13 @@
 ## Reviewing FAIR related to this work
 
-
-
 ### Notes
+It would be good to show how this approach aligns with and assists with
+being FAIR compliant.  This is the beginning of some notes related to that.
+
+
+### Sections
+The sections below reference the sections from the FAIR GUIDING PRINCIPLES
+section at the bottom. 
 
 #### section 1
 To address FAIR section 1 I am looking at @id

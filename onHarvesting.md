@@ -1,6 +1,5 @@
 # Review of activity related to harvesting
 
-
 ### About
 We are looking to conduct a simple test with a set of providers.  This test will involve
 a facility publishing metadata using the approaches defined in the onImplementation.md file 
@@ -14,18 +13,24 @@ set of RDF files (nquads format) will be feed into a triple store and used for b
 
 ## Thoughts
 There are several approaches to extracting the triples from the JSON-LD.   In this early
-testing we are justing some Go RDF libraries.   However, a group doing this might also be 
+testing we are justing some Go RDF libraries.   However, another group doing this might also be 
 interested in using something like the Apache Any23 or other such projects to extract the 
-triples.  
+triples.
 
-### Issues
-The biggest issue is the fact that default JSON-LD results in blank nodes in a RDF representation.  
-While this is fine in terms of SPARQL where blank nodes are effectively variables it is not so good in a 
-LOD approach.  However, through the use of @id in JSON-LD blank nodes can be removed.  This 
-make the JSON-LD a bit more involved to author but only by 1 entry per type.  
+### JSON-LD and blank nodes
+An issue is the fact that it's easy to generate a JSON-LD document 
+that results in blank nodes in a RDF representation.  
+While this is the issue in SPARQL where blank nodes are effectively variables this is not 
+a major issue.   It could be more of a factor in LOD approaches where blank nodes
+are going to obviously impact resource dereferencing on the net.  
+However, through the use of @id in JSON-LD blank nodes can be removed.  This 
+make the JSON-LD a bit more involved to author but only by 1 entry per type.  There are a lot 
+of item type uses though. 
 
-This potential solution raises a new issue in that by declaring these ID (URIs) we become responsible for them.  
-Thus introducing a URI that requires "attention" in a LOD context.  
+This potential solution raises a new issue in that by declaring these ID (URIs) we 
+become responsible for them.  Thus introducing a URI that requires "attention" and 
+maintenance in a LOD context.  Further testing of the approach will reveal if this is a major
+factor or not in implementation patterns.  
 
 ### Example results
 A simple run of this has already been done.  The resulting triples were queried with the following SPARQL which 
