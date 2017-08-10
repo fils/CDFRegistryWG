@@ -104,28 +104,29 @@ Code, docs and other products at:
 * Check the URLs for contact point if you want to discuss this
 * Publishing patterns are evolving  (would love some shared experiences)
 ---
-# Publishing
+# Publishing self hosting metadata  
 
-### Publishing by providers: Self hosting metadata  
-#### Secondary benefit:  organic search benefits (Google, Bing, Yandex, etc)
+### Semantic Search Optimization (Semantic SEO)
 
-_Authority, Relevance and Trust_
+#### _Authority, Relevance and Trust_
+The approach has benefit beyond EarthCube's goals as arguably both a semantic metadata
+publishing and outreach activity for facilities.
 
-The approach has benefit beyond EarthCube's goals.  It is an approach leveraging 
-standards based approaches to organization description.  It's arguably both a metadata
-publishing and outreach activity.  
+### Some value add arguments for web platform semantic metadata publishing
 
-It is a path to address "semantic search optimization" for organizations.
-
-This secondary benefit has not been assessed.
+1. Google, Bing, etc will index these pages and index schema.org types (or external voc references to those types)
+1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata locally, not at N sites
+1. Web arch based harvesting can be implemented by many consumers (Consumers distinguish themselves by their "value add")
+1. Common community governed vocabularies can be used (and improved) broadly
 
 ---
 # Effort required by Publishers
 
-At the current time the effort is relatively small since it scope only facility data normally found in a top page 
-of a domain.   Document contains links, if any, to existing service description documents.  
-
- A single page with a single JSON-LD document that can be hand crafted from templates (not scale-able).
+* Not doing much, so effort low  :)
+    * We are just publishing facility metadata and some service document links
+    * Can be done manually at this time (both document creation and publishing)
+* Document contains links, if any, to existing service description documents or other 
+digital documents
 
 This is a very simple 1st step.
 
@@ -154,47 +155,40 @@ We are still refining the use and encoding of schema.org types and re3data terms
 ---
 # Thoughts on scaling by providers 
 
-### There is talk about how to scale
+##### Web platform based, so scaling in that aspect is fine.  _Scaling the facility implementation of the approach is the key though! _
 
-There are many good JSON-LD libraries and tools: [https://json-ld.org/](https://json-ld.org/)
-Google and others also have structured data testing tools.  [reference](http://www.seoskeptic.com/structured-data-markup-validation-testing-tools/)
-
-
-Leverage existing data pipelines the data facilities are doing now.  
+#### Need to address
+* Integration at facility domains
+    * Leverage existing data pipelines the data facilities are doing now.  
 Shared experiences via EarthCube, ESIP,  others...
+* Tooling, well in hand
+    * There are many good JSON-LD libraries and tools: [https://json-ld.org/](https://json-ld.org/)
+    * Google and others also have structured data testing tools.  [reference](http://www.seoskeptic.com/structured-data-markup-validation-testing-tools/)
+* Some working group members (Open Core Data, BCO-DMO) are currently generating schema.org (JSON-LD) for our data set landing pages. 
+* Connecting to these via type DataCatalog is being tested   
 
-Some working group members (Open Core Data, BCO-DMO) are currently generating schema.org (JSON-LD) for our dataset landing pages. 
-Connecting to these via type DataCatalog is being talked about.   
-
-Leverage our current approaches to allow a simplified and portable pattern to be shared with other 
-providers.  This is obviously an area to engage the larger audience of people doing this similar pattern.  
+#### How do we
+* Leverage our current facility metadata approaches and data work flows
+* Allow a simplified and portable pattern to be shared with other providers 
 
 ---
 # Harvesting
 
 1. Harvest code (simple whitelist) [contextBuilder](https://github.com/fils/contextBuilder):
-2. Results in triples from JSON-LD and simple text index
+1. Results in triples from JSON-LD and simple text index
+1. A more advanced JSON-LD walker guided by hypermedia extracted vis JSON-LD frames is in
+development
 
-The code is re-purposed from a previous abandoned experiment.  So for a package with "context" in
-the name..  there is very little context. 
+NOTE: The code is re-purposed from a previous abandoned experiment by me.  
+So for a package with "context" in the name..  there is very little context. 
 
 <img style="width:75%"  src="../../Images/harvestv2.png">
-
----
-# Value add on harvesting via the web platform
-
-1. Through JSON-LD the contact point of a page can bit directly contacted.  This means that docs can be linted or reviewed and issues sent to the user.
-1. Google, Bing, etc will index these pages as concepts  (noted previously)
-1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata locally, not at N sites
-1. Web arch based harvesting can be implemented by many consumers (Consumers distinguish themselves by their "value add")
-1. Common community governed vocabularies can be used (and improved) broadly
-
 
 
 ---
 # Search and visualize
 
-1. The resulting graph is TINY..  so it's mostly done by simple inspection with tools like Gephi, Cayley and Cytoscape
+1. The resulting graph is TINY..  so it's mostly explored by simple inspection with tools like Gephi, Cayley and Cytoscape
 
 2. Simple search UI to exercise the index and graph. [http://repograph.net/?q=ocean+chemistry](http://repograph.net/?q=ocean+chemistry)
 
@@ -204,13 +198,12 @@ the name..  there is very little context.
 ---
 # Thoughts on work to date
 
-### Group will provide a report back to CDF at Summer ESIP (2017)
+###  ~~Will provide~~ Provided a report to CDF at Summer ESIP (2017)
 
 <p style="font-size:66%">
-To support integration with schema.org the ontology development does have to take on certain approaches.  These approaches facilitate an external ontology connecting to schema.org types.  An “external vocabulary” is one of three approaches to working with scheme.org.  All three approaches are valid and may fit various goals and situations.  Ontologies can be used in JSON-LD without being a “external vocabulary” in schema.org space.  
+To support <b>integration with schema.org the ontology development does have to take on certain practices</b>.  These practices facilitate an external ontology connecting to schema.org types.  An “external vocabulary” is one of three approaches to working with scheme.org.  All three approaches are valid and may fit various goals and situations.  Ontologies can be used in JSON-LD without being a “external vocabulary” in schema.org space.  
 </p>
 <p style="font-size:66%">
-
 Use of schema.org + extensions is a viable approach.  However, it does take a level of governance to ensure term coverage and mapping is taking place and well documented for both providers and consumers.  
 </p>
 <p style="font-size:66%">
@@ -228,30 +221,21 @@ The approach benefits both structured domain specific indexing as well as larger
 
 
 ---
-# Future
+### Future
 
-* Complete pilot effort to test guidelines.
+* Complete pilot effort to test potential recommendations.  Review those recommendations with 
+larger CDF community to gather feedback and comments.
+* Describe how to potentially coordinate with schema.org and re3data on an external vocabulary for repository metadata for on-going management and governance.
  
-* Coordinate with schema.org as a potential external vocabulary for repository metadata for on-going management and governance.
- 
-* Provide guidelines to CDF members and other ESS NSF repositories to embed metadata information as JSON-LD (schema.org).
-
-* Monitor and encourage adoption by CDF members and ESS NSF repositories 
-
----
-# Next steps
+### Next steps
 
 * Exploring extending the connection down to DataCatalog (then to DataSet from there)
-
 * Exploring use of schema.org proposed types: MeasurementTechnique and VariablesMeasured  (leverage CSV for the Web patterns)
-
 * JSON-LD walking leveraging JSON-LD Framing [https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl/simpleCrawler](https://github.com/ESIPFed/snapHacks/tree/master/sh01-jsonldCrawl/simpleCrawler)
-
 * Making products and patterns more usable by a wider range of value add 3rd parties  (publishers and consumers) 
-
 * more...  
 
-\#UseThePlatform
+\#UseThePlatform  
 
 
 ---
@@ -265,6 +249,8 @@ The approach benefits both structured domain specific indexing as well as larger
 ### Public reports of group work:
 * EarthCube All Hands June 2017 [Poster](https://github.com/fils/CDFRegistryWG/blob/master/docs/ECAHM_poster.pdf)
 * ESIP Semantic Committee June 2017 [Presentation](https://github.com/fils/CDFRegistryWG/tree/master/docs/ESIPSemCommJune2017)
-* DataONE Members Meeting July 2017 [Poster](https://github.com/fils/CDFRegistryWG/blob/master/docs/ECAHM_poster.pdf)
+* DataONE Members Meeting July 2017 [Poster](https://github.com/fils/CDFRegistryWG/blob/master/docs/DataOneESIP_poster.pdf)
 * EarthCube CDF July 2017 Report out at [ESIP Summer 2017](http://www.esipfed.org/meetings/upcoming-meetings/esip-summer-meeting-2017)
+* TAC report
+* RDA Montreal (potentially)
 
