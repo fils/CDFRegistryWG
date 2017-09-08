@@ -118,6 +118,7 @@ publishing and outreach activity for facilities.
 1. Self publishing and harvesting means the facilities are responsible for the "freshness" of the metadata locally, not at N sites
 1. Web arch based harvesting can be implemented by many consumers (Consumers distinguish themselves by their "value add")
 1. Common community governed vocabularies can be used (and improved) broadly
+1. Ground truth for elements of a larger scale assembled indexes
 
 ---
 # Effort required by Publishers
@@ -168,7 +169,7 @@ Shared experiences via EarthCube, ESIP,  others...
 * Connecting to these via type DataCatalog is being tested   
 
 #### How do we
-* Leverage our current facility metadata approaches and data work flows
+* Leverage our current facility metadata approaches and metadata work flows
 * Allow a simplified and portable pattern to be shared with other providers 
 
 ---
