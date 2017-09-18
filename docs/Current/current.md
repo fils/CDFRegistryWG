@@ -64,7 +64,7 @@ Code, docs and other products at:
 #### Points
 * This functionality will be reached though the use RE3 terms and extend with CDF recommendations.  These will be reviewed by RE3 editorial board for consideration as part of the core RE3 schema.  
 * A hosted EarthCube CDF ontology can be done in parallel and designed to support schema.org external extension patterns.
-* YAMZ terms
+* YAMZ terms  [YAMZ](http://www.yamz.net/)
 
 
 ---
@@ -92,6 +92,3 @@ Code, docs and other products at:
 * Discussion has taking place with ESIP regarding work related to types like Person and Event.  Early inspection looks promising and this might be considered by RWG as an in scope topic for basic exploration.  
 * Application of hypermedia navigation "hints" via JSON-LD framing are developing.  The approach looks promising and is likely more in scope for P418.
 * RWG will be kept in the loop for P418 and provide feedback related to the RWG scoped subjects.
-
-
----
