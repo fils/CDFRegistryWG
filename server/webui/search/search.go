@@ -48,7 +48,12 @@ func DoSearch(w http.ResponseWriter, r *http.Request) {
 	searchmeta.Term = queryterm
 	searchmeta.Count = len
 	if len == 0 {
-		searchmeta.Message = "No results found for this search"
+		if queryterm == "" {
+			searchmeta.Message = "Search EarthCube CDF RWG demo index"
+
+		} else {
+			searchmeta.Message = "No results found for this search"
+		}
 	}
 
 	// If we have a term.. search the triplestore
@@ -99,7 +104,11 @@ func termReWrite(phrase string) string {
 
 // return JSON string..  enables use of func for REST call too
 func indexCall(phrase string) []FreeTextResults {
-	indexPath := "/Users/dfils/src/go/src/oceanleadership.org/CDFRegistryWG/server/webui/index/rwg.bleve"
+	if phrase == "" {
+		return nil
+	}
+
+	indexPath := "./index/rwg.bleve"
 
 	index, err := bleve.OpenUsing(indexPath, map[string]interface{}{
 		"read_only": true,

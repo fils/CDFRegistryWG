@@ -13,7 +13,6 @@ type MyServer struct {
 }
 
 func main() {
-	// Simpler search handler function to support the web UI
 	searchroute := mux.NewRouter()
 	searchroute.HandleFunc("/", search.DoSearch)
 	http.Handle("/", searchroute)
@@ -26,7 +25,6 @@ func main() {
 	cssRouter.PathPrefix("/css/").Handler(http.StripPrefix("/css/", http.FileServer(http.Dir("./css"))))
 	http.Handle("/css/", &MyServer{cssRouter})
 
-	// Start the server...
 	log.Printf("About to listen on 9900. Go to http://127.0.0.1:9900/")
 
 	err := http.ListenAndServe(":9900", nil)
