@@ -1,0 +1,92 @@
+{
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "re3data": "http://example.org/re3data/0.1/",
+        "ecrwg": "http://example.org/ecrwg/0.1/"
+    },
+    "@type": "Organization",
+    "@id": "http://earthchem.org",
+    "name": "EarthChem",
+    "description": "EarthChem is a community-driven effort to facilitate the preservation, discovery, access and visualization of data generated in the geosciences, with particular emphasis on geochemical, geochronological, and petrological data.",
+    "re3data:keyword": "geochemistry, PetDB, SedDB, NAVDAT, geoscience",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Kerstin Lehnert",
+        "email": "lehnert@ldeo.columbia.edu",
+        "url": "http://orcid.org/0000-0001-7036-1977",
+        "contactType": "Director"
+    },
+    "logo": {
+        "@type": "ImageObject",
+        "url": "http://www.earthchem.org/sites/earthchem.org/files/arthemia_logo.jpg"
+    },
+    "url": "http://earthchem.org",
+    "sameAs": "",
+    "funder": {
+        "@type": "Organization",
+        "name": "NSF",
+        "url": "http://www.nsf.gov"
+    },
+    "memberOf": {
+        "@type": "ProgramMembership",
+        "programName": "EarthCube CDF Registry",
+        "hostingOrganization": {
+            "@type": "Organization",
+            "name": "RE3Data",
+            "url": "http://www.re3data.org"
+        }
+    },
+    "potentialAction": [{
+            "@type": "SearchAction",
+            "target": {
+                "@type": "Search Application",
+                "urlTemplate": "http://ecp.iedadata.org/",
+                "description": "Link to web page enabling users to construct and submit queries to the EarthChem Portal. This Portal aggregates data from Petdb, NAVDAT, GeoRock and Ganseki. Results can be downloaded in Excel spreadsheets or as csv text files.",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "OCG Web Feature Service",
+                "urlTemplate": "http://ecp.iedadata.org/wfs/ows?service=wfs&version=1.0.0&request=GetCapabilities",
+                "description": "Link for GetCapabilities document to access data from the EarthChem portal. The service defines feature types for samples, major elements, trace elements, isotopes, noble gases, rare earth elements, stable isotopes, volatiles, and whole rock major, trace and isotope data aggregated. ",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "RESTful service ",
+                "urlTemplate": "http://ecp.iedadata.org/rest_search_documentation/",
+                "description": "Link to web page describing parameters and providing example queries for requests to access EarthChem portal data. Result formats include JSON, JSONNP, xml, csv, map image, and html.",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "Search Application",
+                "urlTemplate": "http://www.earthchem.org/library/search",
+                "description": "Link to web application to search the EarthChem Library, a collection of file based datasets containing geochemical and related data",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "Browse Application",
+                "urlTemplate": "http://www.earthchem.org/library/browse",
+                "description": "Link to web application to browse files contained the EarthChem Library, a collection of file based datasets containing geochemical and related data",
+                "httpMethod": "GET"
+            }
+        }
+    ],
+    "mainEntityOfPage": [{
+        "@type": "Web Site",
+        "fileformat": "HTML",
+        "keywords": "Earthchem, geochemistry",
+        "description": "Set o web pages with documentation on the EarthChem system",
+        "url": "http://www.earthchem.org/"
+    }]
+}
