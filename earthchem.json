@@ -86,7 +86,7 @@
         "@type": "Web Site",
         "fileformat": "HTML",
         "keywords": "Earthchem, geochemistry",
-        "description": "Set o web pages with documentation on the EarthChem system",
+        "description": "Web site with documentation on the EarthChem system",
         "url": "http://www.earthchem.org/"
     }]
 }
