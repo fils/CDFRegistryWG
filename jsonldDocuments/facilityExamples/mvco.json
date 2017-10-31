@@ -1,0 +1,56 @@
+{
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "re3data": "http://example.org/re3data/0.1/",
+        "ecrwg": "http://example.org/ecrwg/0.1/"
+    },
+    "@type": "Organization",
+    "name": "Marthas Vineyard Coastal Observatory",
+    "description": "The MVCO is a cabled observatory consisting of a shoreside met station; a sub-sea 12m node and an air-sea interaction tower.  It provides near-realtime data for hosted reasearch projects and the public via an ftp server or JGOFS.",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Janet Fredericks",
+        "email": "jfredericksATwhoiDOTedu",
+        "url": "http://orcid.org/0000-0001-6143-5700",
+        "contactType": "technical support"
+    },
+    "re3data:keyword": "geoscience,oceanography, atmospheric",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "http://mvcodata.whoi.edu/images/MVCOv2.png"
+    },
+    "url": "http://www.whoi.edu/mvco",
+    "funder": {
+        "@type": "Organization",
+        "name": "NSF",
+        "url": "http://www.nsf.gov"
+    },
+    "memberOf": {
+        "@type": "ProgramMembership",
+        "programName": "EarthCube CDF Registry",
+        "hostingOrganization": {
+            "@type": "Organization",
+            "name": "RE3Data",
+            "url": "http://www.re3data.org"
+        }
+    },
+    "potentialAction": [{
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://mvcodata.whoi.edu/jg/dir/mvco/",
+                "description": "JGOFS description documents and data links to core and user data.",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://mvcodata.whoi.edu:8080/q2o/adcp?service=SOS&version=1.0&request=GetCapabilities",
+                "description": "OGC SWE-SOS GetCapabilities:  access to Wave Parameters with QC",
+                "httpMethod": "GET"
+            }
+        }
+    ]
+}

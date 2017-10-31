@@ -20,11 +20,18 @@
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
     <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
+    <!-- google icon link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- open search -->
+    <link type="application/opensearchdescription+xml" rel="search" title="EarthCube CDF RWG" href="./html/opensearch.xml" />
+
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -55,6 +62,22 @@
     <style>
         .demo-card-wide.mdl-card {
             width: 712px;
+        }
+        
+        .mdl-layout__content {
+            background: white
+        }
+        
+        .mdl-card {
+            background: #eff0f2
+        }
+        
+        .mdl-card__media {
+            background: #eff0f2
+        }
+        
+        .page-content {
+            background: white
         }
         
         .mdl-card__title-text {
@@ -93,8 +116,11 @@
             <!-- Top row, always visible -->
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span style="margin-left: 20px" class="mdl-layout-title">EarthCube CDF Registry Working Group demo search</span>
+                <span style="margin-left: 20px" class="mdl-layout-title">EarthCube CDF Registry Working Group Testing</span>
+
                 <div class="mdl-layout-spacer"></div>
+                <!-- <span style="font-size:8pt">Hosting provided by IEDA</span> -->
+
                 <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
@@ -110,7 +136,8 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG">GitRepo Group</a>
+                    <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/onImplementation.md">For Facilities</a>
+                    <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG">GitRepo for RWG</a>
                     <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/contextBuilder">GitRepo Crawler</a>
                     <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/docs/ECAHM_poster.pdf">Poster</a>
                     <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/members.md">Members / Providers</a>
@@ -120,7 +147,8 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">CDF Reg WG</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG">GitRepo Group</a>
+                <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/onImplementation.md">For Facilities</a>
+                <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG">GitRepo for group</a>
                 <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/contextBuilder">GitRepo Crawler</a>
                 <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/docs/ECAHM_poster.pdf">Poster</a>
                 <a class="mdl-navigation__link" target="_blank" href="https://github.com/fils/CDFRegistryWG/blob/master/members.md">Members / Providers</a>
@@ -135,7 +163,7 @@
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" name="q" value="{{.Term}}" id="q">
                                 <label class="mdl-textfield__label" for="sample3">Search repository metadata...</label>
-                                <a href="javascript: submitform()">Search</a>
+                                <!-- <a href="javascript: submitform()">Search</a> -->
                             </div>
                         </form>
                         {{if .Count}} Found: {{.Count}} {{end}} {{if .Message}} {{.Message}} {{end}}
@@ -150,10 +178,12 @@
                         {{range $loop := .}}
                         <div class="mdl-card" style="width:100%;margin-bottom:40px">
                             <div class="mdl-card__title">
-                                <h3 class="mdl-card__title-text"><a href="{{$loop.ID}}">{{$loop.ID}}</a> </h3>
+                                <h3 class="mdl-card__title-text"><a target="_blank" href="{{$loop.ID}}">{{$loop.ID}}</a> </h3>
                             </div>
-                            <div class="mdl-card__media">
-                                <img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">
+                            <div class="mdl-card__media" style="margin:5px">
+                                <!--<img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">-->
+                                <i style="font-size:48px" class="material-icons">{{$loop.IconName}}</i> {{$loop.IconDescription}}: {{$loop.Index}}
+
                             </div>
                             <div class="mdl-card__supporting-text">
                                 Position {{$loop.Place}} with score {{$loop.Score}}
@@ -164,7 +194,6 @@
                                 </ul>
                             </div>
                             <div class="mdl-card__actions">
-                                This space for rent....
                             </div>
                         </div>
                         {{end}} {{end}} {{define "S"}}
@@ -174,16 +203,20 @@
 
                     <div class="mdl-cell mdl-cell--4-col">
 
-                        {{if .Desc}}
+                        {{if .Description}}
                         <div class="mdl-card">
                             <div class="mdl-card__title">
-                                <h2 class="mdl-card__title-text">Top SPARQL result here</h2>
+                                <h2 class="mdl-card__title-text"><a target="_blank" href="{{.URL}}">{{.URL}}</a></h2>
                             </div>
-                            <div class="mdl-card__media">
-                                <img src="/images/eclogo.png" width="50" border="0" alt="" style="padding:10px;">
+                            <div class="mdl-card__media" style="background-color:white">
+                                <img src="{{.Logo}}" width="50%" border="0" alt="" style="padding:10px;">
                             </div>
                             <div class="mdl-card__supporting-text">
-                                {{.Desc}}
+
+
+                                <p>{{.Name}}</p>
+                                <p>{{.Description}}</p>
+                                <p>Contact: {{.ContactName}} {{.ContactEmail}}</p>
                             </div>
                         </div>
                         {{end}}

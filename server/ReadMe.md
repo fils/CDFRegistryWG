@@ -5,11 +5,46 @@ A simple package that builds into a docker image for serving
 out the results of the working group crawl.
 
 ### Notes
+Build Go binary for Linux for use in Docker
 
+```
+ env GOOS=linux go build .
+ docker build -t earthcube/cdfrwgweb:0.5 .
+```
+
+
+```
+docker-compose up -d
+```
+
+```
+docker-compose down
+```
+
+Transferer command
+```
+docker save earthcube/cdfrwgweb:0.8 | bzip2 |  ssh fils@repograph.net 'bunzip2 | docker load'
+```
+
+
+Since I am using docker-compose I need to reference the servers via the docker network name as defined
+in the docker-compose.yml file.  Like for the SPARQL calls in sparql.go.   I should pass these in as a 
+parameter at compile time to support non-docker runs.  
+
+
+Blazegraph 
 ```
 docker run -d -p 9999:9999 opencoredata/blazegraph:0.2
+
+
+CGO_ENABLED=0 env GOOS=linux go build .
+
+docker build -t earthcube/cdfrwgweb:0.9.2  -t earthcube/cdfrwgweb:latest .
+docker tag 61d6b42ba6aa earthcube/cdfrwgweb:latest
+
 ```
 
+From playing with virtuoso
 ```
 docker run --name my-virtuoso \
     -p 8890:8890 -p 1111:1111 \
@@ -19,6 +54,11 @@ docker run --name my-virtuoso \
     -v /my/path/to/the/virtuoso/db:/data \
     -d tenforce/virtuoso
 ```
+
+
+### Tagging in Docker
+
+
 
 
 ### SPARQL
@@ -57,3 +97,4 @@ WHERE {
 }
 
 ```
+

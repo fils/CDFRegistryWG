@@ -1,177 +1,192 @@
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/contactPoint> _:J1ofaEcRoRpLvBzlg2duQ0O .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/contactPoint> _:J8deKMzG4gxHu7nVFTI4tk .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/funder> _:GSe43wyYbSjAuC7oqZbyF2d .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/mainEntityOfPage> _:ECvwkAr93plJ0vjwQeu74n .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/memberOf> _:AJAjjlmF3HEKZYTVl0v7gH .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/name> "Open Core Data" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://example.org/re3data/0.1/keywords> "Biological Oceanography, Chemical Oceanography" .
+<http://opencoredata.org#searchAction> <http://schema.org/query-input> "required name=search_term_string" .
+<http://opencoredata.org#searchAction> <http://schema.org/target> "https://www.opencoredata.org/search?q={search_term_string}" .
+<http://opencoredata.org#searchAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+<http://opencoredata.org/id/facilityinfo#contactPoint> <http://schema.org/contactType> "technical support" .
+<http://opencoredata.org/id/facilityinfo#contactPoint> <http://schema.org/email> "dfilsAToceanleadershipDOTorg" .
+<http://opencoredata.org/id/facilityinfo#contactPoint> <http://schema.org/name> "Douglas Fils" .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/description> "NSF funded OpenTopography facilitates community access to high-resolution, Earth science-oriented, topography data, and related tools and resources." .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://example.org/re3data/0.1/keywords> "Biological Oceanography, Chemical Oceanography" .
-_:NqK2dNvPY926PQYyrXAHhw0 <http://example.org/re3data/0.1/datalicense> "http://www.unavco.org/community/policies_forms/data-policy/data-policy.html" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/contactPoint> _:J6GzLh2JSlAM3Bq7nR1y9K .
+<http://opencoredata.org/id/facilityinfo#contactPoint> <http://schema.org/url> "http://orcid.org/0000-0002-2257-9127" .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/funder> _:P48Fw1k3uStGtNLHiGUf2dr .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/potentialAction> _:KMmRN2d3gDZbHf2dv5fcbyPrN .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/logo> _:KA0hAhDGK2d6NoYGVgRpbM9 .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/potentialAction> _:DhtnJF8gP2dFECMrm0TBs22 .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/potentialAction> _:J7BhlEOJa6WAU5WwR7LXgH .
+<http://opencoredata.org/id/facilityinfo#contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/memberOf> _:EEErtC5fURBxCBJ5fv6h22dlT .
+<http://opencoredata.org/id/facilityinfo#funder> <http://schema.org/name> "NSF" .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/name> "OpenTopography" .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/sameAs> <http://www.re3data.org/repository/r3d100012071> .
+<http://opencoredata.org/id/facilityinfo#funder> <http://schema.org/url> "http://www.nsf.gov" .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/potentialAction> _:FBrR52dMXWrnCVxw85KdwqW .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://schema.org/url> <http://www.opencoredata.org> .
+<http://opencoredata.org/id/facilityinfo#funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/potentialAction> _:BfyZaCveBJlL5fsIamu1CSh .
-_:L2dV3j5fgnLK4EFKNSLoMsXA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:F1VD6bmMUumCh4emVonoa2 <http://schema.org/potentialAction> _:Ch2ufojyx87KJ5sQTZcSjE .
-_:J8deKMzG4gxHu7nVFTI4tk <http://schema.org/contactType> "technical support" .
-_:J8deKMzG4gxHu7nVFTI4tk <http://schema.org/email> "dfilsAToceanleadershipDOTorg" .
+<http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> <http://schema.org/description> "User interface for the swagger document" .
+_:F1VD6bmMUumCh4emVonoa2 <http://schema.org/sameAs> <http://www.re3data.org/repository/r3d100010655> .
+<http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> <http://schema.org/fileformat> "HTML" .
+_:F1VD6bmMUumCh4emVonoa2 <http://schema.org/url> <http://www.opentopography.org> .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/contactPoint> _:CWg5Uwlg5f7OKjf2sR3reol .
+<http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> <http://schema.org/keywords> "Swagger" .
+_:F1VD6bmMUumCh4emVonoa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/contactType> "technical support" .
+<http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> <http://schema.org/url> "http://opencoredata.org/common/swagger-ui/" .
+_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/email> "info@opentopography.org" .
+<http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
+_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/url> <http://www.opentopography.org/contact> .
+_:J1ofaEcRoRpLvBzlg2duQ0O <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQL> <http://schema.org/target> <http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint> .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/description> "The Biological and Chemical Oceanography Data Management Office (BCO-DMO) was created in late 2006 to serve PIs funded by the NSF Geosciences Directorate (GEO) Division of Ocean Sciences (OCE) Biological and Chemical Oceanography Programs and Office of Polar Programs (OPP) Antarctic Sciences (ANT) Organisms & Ecosystems Program. The BCO-DMO is a combination the Data Management Offices formerly created to support the US JGOFS and US GLOBEC programs. The BCO-DMO staff members are the curators of the legacy data collections created by those respective programs, as well as many other more recent research efforts including those of individual investigators." .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint> <http://schema.org/description> "SPARQL endpoint" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/funder> _:J6GzLh2JSlAM3Bq7nR1y9K .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint> <http://schema.org/httpMethod> "GET" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/identifier> "http://lod.bco-dmo.org/id/affiliation/191" .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint> <http://schema.org/urlTemplate> "http://opencoredata.org/sparql" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/logo> _:JetsfhmpKvAOrngWwzO0uF .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/memberOf> _:KqTFySCZS1AN76n6lTxnud .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/name> "BCO-DMO" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/potentialAction> _:AIs5foJlzzr9CQWhLnS8Kr4 .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/potentialAction> _:KN5pPQYI4bkAVqiOmZ8LeX .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/potentialAction> _:KvQHLL2siReFWZkApLDXDa .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/sameAs> "http://www.re3data.org/repository/r3d100000012" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://schema.org/url> "http://www.bco-dmo.org" .
+<http://lod.bco-dmo.org/id/affiliation/191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/contactType> "technical support" .
+_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/email> "ashepherd@whoi.edu" .
+_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/name> "Adam Shepherd" .
+_:FBrR52dMXWrnCVxw85KdwqW <http://schema.org/query-input> "required" .
+_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/url> "http://orcid.org/0000-0003-4486-9448" .
+_:FBrR52dMXWrnCVxw85KdwqW <http://schema.org/target> "http://opentopo.sdsc.edu/datasets?search={query}" .
+_:CWg5Uwlg5f7OKjf2sR3reol <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+_:FBrR52dMXWrnCVxw85KdwqW <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/name> "NSF" .
+_:P48Fw1k3uStGtNLHiGUf2dr <http://schema.org/name> "National Science Foundation" .
+_:P48Fw1k3uStGtNLHiGUf2dr <http://schema.org/url> <http://www.nsf.gov> .
+_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/url> "http://www.nsf.gov" .
+_:J6GzLh2JSlAM3Bq7nR1y9K <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:P48Fw1k3uStGtNLHiGUf2dr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://schema.org/description> "OAI-PMH Endpoint" .
+_:KA0hAhDGK2d6NoYGVgRpbM9 <http://schema.org/url> <http://www.opentopography.org/sites/opentopography.org/files/ot_transp_logo.png> .
+_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://schema.org/httpMethod> "GET" .
+_:KA0hAhDGK2d6NoYGVgRpbM9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
+_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://schema.org/urlTemplate> "http://www.bco-dmo.org/services/oai" .
+_:EEErtC5fURBxCBJ5fv6h22dlT <http://schema.org/hostingOrganization> _:D39PprqcVbWP0HylYPq4YO .
+_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:EEErtC5fURBxCBJ5fv6h22dlT <http://schema.org/programName> "EarthCube CDF Registry" .
+_:JetsfhmpKvAOrngWwzO0uF <http://schema.org/url> "http://www.bco-dmo.org/files/bcodmo/images/bco-dmo-words-BLUE.jpg" .
+_:EEErtC5fURBxCBJ5fv6h22dlT <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
+_:JetsfhmpKvAOrngWwzO0uF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
+_:D39PprqcVbWP0HylYPq4YO <http://schema.org/name> "RE3Data" .
+_:KqTFySCZS1AN76n6lTxnud <http://schema.org/hostingOrganization> _:BBLBcG5TWWnKndoAv82xaw .
+_:D39PprqcVbWP0HylYPq4YO <http://schema.org/url> <http://www.re3data.org> .
+_:KqTFySCZS1AN76n6lTxnud <http://schema.org/programName> "EarthCube CDF Registry" .
+_:D39PprqcVbWP0HylYPq4YO <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:KqTFySCZS1AN76n6lTxnud <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
+_:BBLBcG5TWWnKndoAv82xaw <http://schema.org/name> "RE3Data" .
+_:BfyZaCveBJlL5fsIamu1CSh <http://schema.org/target> _:LxTL4O3nl6VJxkAWmj2d8vC .
+_:BBLBcG5TWWnKndoAv82xaw <http://schema.org/url> "http://www.re3data.org" .
+<http://opencoredata.org/id/facilityinfo#potentialActionSPARQLEntryPpint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:BBLBcG5TWWnKndoAv82xaw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:AIs5foJlzzr9CQWhLnS8Kr4 <http://schema.org/target> _:Kv29JDqpKn5KLG8VeVSM28 .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwagger> <http://schema.org/target> <http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint> .
+_:AIs5foJlzzr9CQWhLnS8Kr4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwagger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:Kv29JDqpKn5KLG8VeVSM28 <http://schema.org/description> "SPARQL Endpoint" .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint> <http://schema.org/description> "Swagger 1.2 description document" .
+_:Kv29JDqpKn5KLG8VeVSM28 <http://schema.org/httpMethod> "GET" .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint> <http://schema.org/httpMethod> "GET" .
+_:Kv29JDqpKn5KLG8VeVSM28 <http://schema.org/urlTemplate> "http://lod.bco-dmo.org/sparql" .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint> <http://schema.org/urlTemplate> "http://opencoredata.org/apidocs.json" .
+_:Kv29JDqpKn5KLG8VeVSM28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+<http://opencoredata.org/id/facilityinfo#potentialActionSwaggerEntryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:KN5pPQYI4bkAVqiOmZ8LeX <http://schema.org/target> _:AdTJIUFV3zjM58txwGyZTq .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOID> <http://schema.org/target> <http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint> .
+_:KN5pPQYI4bkAVqiOmZ8LeX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:AdTJIUFV3zjM58txwGyZTq <http://schema.org/description> "VoID Description" .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:AdTJIUFV3zjM58txwGyZTq <http://schema.org/httpMethod> "GET" .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint> <http://schema.org/description> "VoID document" .
+_:AdTJIUFV3zjM58txwGyZTq <http://schema.org/urlTemplate> "http://www.bco-dmo.org/.well-known/void" .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint> <http://schema.org/httpMethod> "GET" .
+_:AdTJIUFV3zjM58txwGyZTq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint> <http://schema.org/urlTemplate> "http://opencoredata.org/rdf/void.ttl" .
+_:KvQHLL2siReFWZkApLDXDa <http://schema.org/target> _:OgAU3iQ5f9pGN2dfDO5oAHJj .
+<http://opencoredata.org/id/facilityinfo#potentialActionVOIDEntryPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+<http://opencoredata.org/id/facilityinfo#programMembership> <http://schema.org/hostingOrganization> <http://opencoredata.org/id/facilityinfo#programMembershipHost> .
+_:KvQHLL2siReFWZkApLDXDa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+<http://opencoredata.org/id/facilityinfo#programMembership> <http://schema.org/programName> "EarthCube CDF Registry" .
+<http://opencoredata.org/id/facilityinfo#programMembership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
+<http://opencoredata.org/id/facilityinfo#programMembershipHost> <http://schema.org/name> "RE3Data" .
+<http://opencoredata.org/id/facilityinfo#programMembershipHost> <http://schema.org/url> "http://www.re3data.org" .
+<http://opencoredata.org/id/facilityinfo#programMembershipHost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://opencoredata.org/id/facilityinfo> <http://example.org/re3data/0.1/datalicense> "http://opencoredata.org/datapolicy.html" .
+<http://opencoredata.org/id/facilityinfo> <http://example.org/re3data/0.1/keyword> "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism" .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/contactPoint> <http://opencoredata.org/id/facilityinfo#contactPoint> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/funder> <http://opencoredata.org/id/facilityinfo#funder> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/mainEntityOfPage> <http://opencoredata.org/id/facilityinfo#mainEntityOfPageSwaggerUI> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/memberOf> <http://opencoredata.org/id/facilityinfo#programMembership> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/name> "Open Core Data" .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/potentialAction> <http://opencoredata.org/id/facilityinfo#potentialActionSPARQL> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/potentialAction> <http://opencoredata.org/id/facilityinfo#potentialActionSwagger> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/potentialAction> <http://opencoredata.org/id/facilityinfo#potentialActionVOID> .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/sameAs> "http://www.re3data.org/repository/r3d100012071" .
+<http://opencoredata.org/id/facilityinfo> <http://schema.org/url> "http://www.opencoredata.org" .
+<http://opencoredata.org/id/facilityinfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://opencoredata.org> <http://schema.org/description> "opencoredata is a data infrastructure focused on making data from JRSO and CSDCO scientific drilling data facilities available in a semantic and Linked Open Data manner." .
+<http://opencoredata.org> <http://schema.org/keywords> "geochemistry, paleontology, geophysics, geoscience, scientific drilling, ocean drilling, continental drilling, paleomagnetism" .
+<http://opencoredata.org> <http://schema.org/potentialAction> <http://opencoredata.org#searchAction> .
+<http://opencoredata.org> <http://schema.org/url> <https://www.opencoredata.org/> .
+<http://opencoredata.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+_:NqK2dNvPY926PQYyrXAHhw0 <http://example.org/re3data/0.1/datalicense> "http://www.unavco.org/community/policies_forms/data-policy/data-policy.html" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://example.org/re3data/0.1/keyword> "geodesy, geophysics, geoscience, Earth Science, Geodesy, Geophysics, Crustal Motion, Deformation, Plate Tectonics, Education and Outreach, GAGE Facility, EarthScope, Plate Boundary Observatory, PBO, Polar Research, SNARF, POLENET, Research Consortium, GNSS, GPS, GPS Equipment, GPS Surveying, Kinematic Survey, RTK, GPS Stations, GPS Data, Data Archive, Data Maps, LiDAR, LASER Mapping, Laser Scanning, TLS, Terrestrial Laser Scanning, Strainmeter, tiltmeter, pore pressure, SAR, Synthetic Aperture Radar, InSAR, WInSAR" .
-_:J8deKMzG4gxHu7nVFTI4tk <http://schema.org/name> "Douglas Fils" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/contactPoint> _:K5fh2eWg5HFKCwgdJKkB5fyj .
-_:J8deKMzG4gxHu7nVFTI4tk <http://schema.org/url> <http://orcid.org/0000-0002-2257-9127> .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/description> "UNAVCO, is a non-profit university-governed consortium that facilitates geoscience research and education using geodesy.  UNAVCO provides engineering, instrumentation, and data services to NSF-funded investigators who use terrestrial and satellite geodetic technologies (e.g., TLS, GPS, and InSAR)" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/funder> _:MLI5fn8uBnmeBK6T3sQPdqE .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/logo> _:EE6MExIoeSbOHFn4ybECKP .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/mainEntityOfPage> _:Haji6jYSrVBE0u2dt6yMfF .
-_:J8deKMzG4gxHu7nVFTI4tk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/memberOf> _:AEKzSVTxZavOSD2dyyj52d3Q .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/name> "UNAVCO" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/potentialAction> _:FmEFavJUn7MJiH4TVX1m1t .
-_:KMmRN2d3gDZbHf2dv5fcbyPrN <http://schema.org/target> _:OpqReBibJL8Ml8UEBZR0J8 .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/potentialAction> _:Px1nAAo9P6AJQrwlchaNtJ .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/description> "The Biological and Chemical Oceanography Data Management Office (BCO-DMO) was created in late 2006 to serve PIs funded by the NSF Geosciences Directorate (GEO) Division of Ocean Sciences (OCE) Biological and Chemical Oceanography Programs and Office of Polar Programs (OPP) Antarctic Sciences (ANT) Organisms & Ecosystems Program. The BCO-DMO is a combination the Data Management Offices formerly created to support the US JGOFS and US GLOBEC programs. The BCO-DMO staff members are the curators of the legacy data collections created by those respective programs, as well as many other more recent research efforts including those of individual investigators." .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/potentialAction> _:JcQTpteVRTlOxp5fRnK5fCiK .
-_:F1VD6bmMUumCh4emVonoa2 <http://schema.org/sameAs> <http://www.re3data.org/repository/r3d100010655> .
-_:KMmRN2d3gDZbHf2dv5fcbyPrN <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/funder> _:JetsfhmpKvAOrngWwzO0uF .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/potentialAction> _:NQXGd1i9XBuKnWVxOcACgQ .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/logo> _:KqTFySCZS1AN76n6lTxnud .
-_:OpqReBibJL8Ml8UEBZR0J8 <http://schema.org/description> "VoID document" .
-_:F1VD6bmMUumCh4emVonoa2 <http://schema.org/url> <http://www.opentopography.org> .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/memberOf> _:BBLBcG5TWWnKndoAv82xaw .
-_:OpqReBibJL8Ml8UEBZR0J8 <http://schema.org/httpMethod> "GET" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/sameAs> "http://www.re3data.org/repository/r3d100010872" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/name> "BCO-DMO" .
-_:F1VD6bmMUumCh4emVonoa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:OpqReBibJL8Ml8UEBZR0J8 <http://schema.org/urlTemplate> "http://opencoredata.org/rdf/void.ttl" .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://schema.org/url> "http://www.unavco.org" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/potentialAction> _:OgAU3iQ5f9pGN2dfDO5oAHJj .
-_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/contactType> "technical support" .
-_:OpqReBibJL8Ml8UEBZR0J8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:NqK2dNvPY926PQYyrXAHhw0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/potentialAction> _:Kv29JDqpKn5KLG8VeVSM28 .
-_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/email> "info@opentopography.org" .
-_:GSe43wyYbSjAuC7oqZbyF2d <http://schema.org/name> "NSF" .
 _:K5fh2eWg5HFKCwgdJKkB5fyj <http://schema.org/contactType> "technical support" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/potentialAction> _:AdTJIUFV3zjM58txwGyZTq .
-_:J1ofaEcRoRpLvBzlg2duQ0O <http://schema.org/url> <http://www.opentopography.org/contact> .
-_:GSe43wyYbSjAuC7oqZbyF2d <http://schema.org/url> <http://www.nsf.gov> .
 _:K5fh2eWg5HFKCwgdJKkB5fyj <http://schema.org/email> "jrileyATunavcoDOTorg" .
 _:K5fh2eWg5HFKCwgdJKkB5fyj <http://schema.org/name> "Jim Riley" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/sameAs> "http://www.re3data.org/repository/r3d100000012" .
-_:GSe43wyYbSjAuC7oqZbyF2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:J1ofaEcRoRpLvBzlg2duQ0O <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://schema.org/url> "http://www.bco-dmo.org" .
 _:K5fh2eWg5HFKCwgdJKkB5fyj <http://schema.org/url> "http://orcid.org/0000-0001-8163-5662" .
-_:FBrR52dMXWrnCVxw85KdwqW <http://schema.org/query-input> "required" .
-_:ECvwkAr93plJ0vjwQeu74n <http://schema.org/description> "User interface for the swagger document" .
-_:ECvwkAr93plJ0vjwQeu74n <http://schema.org/fileformat> "HTML" .
-_:CWg5Uwlg5f7OKjf2sR3reol <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:FBrR52dMXWrnCVxw85KdwqW <http://schema.org/target> "http://opentopo.sdsc.edu/datasets?search={query}" .
 _:K5fh2eWg5HFKCwgdJKkB5fyj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
-_:ECvwkAr93plJ0vjwQeu74n <http://schema.org/keywords> "Swagger" .
-_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/contactType> "technical support" .
-_:FBrR52dMXWrnCVxw85KdwqW <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:J6Q5fxmTyUyaBn3O1vwHA3b <http://schema.org/description> "Swagger 2.0 description document for earlier beta release API" .
-_:ECvwkAr93plJ0vjwQeu74n <http://schema.org/url> <http://opencoredata.org/common/swagger-ui/> .
-_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/email> "ashepherd@whoi.edu" .
 _:J6Q5fxmTyUyaBn3O1vwHA3b <http://schema.org/httpMethod> "GET" .
-_:P48Fw1k3uStGtNLHiGUf2dr <http://schema.org/name> "National Science Foundation" .
-_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/name> "Adam Shepherd" .
-_:ECvwkAr93plJ0vjwQeu74n <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
-_:P48Fw1k3uStGtNLHiGUf2dr <http://schema.org/url> <http://www.nsf.gov> .
-_:J6GzLh2JSlAM3Bq7nR1y9K <http://schema.org/url> "http://orcid.org/0000-0003-4486-9448" .
-_:AJAjjlmF3HEKZYTVl0v7gH <http://schema.org/hostingOrganization> _:NL9gU6CttFIKhxPgAFuYmG .
 _:J6Q5fxmTyUyaBn3O1vwHA3b <http://schema.org/urlTemplate> "http://www.unavco.org/data/web-services/documentation-old/external-prod-server.json" .
-_:P48Fw1k3uStGtNLHiGUf2dr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:AJAjjlmF3HEKZYTVl0v7gH <http://schema.org/programName> "EarthCube CDF Registry" .
-_:J6GzLh2JSlAM3Bq7nR1y9K <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
 _:J6Q5fxmTyUyaBn3O1vwHA3b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://schema.org/target> _:EMevN8EzA5f5MYeGc1Pg5f7X .
 _:FmEFavJUn7MJiH4TVX1m1t <http://schema.org/target> _:EZWpRG2dSn13HgCns363QTn .
-_:KA0hAhDGK2d6NoYGVgRpbM9 <http://schema.org/url> <http://www.opentopography.org/sites/opentopography.org/files/ot_transp_logo.png> .
-_:AJAjjlmF3HEKZYTVl0v7gH <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
-_:OgAU3iQ5f9pGN2dfDO5oAHJj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:NL9gU6CttFIKhxPgAFuYmG <http://schema.org/name> "RE3Data" .
 _:FmEFavJUn7MJiH4TVX1m1t <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:KA0hAhDGK2d6NoYGVgRpbM9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
-_:EMevN8EzA5f5MYeGc1Pg5f7X <http://schema.org/description> "OAI-PMH Endpoint" .
-_:NL9gU6CttFIKhxPgAFuYmG <http://schema.org/url> <http://www.re3data.org> .
-_:EEErtC5fURBxCBJ5fv6h22dlT <http://schema.org/hostingOrganization> _:D39PprqcVbWP0HylYPq4YO .
-_:EMevN8EzA5f5MYeGc1Pg5f7X <http://schema.org/httpMethod> "GET" .
 _:EZWpRG2dSn13HgCns363QTn <http://schema.org/description> "GPS REST services custom documentation for older API" .
-_:NL9gU6CttFIKhxPgAFuYmG <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:EZWpRG2dSn13HgCns363QTn <http://schema.org/httpMethod> "GET" .
-_:EEErtC5fURBxCBJ5fv6h22dlT <http://schema.org/programName> "EarthCube CDF Registry" .
-_:EMevN8EzA5f5MYeGc1Pg5f7X <http://schema.org/urlTemplate> "http://www.bco-dmo.org/services/oai" .
-_:DhtnJF8gP2dFECMrm0TBs22 <http://schema.org/target> _:P2OBRjIlUtIPpffLZLOoGJ .
 _:EZWpRG2dSn13HgCns363QTn <http://schema.org/urlTemplate> "http://www.unavco.org/gsacws/gsacapi/repository/view" .
-_:EEErtC5fURBxCBJ5fv6h22dlT <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
-_:EMevN8EzA5f5MYeGc1Pg5f7X <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:DhtnJF8gP2dFECMrm0TBs22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:D39PprqcVbWP0HylYPq4YO <http://schema.org/name> "RE3Data" .
-_:JetsfhmpKvAOrngWwzO0uF <http://schema.org/name> "NSF" .
 _:EZWpRG2dSn13HgCns363QTn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:P2OBRjIlUtIPpffLZLOoGJ <http://schema.org/description> "Swagger 1.2 description document" .
-_:JetsfhmpKvAOrngWwzO0uF <http://schema.org/url> "http://www.nsf.gov" .
-_:D39PprqcVbWP0HylYPq4YO <http://schema.org/url> <http://www.re3data.org> .
 _:Px1nAAo9P6AJQrwlchaNtJ <http://schema.org/target> _:H2lmrlrXtIgNjU8QmplnlO .
-_:P2OBRjIlUtIPpffLZLOoGJ <http://schema.org/httpMethod> "GET" .
-_:JetsfhmpKvAOrngWwzO0uF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:D39PprqcVbWP0HylYPq4YO <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:Px1nAAo9P6AJQrwlchaNtJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:BfyZaCveBJlL5fsIamu1CSh <http://schema.org/target> _:LxTL4O3nl6VJxkAWmj2d8vC .
-_:KqTFySCZS1AN76n6lTxnud <http://schema.org/url> "http://www.bco-dmo.org/files/bcodmo/images/bco-dmo-words-BLUE.jpg" .
 _:H2lmrlrXtIgNjU8QmplnlO <http://schema.org/description> "SAR Federated REST Services custom documentation for current API" .
-_:BfyZaCveBJlL5fsIamu1CSh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:H2lmrlrXtIgNjU8QmplnlO <http://schema.org/httpMethod> "GET" .
-_:KqTFySCZS1AN76n6lTxnud <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
-_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/description> "OGC Catalog Service for the Web (CSW)" .
-_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/httpMethod> "GET" .
 _:H2lmrlrXtIgNjU8QmplnlO <http://schema.org/urlTemplate> "http://web-services.unavco.org/brokered/ssara/" .
 _:H2lmrlrXtIgNjU8QmplnlO <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:BBLBcG5TWWnKndoAv82xaw <http://schema.org/hostingOrganization> _:AIs5foJlzzr9CQWhLnS8Kr4 .
 _:MLI5fn8uBnmeBK6T3sQPdqE <http://schema.org/name> "NSF" .
-_:BBLBcG5TWWnKndoAv82xaw <http://schema.org/programName> "EarthCube CDF Registry" .
 _:MLI5fn8uBnmeBK6T3sQPdqE <http://schema.org/url> "http://www.nsf.gov" .
-_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/urlTemplate> "http://opentopo.sdsc.edu/geoportal/csw?Request=GetCapabilities&Service=CSW&Version=2.0.2" .
-_:BBLBcG5TWWnKndoAv82xaw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
 _:MLI5fn8uBnmeBK6T3sQPdqE <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:AIs5foJlzzr9CQWhLnS8Kr4 <http://schema.org/name> "RE3Data" .
-_:AIs5foJlzzr9CQWhLnS8Kr4 <http://schema.org/url> "http://www.re3data.org" .
 _:EE6MExIoeSbOHFn4ybECKP <http://schema.org/url> "http://www.unavco.org/about/logo-usage/unavco-red-black-shadow/unavco-logo-red-black-shadow.png" .
-_:AIs5foJlzzr9CQWhLnS8Kr4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:Kv29JDqpKn5KLG8VeVSM28 <http://schema.org/target> _:KN5pPQYI4bkAVqiOmZ8LeX .
 _:EE6MExIoeSbOHFn4ybECKP <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
-_:Kv29JDqpKn5KLG8VeVSM28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:KN5pPQYI4bkAVqiOmZ8LeX <http://schema.org/description> "SPARQL Endpoint" .
 _:Haji6jYSrVBE0u2dt6yMfF <http://schema.org/description> "Main web services catalog for swagger documents and custom API documentation" .
 _:Haji6jYSrVBE0u2dt6yMfF <http://schema.org/fileformat> "HTML" .
-_:KN5pPQYI4bkAVqiOmZ8LeX <http://schema.org/httpMethod> "GET" .
 _:Haji6jYSrVBE0u2dt6yMfF <http://schema.org/keywords> "Swagger, Custom" .
-_:KN5pPQYI4bkAVqiOmZ8LeX <http://schema.org/urlTemplate> "http://lod.bco-dmo.org/sparql" .
 _:Haji6jYSrVBE0u2dt6yMfF <http://schema.org/url> "http://www.unavco.org/data/web-services/web-services.html" .
-_:KN5pPQYI4bkAVqiOmZ8LeX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:AdTJIUFV3zjM58txwGyZTq <http://schema.org/target> _:KvQHLL2siReFWZkApLDXDa .
 _:Haji6jYSrVBE0u2dt6yMfF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
 _:AEKzSVTxZavOSD2dyyj52d3Q <http://schema.org/hostingOrganization> _:Gbb2prwiMKTFLc2du5Hjidg .
-_:AdTJIUFV3zjM58txwGyZTq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:KvQHLL2siReFWZkApLDXDa <http://schema.org/description> "VoID Description" .
 _:AEKzSVTxZavOSD2dyyj52d3Q <http://schema.org/programName> "EarthCube CDF Registry" .
-_:KvQHLL2siReFWZkApLDXDa <http://schema.org/httpMethod> "GET" .
 _:AEKzSVTxZavOSD2dyyj52d3Q <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
-_:KvQHLL2siReFWZkApLDXDa <http://schema.org/urlTemplate> "http://www.bco-dmo.org/.well-known/void" .
 _:Gbb2prwiMKTFLc2du5Hjidg <http://schema.org/name> "RE3Data" .
 _:Gbb2prwiMKTFLc2du5Hjidg <http://schema.org/url> "http://www.re3data.org" .
-_:KvQHLL2siReFWZkApLDXDa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:Gbb2prwiMKTFLc2du5Hjidg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:JcQTpteVRTlOxp5fRnK5fCiK <http://schema.org/target> _:AiVRd2dCCw8iJMgDwEho61s .
 _:JcQTpteVRTlOxp5fRnK5fCiK <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
@@ -181,6 +196,17 @@ _:AiVRd2dCCw8iJMgDwEho61s <http://schema.org/urlTemplate> "http://web-services.u
 _:AiVRd2dCCw8iJMgDwEho61s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:NQXGd1i9XBuKnWVxOcACgQ <http://schema.org/target> _:J6Q5fxmTyUyaBn3O1vwHA3b .
 _:NQXGd1i9XBuKnWVxOcACgQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:BfyZaCveBJlL5fsIamu1CSh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/description> "OGC Catalog Service for the Web (CSW)" .
+_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/httpMethod> "GET" .
+_:LxTL4O3nl6VJxkAWmj2d8vC <http://schema.org/urlTemplate> "http://opentopo.sdsc.edu/geoportal/csw?Request=GetCapabilities&Service=CSW&Version=2.0.2" .
+_:LxTL4O3nl6VJxkAWmj2d8vC <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:Ch2ufojyx87KJ5sQTZcSjE <http://schema.org/target> _:OOwSMhGGD8dP8Y9iOP594L .
+_:Ch2ufojyx87KJ5sQTZcSjE <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/description> "SPARQL Endpoint" .
+_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/httpMethod> "GET" .
+_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/urlTemplate> "http://opentopo.sdsc.edu/d2rq/snorql" .
+_:OOwSMhGGD8dP8Y9iOP594L <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/contactPoint> _:HUoNvgYk2dSnHgnIdDB7zGA .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/logo> _:PDBKxgZrmV1MRgeyb5fCNT9 .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/mainEntityOfPage> _:O2dxPyQiFSWbHWyFLLqCTEP .
@@ -190,7 +216,6 @@ _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/memberOf> _:JvvnR3hMLTpBSgO5fHkM5fvX
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/name> "Incorporated Research Institutions for Seismology IRIS" .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/potentialAction> _:G2dkweE6aBvgEtm9jZq0gdO .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/potentialAction> _:E7zuzbAxJ3WBOztHTJoWb5 .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/contactPoint> _:P3a2H80PXP0IetR0km1Rgb .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/potentialAction> _:B8eeuVNjCsMCV8qvGk8lAC .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/potentialAction> _:M2QFlfPTw6LEQFmZCK5f4y1 .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/potentialAction> _:MyLFPskXXqhON5Ick9m85k .
@@ -198,98 +223,107 @@ _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/sameAs> <http://www.re3data.org/repo
 _:IMEa5HT3f7JPjvjLfd0lrf <http://schema.org/url> <http://www.iris.edu> .
 _:IMEa5HT3f7JPjvjLfd0lrf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:HUoNvgYk2dSnHgnIdDB7zGA <http://schema.org/contactType> "technical support" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/description> "The Rolling Deck to Repository (R2R) program facilitates open access to environmental sensor data routinely acquired each year by the U.S. academic research fleet on hundreds of expeditions around the world. R2R maintains a master catalog including vessel and cruise identifiers, start/end dates and ports, project titles and funding awards, science parties, dataset inventories with instrument types and file formats, data quality assessments, and links to related content at other repositories. Standard products are published including shiptrack navigation, near-real-time METOC data, underway geophysical profiles, and CTD profiles." .
 _:HUoNvgYk2dSnHgnIdDB7zGA <http://schema.org/email> "mike@iris.washington.edu" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/funder> _:BRtCNoT7Z5EAG7F5fksdXtk .
 _:HUoNvgYk2dSnHgnIdDB7zGA <http://schema.org/name> "Mike Stults" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/logo> _:B2dZKBtPqq5dGovQ5I0BzZL .
 _:HUoNvgYk2dSnHgnIdDB7zGA <http://schema.org/url> <http://iris.edu> .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/memberOf> _:CRFo5f2dT5fCtLJZbUkqJyMJ3 .
 _:HUoNvgYk2dSnHgnIdDB7zGA <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/name> "Rolling Deck to Repository (R2R)" .
 _:G2dkweE6aBvgEtm9jZq0gdO <http://schema.org/target> _:MVW2dgioU2J9JrPi5fFIdnC7 .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:DcjBGvpfh33PVXyrbzuFZH .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:KtlOIDRkla5fKCx5WeuBoYQ .
 _:G2dkweE6aBvgEtm9jZq0gdO <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:EqrsZ5G3nGsFtGOYfoYOLF .
 _:MVW2dgioU2J9JrPi5fFIdnC7 <http://schema.org/description> "Data Select WADL description document" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:MIF4Qjn35fjZEGnd2dwz21eo .
 _:MVW2dgioU2J9JrPi5fFIdnC7 <http://schema.org/httpMethod> "GET" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/url> <http://www.rvdata.us/> .
 _:MVW2dgioU2J9JrPi5fFIdnC7 <http://schema.org/urlTemplate> "http://service.iris.edu/fdsnws/dataselect/1/application.wadl" .
-_:Bbkc0eKHciEAI072dUGLuvc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:MVW2dgioU2J9JrPi5fFIdnC7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:LxTL4O3nl6VJxkAWmj2d8vC <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:Ch2ufojyx87KJ5sQTZcSjE <http://schema.org/target> _:OOwSMhGGD8dP8Y9iOP594L .
-_:Bbkc0eKHciEAI072dUGLuvc <re3data:keywords> "Geosciences, Oceanography" .
-_:Ch2ufojyx87KJ5sQTZcSjE <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/contactType> "technical support" .
-_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/description> "SPARQL Endpoint" .
-_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/email> "sys@rvdata.us" .
 _:E7zuzbAxJ3WBOztHTJoWb5 <http://schema.org/target> _:EkizaTbTGSgHU06nEw8aQ6 .
-_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/httpMethod> "GET" .
-_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/name> "System Administrator" .
 _:E7zuzbAxJ3WBOztHTJoWb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:OOwSMhGGD8dP8Y9iOP594L <http://schema.org/urlTemplate> "http://opentopo.sdsc.edu/d2rq/snorql" .
-_:P3a2H80PXP0IetR0km1Rgb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
 _:EkizaTbTGSgHU06nEw8aQ6 <http://schema.org/description> "InterMagnet Open API Swagger 2.0 description document" .
-_:DcjBGvpfh33PVXyrbzuFZH <http://schema.org/target> _:BPIbTsXHLdtCAUbjCnmf3D .
 _:EkizaTbTGSgHU06nEw8aQ6 <http://schema.org/httpMethod> "GET" .
-_:OOwSMhGGD8dP8Y9iOP594L <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:DcjBGvpfh33PVXyrbzuFZH <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:EkizaTbTGSgHU06nEw8aQ6 <http://schema.org/urlTemplate> "http://geows.ds.iris.edu/geows-uf/intermagnet/1/v2/swagger" .
-_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/description> "OGC Catalog Service for Web (CSW) Description" .
 _:EkizaTbTGSgHU06nEw8aQ6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/httpMethod> "GET" .
 _:B8eeuVNjCsMCV8qvGk8lAC <http://schema.org/target> _:DDjm3O2BxvEI0ljiEVrZ2dr .
-_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/urlTemplate> "http://api.rvdata.us/catalog?service=CSW&version=3.0.0&request=GetCapabilities" .
 _:B8eeuVNjCsMCV8qvGk8lAC <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:BPIbTsXHLdtCAUbjCnmf3D <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:DDjm3O2BxvEI0ljiEVrZ2dr <http://schema.org/description> "WovoDat Open API Swagger 2.0 description document" .
-_:KtlOIDRkla5fKCx5WeuBoYQ <http://schema.org/target> _:GGB8JOgDft4O59WPuuqGd2 .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/contactPoint> _:P3a2H80PXP0IetR0km1Rgb .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/description> "The Rolling Deck to Repository (R2R) program facilitates open access to environmental sensor data routinely acquired each year by the U.S. academic research fleet on hundreds of expeditions around the world. R2R maintains a master catalog including vessel and cruise identifiers, start/end dates and ports, project titles and funding awards, science parties, dataset inventories with instrument types and file formats, data quality assessments, and links to related content at other repositories. Standard products are published including shiptrack navigation, near-real-time METOC data, underway geophysical profiles, and CTD profiles." .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/funder> _:BRtCNoT7Z5EAG7F5fksdXtk .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/logo> _:B2dZKBtPqq5dGovQ5I0BzZL .
 _:DDjm3O2BxvEI0ljiEVrZ2dr <http://schema.org/httpMethod> "GET" .
-_:KtlOIDRkla5fKCx5WeuBoYQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:DDjm3O2BxvEI0ljiEVrZ2dr <http://schema.org/urlTemplate> "http://geows.ds.iris.edu/geows-uf/wovodat/1/v2/swagger" .
-_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/description> "OGC Web Feature Service (WFS) Description" .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/memberOf> _:CRFo5f2dT5fCtLJZbUkqJyMJ3 .
 _:DDjm3O2BxvEI0ljiEVrZ2dr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/httpMethod> "GET" .
 _:M2QFlfPTw6LEQFmZCK5f4y1 <http://schema.org/target> _:DoTiRPLmRu8H59hjHMQbEi .
-_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/urlTemplate> "http://api.rvdata.us/gis?service=WFS&version=1.0.0&request=GetCapabilities" .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/name> "Rolling Deck to Repository (R2R)" .
 _:M2QFlfPTw6LEQFmZCK5f4y1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:GGB8JOgDft4O59WPuuqGd2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:DcjBGvpfh33PVXyrbzuFZH .
 _:DoTiRPLmRu8H59hjHMQbEi <http://schema.org/description> "UTEPGravityMag Open API Swagger 2.0 description document" .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:KtlOIDRkla5fKCx5WeuBoYQ .
 _:DoTiRPLmRu8H59hjHMQbEi <http://schema.org/httpMethod> "GET" .
-_:BRtCNoT7Z5EAG7F5fksdXtk <http://schema.org/name> "National Science Foundation (NSF)" .
-_:BRtCNoT7Z5EAG7F5fksdXtk <http://schema.org/url> <http://www.nsf.gov/> .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:EqrsZ5G3nGsFtGOYfoYOLF .
 _:DoTiRPLmRu8H59hjHMQbEi <http://schema.org/urlTemplate> "http://geows.ds.iris.edu/geows-uf/utepgravitymag/1/v2/swagger" .
-_:BRtCNoT7Z5EAG7F5fksdXtk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/potentialAction> _:MIF4Qjn35fjZEGnd2dwz21eo .
 _:DoTiRPLmRu8H59hjHMQbEi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:B2dZKBtPqq5dGovQ5I0BzZL <http://schema.org/url> <http://api.rvdata.us/img/r2r_360x360.png> .
+_:Bbkc0eKHciEAI072dUGLuvc <http://schema.org/url> <http://www.rvdata.us/> .
 _:PDBKxgZrmV1MRgeyb5fCNT9 <http://schema.org/url> <http://www.iris.edu/hq/files/publications/logos/iris_color_screen_lrg.png> .
-_:B2dZKBtPqq5dGovQ5I0BzZL <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
+_:Bbkc0eKHciEAI072dUGLuvc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
 _:PDBKxgZrmV1MRgeyb5fCNT9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
-_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://schema.org/hostingOrganization> _:MkPz5f5fG64sYLYN955f25MVX .
+_:Bbkc0eKHciEAI072dUGLuvc <re3data:keywords> "Geosciences, Oceanography" .
 _:O2dxPyQiFSWbHWyFLLqCTEP <http://schema.org/description> "The DMC collects and archives a number of different types of data." .
-_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://schema.org/programName> "EarthCube Council of Data Facilities (CDF) Registry" .
 _:O2dxPyQiFSWbHWyFLLqCTEP <http://schema.org/fileformat> "HTML" .
+_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/contactType> "technical support" .
 _:O2dxPyQiFSWbHWyFLLqCTEP <http://schema.org/keywords> "Time series, event, historical, metadata" .
+_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/email> "sys@rvdata.us" .
 _:O2dxPyQiFSWbHWyFLLqCTEP <http://schema.org/url> <http://ds.iris.edu/ds/nodes/dmc/data/types/> .
-_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
-_:MkPz5f5fG64sYLYN955f25MVX <http://schema.org/name> "re3data.org" .
 _:O2dxPyQiFSWbHWyFLLqCTEP <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
-_:MkPz5f5fG64sYLYN955f25MVX <http://schema.org/url> <http://www.re3data.org/> .
+_:P3a2H80PXP0IetR0km1Rgb <http://schema.org/name> "System Administrator" .
+_:P3a2H80PXP0IetR0km1Rgb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
 _:MdVYoZbFq5fLI3MK09r7p2V <http://schema.org/description> "Data products derived from raw data are produced both by the scientific community and the IRIS DMC" .
-_:MkPz5f5fG64sYLYN955f25MVX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:DcjBGvpfh33PVXyrbzuFZH <http://schema.org/target> _:BPIbTsXHLdtCAUbjCnmf3D .
 _:MdVYoZbFq5fLI3MK09r7p2V <http://schema.org/fileformat> "HTML" .
-_:EqrsZ5G3nGsFtGOYfoYOLF <http://schema.org/target> _:HV60iInKNhQN1Im89hVpfm .
-_:P2OBRjIlUtIPpffLZLOoGJ <http://schema.org/urlTemplate> "http://opencoredata.org/apidocs.json" .
+_:DcjBGvpfh33PVXyrbzuFZH <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:MdVYoZbFq5fLI3MK09r7p2V <http://schema.org/keywords> "Data Services Products" .
-_:EqrsZ5G3nGsFtGOYfoYOLF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
 _:MdVYoZbFq5fLI3MK09r7p2V <http://schema.org/url> <http://ds.iris.edu/ds/products/> .
-_:HV60iInKNhQN1Im89hVpfm <http://schema.org/description> "Vocabulary of Interlinked Datasets (VoID) Description" .
+_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/description> "OGC Catalog Service for Web (CSW) Description" .
 _:MdVYoZbFq5fLI3MK09r7p2V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
-_:HV60iInKNhQN1Im89hVpfm <http://schema.org/httpMethod> "GET" .
+_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/httpMethod> "GET" .
 _:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/description> "IRIS DMC Web Services" .
+_:BPIbTsXHLdtCAUbjCnmf3D <http://schema.org/urlTemplate> "http://api.rvdata.us/catalog?service=CSW&version=3.0.0&request=GetCapabilities" .
+_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/fileformat> "HTML" .
+_:BPIbTsXHLdtCAUbjCnmf3D <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/keywords> "Web Services" .
+_:KtlOIDRkla5fKCx5WeuBoYQ <http://schema.org/target> _:GGB8JOgDft4O59WPuuqGd2 .
+_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/url> <http://service.iris.edu/> .
+_:KzgdjANJzacIrzsGAKC2dOX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
+_:KtlOIDRkla5fKCx5WeuBoYQ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:JvvnR3hMLTpBSgO5fHkM5fvX <http://schema.org/hostingOrganization> _:KKKxJPoJ5fdnJ9D45fLDJv1x .
+_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/description> "OGC Web Feature Service (WFS) Description" .
+_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/httpMethod> "GET" .
+_:JvvnR3hMLTpBSgO5fHkM5fvX <http://schema.org/programName> "EarthCube CDF Registry" .
+_:JvvnR3hMLTpBSgO5fHkM5fvX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
+_:GGB8JOgDft4O59WPuuqGd2 <http://schema.org/urlTemplate> "http://api.rvdata.us/gis?service=WFS&version=1.0.0&request=GetCapabilities" .
+_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://schema.org/name> "RE3Data" .
+_:GGB8JOgDft4O59WPuuqGd2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://schema.org/url> <http://www.re3data.org> .
+_:BRtCNoT7Z5EAG7F5fksdXtk <http://schema.org/name> "National Science Foundation (NSF)" .
+_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:BRtCNoT7Z5EAG7F5fksdXtk <http://schema.org/url> <http://www.nsf.gov/> .
+_:MyLFPskXXqhON5Ick9m85k <http://schema.org/target> _:EUqtZlVbXnNBhife3dl3Ka .
+_:BRtCNoT7Z5EAG7F5fksdXtk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:MyLFPskXXqhON5Ick9m85k <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:B2dZKBtPqq5dGovQ5I0BzZL <http://schema.org/url> <http://api.rvdata.us/img/r2r_360x360.png> .
+_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/description> "Station WADL description document" .
+_:B2dZKBtPqq5dGovQ5I0BzZL <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject> .
+_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/httpMethod> "GET" .
+_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://schema.org/hostingOrganization> _:MkPz5f5fG64sYLYN955f25MVX .
+_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/urlTemplate> "http://service.iris.edu/fdsnws/station/1/application.wadl" .
+_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://schema.org/programName> "EarthCube Council of Data Facilities (CDF) Registry" .
+_:CRFo5f2dT5fCtLJZbUkqJyMJ3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
+_:EUqtZlVbXnNBhife3dl3Ka <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
+_:MkPz5f5fG64sYLYN955f25MVX <http://schema.org/name> "re3data.org" .
+_:MkPz5f5fG64sYLYN955f25MVX <http://schema.org/url> <http://www.re3data.org/> .
+_:MkPz5f5fG64sYLYN955f25MVX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:EqrsZ5G3nGsFtGOYfoYOLF <http://schema.org/target> _:HV60iInKNhQN1Im89hVpfm .
+_:EqrsZ5G3nGsFtGOYfoYOLF <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
+_:HV60iInKNhQN1Im89hVpfm <http://schema.org/description> "Vocabulary of Interlinked Datasets (VoID) Description" .
+_:HV60iInKNhQN1Im89hVpfm <http://schema.org/httpMethod> "GET" .
 _:HV60iInKNhQN1Im89hVpfm <http://schema.org/urlTemplate> "http://vps.geolink.org/r2rdump/void.ttl" .
 _:HV60iInKNhQN1Im89hVpfm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
 _:MIF4Qjn35fjZEGnd2dwz21eo <http://schema.org/target> _:KcUwwEJWeviDuLDBlYTQ3P .
@@ -297,27 +331,4 @@ _:MIF4Qjn35fjZEGnd2dwz21eo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <ht
 _:KcUwwEJWeviDuLDBlYTQ3P <http://schema.org/description> "RDF Query Language (SPARQL) Endpoint" .
 _:KcUwwEJWeviDuLDBlYTQ3P <http://schema.org/httpMethod> "GET" .
 _:KcUwwEJWeviDuLDBlYTQ3P <http://schema.org/urlTemplate> "http://data.rvdata.us/sparql" .
-_:P2OBRjIlUtIPpffLZLOoGJ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:J7BhlEOJa6WAU5WwR7LXgH <http://schema.org/target> _:LzMvdx78gMgJ0OzarTnJ59 .
 _:KcUwwEJWeviDuLDBlYTQ3P <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:J7BhlEOJa6WAU5WwR7LXgH <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:LzMvdx78gMgJ0OzarTnJ59 <http://schema.org/description> "SPARQL endpoint" .
-_:LzMvdx78gMgJ0OzarTnJ59 <http://schema.org/httpMethod> "GET" .
-_:LzMvdx78gMgJ0OzarTnJ59 <http://schema.org/urlTemplate> "http://opencoredata.org/sparql" .
-_:LzMvdx78gMgJ0OzarTnJ59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .
-_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/fileformat> "HTML" .
-_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/keywords> "Web Services" .
-_:KzgdjANJzacIrzsGAKC2dOX <http://schema.org/url> <http://service.iris.edu/> .
-_:KzgdjANJzacIrzsGAKC2dOX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/DigitalDocument> .
-_:JvvnR3hMLTpBSgO5fHkM5fvX <http://schema.org/hostingOrganization> _:KKKxJPoJ5fdnJ9D45fLDJv1x .
-_:JvvnR3hMLTpBSgO5fHkM5fvX <http://schema.org/programName> "EarthCube CDF Registry" .
-_:JvvnR3hMLTpBSgO5fHkM5fvX <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ProgramMembership> .
-_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://schema.org/name> "RE3Data" .
-_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://schema.org/url> <http://www.re3data.org> .
-_:KKKxJPoJ5fdnJ9D45fLDJv1x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-_:MyLFPskXXqhON5Ick9m85k <http://schema.org/target> _:EUqtZlVbXnNBhife3dl3Ka .
-_:MyLFPskXXqhON5Ick9m85k <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/SearchAction> .
-_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/description> "Station WADL description document" .
-_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/httpMethod> "GET" .
-_:EUqtZlVbXnNBhife3dl3Ka <http://schema.org/urlTemplate> "http://service.iris.edu/fdsnws/station/1/application.wadl" .
-_:EUqtZlVbXnNBhife3dl3Ka <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EntryPoint> .

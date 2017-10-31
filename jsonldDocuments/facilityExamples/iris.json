@@ -1,0 +1,82 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Incorporated Research Institutions for Seismology IRIS",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Mike Stults",
+        "email": "mike@iris.washington.edu",
+        "url": "http://iris.edu",
+        "contactType": "technical support"
+    },
+    "url": "http://www.iris.edu",
+    "sameAs": "http://www.re3data.org/repository/r3d100010268",
+    "potentialAction": [{
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://service.iris.edu/fdsnws/station/1/application.wadl",
+                "description": "Station WADL description document",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://service.iris.edu/fdsnws/dataselect/1/application.wadl",
+                "description": "Data Select WADL description document",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://geows.ds.iris.edu/geows-uf/intermagnet/1/v2/swagger",
+                "description": "InterMagnet Open API Swagger 2.0 description document",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://geows.ds.iris.edu/geows-uf/wovodat/1/v2/swagger",
+                "description": "WovoDat Open API Swagger 2.0 description document",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://geows.ds.iris.edu/geows-uf/utepgravitymag/1/v2/swagger",
+                "description": "UTEPGravityMag Open API Swagger 2.0 description document",
+                "httpMethod": "GET"
+            }
+        }
+    ],
+    "mainEntityOfPage": [{
+            "@type": "DigitalDocument",
+            "fileformat": "HTML",
+            "keywords": "Time series, event, historical, metadata",
+            "description": "The DMC collects and archives a number of different types of data.",
+            "url": "http://ds.iris.edu/ds/nodes/dmc/data/types/"
+        },
+        {
+            "@type": "DigitalDocument",
+            "fileformat": "HTML",
+            "keywords": "Data Services Products",
+            "description": "Data products derived from raw data are produced both by the scientific community and the IRIS DMC",
+            "url": "http://ds.iris.edu/ds/products/"
+        },
+        {
+            "@type": "DigitalDocument",
+            "fileformat": "HTML",
+            "keywords": "Web Services",
+            "description": "IRIS DMC Web Services",
+            "url": "http://service.iris.edu/"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "R2R",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Bob Arko",
+        "email": "nemo@nobody.com",
+        "url": "http://foo.com",
+        "contactType": "technical support"
+    },
+    "url": "http://www.rvdata.us",
+    "mainEntityOfPage": [{
+            "@type": "DigitalDocument",
+            "fileformat": "OGC WxS",
+            "keywords": "OGC Wxs",
+            "description": "OGC Web Feature and other services",
+            "url": "http://api.rvdata.us/gis"
+        },
+        {
+            "@type": "DigitalDocument",
+            "fileformat": "OGC CSV",
+            "keywords": "OGC CSV",
+            "description": "OGC coverage description document",
+            "url": "http: //api.rvdata.us/catalog"
+        },
+        {
+            "@type": "DigitalDocument",
+            "fileformat": "OGC CSV",
+            "keywords": "SPARQL",
+            "description": "R2R SPARQL end point",
+            "url": "http: //data.rvdata.us/sparql"
+        }
+    ]
+}

@@ -11,21 +11,28 @@ const queries = `
 # Comments are ignored, except those tagging a query.
 
 # tag: orgInfo
-	   SELECT DISTINCT *
-	   WHERE {
-		{   
-	     ?s <http://schema.org/url> "{{.URL}}" .
-	     optional {?s <http://schema.org/description> ?desc } .
-	     ?s rdf:type <http://schema.org/Organization>   .
-	     ?s ?pred ?obj
-		 }
-		 UNION
-		 		{   
-	     ?s <http://schema.org/url> <{{.URL}}> .
-	     optional {?s <http://schema.org/description> ?desc } .
-	     ?s rdf:type <http://schema.org/Organization>   .
-	     ?s ?pred ?obj
-		 }
+PREFIX schemaorg: <http://schema.org/>
+SELECT DISTINCT ?repository ?name ?url ?logo ?description ?contact_name ?contact_email ?contact_url ?contact_role
+WHERE {
+  {
+     ?repository schemaorg:url <{{.URL}}> .
+  }
+  UNION
+  {
+     ?repository <http://schema.org/url> "{{.URL}}" .
+  }
+  ?repository rdf:type <http://schema.org/Organization>   .
+  ?repository schemaorg:name ?name .
+  ?repository schemaorg:url ?url .
+  OPTIONAL { ?repository schemaorg:description ?description . }
+  OPTIONAL { ?repository schemaorg:logo [ schemaorg:url ?logo ] . }
+  OPTIONAL {
+    ?repository schemaorg:contactPoint ?contact .
+    ?contact schemaorg:name ?contact_name .
+    ?contact schemaorg:email ?contact_email .
+    ?contact schemaorg:contactType ?contact_role .
+    ?contact schemaorg:url ?contact_url .
+  }
 }
 LIMIT 1
 
@@ -64,19 +71,26 @@ LIMIT 1
 `
 
 // SPres SPARQL call results
+// ?repository ?name ?url ?logo ?description ?contact_name ?contact_email ?contact_url ?contact_role
 type SPres struct {
-	Subject string
-	Desc    string
-	Type    string
-	Pred    string
-	Obj     string
+	Repository   string
+	Name         string
+	URL          string
+	Logo         string
+	Description  string
+	ContactName  string
+	ContactEmail string
+	ContactURL   string
+	ContactRole  string
 }
 
 // SPARQLCall calls triple store and returns results
-func DoCall(url string) SPres {
-	repo, err := sparql.NewRepo("http://0.0.0.0:7777/blazegraph/namespace/ecrwg/sparql")
+func DoCall(url string) (SPres, error) {
+	data := SPres{}
+	repo, err := sparql.NewRepo("http://rwgsparql:9999/blazegraph/namespace/ecrwg/sparql")
 	if err != nil {
 		log.Printf("query make repo: %v\n", err)
+		return data, err
 	}
 
 	f := bytes.NewBufferString(queries)
@@ -85,25 +99,46 @@ func DoCall(url string) SPres {
 	q, err := bank.Prepare("orgInfo", struct{ URL string }{url})
 	if err != nil {
 		log.Printf("query bank prepair: %v\n", err)
+		return data, err
 	}
 
 	res, err := repo.Query(q)
 	if err != nil {
 		log.Printf("query call: %v\n", err)
+		return data, err
 	}
 
-	data := SPres{}
 	bindingsTest2 := res.Bindings() // map[string][]rdf.Term
 
-	data.Desc = "No description provided by facility"
+	// This whole aspect seems verbose... there has to be a better Go way to do this check?
+	data.Description = "No description provided by facility"
 	if len(bindingsTest2) > 0 {
-		data.Subject = bindingsTest2["s"][0].String()
-		if len(bindingsTest2["desc"]) > 0 {
-			data.Desc = bindingsTest2["desc"][0].String()
+		data.Repository = bindingsTest2["repository"][0].String()
+		if len(bindingsTest2["description"]) > 0 {
+			data.Description = bindingsTest2["description"][0].String()
 		}
-		data.Pred = bindingsTest2["pred"][0].String()
-		data.Obj = bindingsTest2["obj"][0].String()
+		if len(bindingsTest2["name"]) > 0 {
+			data.Name = bindingsTest2["name"][0].String()
+		}
+		if len(bindingsTest2["url"]) > 0 {
+			data.URL = bindingsTest2["url"][0].String()
+		}
+		if len(bindingsTest2["logo"]) > 0 {
+			data.Logo = bindingsTest2["logo"][0].String()
+		}
+		if len(bindingsTest2["contact_name"]) > 0 {
+			data.ContactName = bindingsTest2["contact_name"][0].String()
+		}
+		if len(bindingsTest2["contact_email"]) > 0 {
+			data.ContactEmail = bindingsTest2["contact_email"][0].String()
+		}
+		if len(bindingsTest2["contact_url"]) > 0 {
+			data.ContactURL = bindingsTest2["contact_url"][0].String()
+		}
+		if len(bindingsTest2["contact_role"]) > 0 {
+			data.ContactRole = bindingsTest2["contact_role"][0].String()
+		}
 	}
 
-	return data
+	return data, err
 }
