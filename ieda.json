@@ -1,0 +1,69 @@
+{
+    "@context": {
+        "@vocab": "http://schema.org/",
+        "re3data": "http://example.org/re3data/0.1/",
+        "ecrwg": "http://example.org/ecrwg/0.1/"
+    },
+    "@type": "Organization",
+    "@id": "http://iedadata.org",
+    "name": "Interdisciplinary Earth Data Alliance (IEDA)",
+    "alternateName": "IEDA",
+    "description": "The Interdisciplinary Earth Data Alliance (IEDA) supports, sustains, and advances the geosciences by providing data services for observational geoscience data from the Ocean, Earth, and Polar Sciences",
+    "re3data:keyword": "geochemistry, geoscience, petrology, Marine geoscience, seismic reflection, Antarctica",
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "name": "Kerstin Lehnert",
+            "email": "lehnertATldeoDOTcolumbiaDOTedu",
+            "url": "http://orcid.org/0000-0001-7036-1977",
+            "contactType": "Director"
+    },
+        {
+            "@type": "ContactPoint",
+            "name": "Suzanne Carbotte",
+            "email": "carbotteATldeoDOTcolumbiaDOTedu",
+            "url": "http://orcid.org/0000-0001-9471-700X"
+    }
+    ],
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.iedadata.org/wp-content/themes/IEDA/assets/img/logo.png"
+    },
+    "url": "http://iedadata.org",
+    "funder": {
+        "@type": "Organization",
+        "name": "NSF",
+        "url": "http://www.nsf.gov"
+    },
+    "memberOf": {
+        "@type": "ProgramMembership",
+        "programName": "EarthCube CDF Registry",
+        "hostingOrganization": {
+            "@type": "Organization",
+            "name": "RE3Data",
+            "url": "http://www.re3data.org"
+        }
+    },
+    "potentialAction": [
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "http://catalog-dev.iedadata.org:8080/geoportal/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+                "description": "Search the IEDA integrated catalog. search_term_string is used for a free text search of Titles, Abstracts and Keywords in the catalog.",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.iedadata.org/?s={search_term_string}",
+                "query-input": "required name=search_term_string",
+                "description": "Search recent data submissions to IEDA partner systems",
+                "httpMethod": "GET"
+            }
+        }
+    ]
+}
