@@ -9,6 +9,7 @@ ADD ./images  /images
 ADD ./templates  /templates
 ADD ./index  /index
 ADD ./css /css
+ADD ./html /html
 
 # Add our binary
 CMD ["/webui"]
