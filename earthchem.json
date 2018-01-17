@@ -8,23 +8,39 @@
     "@id": "http://earthchem.org",
     "name": "EarthChem",
     "description": "EarthChem is a community-driven effort to facilitate the preservation, discovery, access and visualization of data generated in the geosciences, with particular emphasis on geochemical, geochronological, and petrological data.",
-    "re3data:keyword": "geochemistry, PetDB, SedDB, NAVDAT, geoscience",
+    "category": ["geochemistry", "geoscience"],
     "contactPoint": {
         "@type": "ContactPoint",
-        "name": "Kerstin Lehnert",
-        "email": "lehnert@ldeo.columbia.edu",
-        "url": "http://orcid.org/0000-0001-7036-1977",
-        "contactType": "Director"
+        "name": "Data Manager",
+        "email": "info@earthchem.org",
+        "url": "http://www.earthchem.org/support/contact",
+        "contactType": "Information"
     },
     "logo": {
         "@type": "ImageObject",
         "url": "http://www.earthchem.org/sites/earthchem.org/files/arthemia_logo.jpg"
     },
     "url": "http://earthchem.org",
-    "sameAs": "",
+    "parentOrganization":{
+     "@type": "Organization",
+    "@id": "http://iedadata.org",
+    "name": "Interdisciplinary Earth Data Alliance (IEDA)",
+    "alternateName": "IEDA",
+    "description": "The Interdisciplinary Earth Data Alliance (IEDA) supports, sustains, and advances the geosciences by providing data services for observational geoscience data from the Ocean, Earth, and Polar Sciences",
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "name": "questions",
+            "email": "info@iedadata.org ",
+            "contactType": "Information"
+        }
+    ]
+    },
     "funder": {
         "@type": "Organization",
-        "name": "NSF",
+        "@id": "http://dx.doi.org/10.13039/100000001",
+        "legalName": "National Science Foundation",
+        "alternateName": "NSF",
         "url": "http://www.nsf.gov"
     },
     "memberOf": {
@@ -46,44 +62,48 @@
             }
         },
         {
-            "@type": "SearchAction",
+            "@type": "ReadAction",
+            "name":"OCG Web Feature Service Capabilities",
+            "description": "Link for GetCapabilities document to access data from the EarthChem portal. The service defines feature types for samples, major elements, trace elements, isotopes, noble gases, rare earth elements, stable isotopes, volatiles, and whole rock major, trace and isotope data aggregated. ",
             "target": {
-                "@type": "OCG Web Feature Service",
-                "urlTemplate": "http://ecp.iedadata.org/wfs/ows?service=wfs&version=1.0.0&request=GetCapabilities",
-                "description": "Link for GetCapabilities document to access data from the EarthChem portal. The service defines feature types for samples, major elements, trace elements, isotopes, noble gases, rare earth elements, stable isotopes, volatiles, and whole rock major, trace and isotope data aggregated. ",
+                "@type": "EntryPoint",
+                "url": "http://ecp.iedadata.org/wfs/ows?service=wfs&version=1.0.0&request=GetCapabilities",
+                "httpMethod": "GET"
+            }
+        },
+        {
+            "@type": "ReadAction",
+            "name":"Documentation for EarthChem Portal REST service for geochemical data",
+            "description": "Link to web page describing parameters and providing example queries for requests to access EarthChem portal data. Result formats include JSON, JSONNP, xml, csv, map image, and html.",
+            "target": {
+                "@type": "EntryPoint",
+                "url": "http://ecp.iedadata.org/rest_search_documentation/",
                 "httpMethod": "GET"
             }
         },
         {
             "@type": "SearchAction",
+            "name":"EarthChem Library search",
+            "description": "Link to web application to search the EarthChem Library, a collection of file based datasets containing geochemical and related data",
             "target": {
-                "@type": "RESTful service ",
-                "urlTemplate": "http://ecp.iedadata.org/rest_search_documentation/",
-                "description": "Link to web page describing parameters and providing example queries for requests to access EarthChem portal data. Result formats include JSON, JSONNP, xml, csv, map image, and html.",
+                "@type": "EntryPoint",
+                "url": "http://www.earthchem.org/library/search",
                 "httpMethod": "GET"
             }
         },
         {
-            "@type": "SearchAction",
+            "@type": "ReadAction",
+             "description": "Link to web application to browse files contained the EarthChem Library, a collection of file based datasets containing geochemical and related data",
+             "name":"Browse items in EarthChem Library repository",
             "target": {
-                "@type": "Search Application",
-                "urlTemplate": "http://www.earthchem.org/library/search",
-                "description": "Link to web application to search the EarthChem Library, a collection of file based datasets containing geochemical and related data",
-                "httpMethod": "GET"
-            }
-        },
-        {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "Browse Application",
-                "urlTemplate": "http://www.earthchem.org/library/browse",
-                "description": "Link to web application to browse files contained the EarthChem Library, a collection of file based datasets containing geochemical and related data",
-                "httpMethod": "GET"
+                "@type": "EntryPoint",
+                "url": "http://www.earthchem.org/library/browse",
+               "httpMethod": "GET"
             }
         }
     ],
     "mainEntityOfPage": [{
-        "@type": "Web Site",
+        "@type": "WebSite",
         "fileformat": "HTML",
         "keywords": "Earthchem, geochemistry",
         "description": "Web site with documentation on the EarthChem system",
